@@ -312,12 +312,29 @@
       </div>
     </div>
 
-    <!-- The IDE Switchboard Container -->
-    <div class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12">
+    <!-- Mode Switcher Tabs -->
+    <div class="flex items-center gap-2 mb-6 border-b border-ink-200 pb-3 overflow-x-auto">
+      <button id="mode-tab-pattern" onclick="setMode('pattern')" class="px-4 py-2 rounded-xl text-xs font-mono font-bold bg-ink-900 text-white shadow-sm transition-all flex items-center gap-2 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-peach-400"></span>
+        <span>Mode 1: Pattern Matcher (with Guards)</span>
+      </button>
+      <button id="mode-tab-zeroshot" onclick="setMode('zeroshot')" class="px-4 py-2 rounded-xl text-xs font-mono font-medium text-ink-600 hover:text-ink-900 hover:bg-ink-100 transition-all flex items-center gap-2 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-ink-400"></span>
+        <span>Mode 2: Zero-Shot Array Classifier</span>
+      </button>
+      <button id="mode-tab-predicate" onclick="setMode('predicate')" class="px-4 py-2 rounded-xl text-xs font-mono font-medium text-ink-600 hover:text-ink-900 hover:bg-ink-100 transition-all flex items-center gap-2 shrink-0">
+        <span class="w-2 h-2 rounded-full bg-ink-400"></span>
+        <span>Mode 3: Boolean Predicate (Noul)</span>
+      </button>
+    </div>
+
+    <!-- MODE 1: PATTERN MATCHER CONTAINER -->
+    <div id="panel-pattern" class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12">
       
-      <!-- Left Column: Code Block / Pattern Editor -->
+      <!-- Left Column: Code Switchboard IDE -->
       <div class="lg:col-span-6 bg-ink-900 text-white p-6 font-mono text-xs flex flex-col justify-between border-r border-ink-800">
         <div>
+          <!-- Top Window Bar -->
           <div class="flex items-center justify-between pb-3 mb-4 border-b border-ink-800 text-[11px] text-ink-400">
             <span class="flex items-center gap-2">
               <span class="w-2.5 h-2.5 rounded-full bg-coral-400 inline-block"></span>
@@ -325,125 +342,259 @@
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 inline-block"></span>
               <span class="ml-2 font-bold text-ink-300">router.mjs</span>
             </span>
-            <span>Single Forward Pass</span>
+            <span class="text-emerald-400 font-semibold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              Single Forward Pass
+            </span>
           </div>
 
-          <!-- Code Lines -->
-          <div class="space-y-1.5 text-ink-200">
-            <div class="text-ink-400">// Semantic Pattern Matcher</div>
-            <div><span class="text-peach-400 font-semibold">await</span> <span class="text-amber-300">hev</span>(event, {</div>
+          <!-- Interactive Threshold Slider Bar -->
+          <div class="p-3 mb-4 rounded-xl bg-ink-800/90 border border-ink-700/80 flex items-center justify-between gap-3 text-[11px]">
+            <div class="flex items-center gap-2">
+              <span class="text-ink-400">Confidence Guard:</span>
+              <span id="sliderValDisplay" class="font-bold font-mono text-amber-300 bg-ink-900 px-2 py-0.5 rounded border border-ink-700">@ &gt;0.80</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[10px] text-ink-400">0.50</span>
+              <input type="range" id="guardSlider" min="0.50" max="0.99" step="0.01" value="0.80" oninput="onSliderChange(this.value)" class="w-28 sm:w-36 accent-peach-500 cursor-pointer" />
+              <span class="text-[10px] text-ink-400">0.99</span>
+            </div>
+          </div>
+
+          <!-- Code Lines / Switchboard Circuits -->
+          <div class="space-y-2 text-ink-200">
+            <div class="text-ink-400 text-[11px]">// Pattern Matching &amp; Confidence Routing</div>
+            <div><span class="text-peach-400 font-semibold">await</span> <span class="text-amber-300 font-bold">hev</span>(event, {</div>
             
-            <div id="code-branch-0" class="py-1 px-2 rounded transition-all flex items-center justify-between">
-              <span>  <span class="text-emerald-300">'bug @ >0.8'</span>:  (t) =&gt; <span class="text-sky-300">dispatchP0Jira</span>(t),</span>
-              <span id="badge-branch-0" class="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase hidden"></span>
+            <!-- Branch 0: Guarded Bug -->
+            <div id="code-branch-0" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold"><span class="text-emerald-300" id="branch-0-code">'bug @ &gt;0.80'</span>: (t) =&gt; <span class="text-sky-300 font-semibold">dispatchP0Jira</span>(t),</span>
+                <span id="badge-branch-0" class="text-[10px] px-2 py-0.5 rounded font-bold uppercase"></span>
+              </div>
+              <div class="w-full bg-ink-950/80 h-1.5 rounded-full overflow-hidden flex">
+                <div id="bar-branch-0" class="bg-emerald-400 h-full transition-all duration-300" style="width: 0%"></div>
+              </div>
             </div>
             
-            <div id="code-branch-1" class="py-1 px-2 rounded transition-all flex items-center justify-between">
-              <span>  <span class="text-emerald-300">'bug'</span>:        (t) =&gt; <span class="text-sky-300">queueForReview</span>(t),</span>
-              <span id="badge-branch-1" class="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase hidden"></span>
+            <!-- Branch 1: Unguarded Bug (Fallback Review) -->
+            <div id="code-branch-1" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold"><span class="text-emerald-300">'bug'</span>:        (t) =&gt; <span class="text-sky-300 font-semibold">queueForReview</span>(t),</span>
+                <span id="badge-branch-1" class="text-[10px] px-2 py-0.5 rounded font-bold uppercase"></span>
+              </div>
+              <div class="w-full bg-ink-950/80 h-1.5 rounded-full overflow-hidden flex">
+                <div id="bar-branch-1" class="bg-amber-400 h-full transition-all duration-300" style="width: 0%"></div>
+              </div>
             </div>
 
-            <div id="code-branch-2" class="py-1 px-2 rounded transition-all flex items-center justify-between">
-              <span>  <span class="text-emerald-300">'billing'</span>:    (t) =&gt; <span class="text-sky-300">routeToStripe</span>(t),</span>
-              <span id="badge-branch-2" class="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase hidden"></span>
+            <!-- Branch 2: Billing -->
+            <div id="code-branch-2" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold"><span class="text-emerald-300">'billing'</span>:    (t) =&gt; <span class="text-sky-300 font-semibold">routeToStripe</span>(t),</span>
+                <span id="badge-branch-2" class="text-[10px] px-2 py-0.5 rounded font-bold uppercase"></span>
+              </div>
+              <div class="w-full bg-ink-950/80 h-1.5 rounded-full overflow-hidden flex">
+                <div id="bar-branch-2" class="bg-sky-400 h-full transition-all duration-300" style="width: 0%"></div>
+              </div>
             </div>
 
-            <div id="code-branch-3" class="py-1 px-2 rounded transition-all flex items-center justify-between">
-              <span>  <span class="text-emerald-300">'feature'</span>:    (t) =&gt; <span class="text-sky-300">upvoteRoadmap</span>(t),</span>
-              <span id="badge-branch-3" class="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase hidden"></span>
+            <!-- Branch 3: Feature -->
+            <div id="code-branch-3" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold"><span class="text-emerald-300">'feature'</span>:    (t) =&gt; <span class="text-sky-300 font-semibold">upvoteRoadmap</span>(t),</span>
+                <span id="badge-branch-3" class="text-[10px] px-2 py-0.5 rounded font-bold uppercase"></span>
+              </div>
+              <div class="w-full bg-ink-950/80 h-1.5 rounded-full overflow-hidden flex">
+                <div id="bar-branch-3" class="bg-peach-400 h-full transition-all duration-300" style="width: 0%"></div>
+              </div>
             </div>
 
-            <div id="code-branch-4" class="py-1 px-2 rounded transition-all flex items-center justify-between">
-              <span>  <span class="text-emerald-300">'spam'</span>:       ()  =&gt; <span class="text-coral-400">dropSilently</span>(),</span>
-              <span id="badge-branch-4" class="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase hidden"></span>
+            <!-- Branch 4: Spam -->
+            <div id="code-branch-4" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold"><span class="text-emerald-300">'spam'</span>:       ()  =&gt; <span class="text-coral-400 font-semibold">dropSilently</span>(),</span>
+                <span id="badge-branch-4" class="text-[10px] px-2 py-0.5 rounded font-bold uppercase"></span>
+              </div>
+              <div class="w-full bg-ink-950/80 h-1.5 rounded-full overflow-hidden flex">
+                <div id="bar-branch-4" class="bg-coral-400 h-full transition-all duration-300" style="width: 0%"></div>
+              </div>
             </div>
 
-            <div id="code-branch-5" class="py-1 px-2 rounded transition-all flex items-center justify-between">
-              <span>  <span class="text-emerald-300">_</span>:            (t) =&gt; <span class="text-ink-400">generalInbox</span>(t),</span>
-              <span id="badge-branch-5" class="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase hidden"></span>
+            <!-- Branch 5: Wildcard Fallback -->
+            <div id="code-branch-5" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-bold"><span class="text-emerald-300">_</span>:            (t) =&gt; <span class="text-ink-400 font-semibold">generalInbox</span>(t),</span>
+                <span id="badge-branch-5" class="text-[10px] px-2 py-0.5 rounded font-bold uppercase"></span>
+              </div>
             </div>
 
             <div>});</div>
           </div>
         </div>
 
-        <div class="mt-6 pt-4 border-t border-ink-800 flex items-center justify-between text-[11px] text-ink-400">
-          <span>Target Density: 4/10</span>
-          <span>Zero wrapper objects</span>
+        <!-- Active Dispatch Banner -->
+        <div class="mt-6 pt-4 border-t border-ink-800">
+          <div class="text-[10px] uppercase font-mono text-ink-400 mb-1">Active Dispatched Function Call</div>
+          <div id="activeCallPreview" class="text-xs font-mono font-bold text-emerald-400 bg-ink-950/90 p-2.5 rounded-lg border border-emerald-900/60 truncate">
+            → dispatchP0Jira(event, meta)
+          </div>
         </div>
       </div>
 
-      <!-- Right Column: Live Event Simulator & Execution Tracer -->
+      <!-- Right Column: Live Event Simulator & Routing Reason -->
       <div class="lg:col-span-6 p-6 flex flex-col justify-between bg-white">
         <div>
           <!-- Event Input -->
           <label class="block text-xs font-mono uppercase tracking-wider text-ink-500 font-semibold mb-2">
-            Inbound Event / Natural Language Payload
+            Inbound Event Payload (Type to Test)
           </label>
           <textarea
             id="eventInput"
             rows="2"
-            class="w-full p-3.5 rounded-xl bg-canvas border border-ink-200 text-ink-900 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-peach-300 transition-all"
+            class="w-full p-3.5 rounded-xl bg-canvas border border-ink-200 text-ink-900 font-mono text-xs focus:outline-none focus:ring-2 focus:ring-peach-300 transition-all shadow-inner"
+            placeholder="Type any natural language event or click a preset..."
           >Fatal error: checkout button throws 500 internal server error</textarea>
 
           <!-- Quick Presets -->
           <div class="mt-3 flex items-center gap-1.5 flex-wrap">
-            <span class="text-[11px] font-mono text-ink-500">Inject:</span>
-            <button onclick="setEvent('Fatal error: checkout button throws 500 internal server error')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 transition-all">
+            <span class="text-[11px] font-mono text-ink-500">Scenarios:</span>
+            <button onclick="setEvent('Fatal error: checkout button throws 500 internal server error')" class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 font-medium transition-all">
               500 Bug (P0)
             </button>
-            <button onclick="setEvent('Why was my credit card charged twice for the subscription?')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 transition-all">
+            <button onclick="setEvent('Page throws an unexpected exception')" class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-amber-50 border border-amber-300 hover:bg-amber-100 text-amber-900 font-semibold transition-all">
+              Ambiguous Bug (Test Guard)
+            </button>
+            <button onclick="setEvent('Why was my credit card charged twice for the subscription?')" class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 font-medium transition-all">
               Double Charge
             </button>
-            <button onclick="setEvent('Please add a dark mode toggle to the dashboard settings')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 transition-all">
-              Dark Mode Request
+            <button onclick="setEvent('Please add a dark mode toggle to the dashboard settings')" class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 font-medium transition-all">
+              Dark Mode Wish
             </button>
-            <button onclick="setEvent('Congratulations! You won a free luxury crypto reward bonus!!')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 transition-all">
+            <button onclick="setEvent('Congratulations! You won a free luxury crypto reward bonus!!')" class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 font-medium transition-all">
               Crypto Spam
             </button>
-            <button onclick="setEvent('The app button could maybe look slightly greener')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 transition-all">
-              Ambiguous / Low Conf
+            <button onclick="setEvent('Good morning team, what is on the sync agenda?')" class="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100 text-ink-800 font-medium transition-all">
+              Wildcard Fallback (_)
             </button>
           </div>
 
-          <!-- Live Execution Trace Box -->
-          <div class="mt-6 p-4 rounded-xl bg-canvas border border-ink-200">
+          <!-- The "Why It Routed Here" Explanation Card -->
+          <div class="mt-6 p-4 rounded-xl bg-peach-50/50 border border-peach-200">
             <div class="flex items-center justify-between text-xs font-mono mb-2">
-              <span class="font-bold text-ink-800 uppercase">Execution Trace</span>
-              <span id="traceLatency" class="text-emerald-700 font-semibold">0.12 ms</span>
+              <span class="font-bold text-ink-900 uppercase flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-peach-600"></span>
+                Routing Logic Explanation
+              </span>
+              <span id="traceLatency" class="text-emerald-700 font-semibold font-mono text-[11px]">0.05 ms</span>
             </div>
+            <p id="routingReasonText" class="text-xs text-ink-800 leading-relaxed font-sans">
+              <!-- Dynamically generated plain-English explanation -->
+            </p>
+          </div>
 
-            <!-- Trace Item 1: Logits -->
-            <div class="text-xs font-mono space-y-1 text-ink-700">
-              <div class="flex items-center justify-between">
-                <span>Top Predicted Label:</span>
-                <span id="traceTopLabel" class="font-bold text-ink-900">bug</span>
-              </div>
-              <div class="flex items-center justify-between">
-                <span>Softmax Probability:</span>
-                <span id="traceConfidence" class="font-bold text-ink-900">0.96</span>
-              </div>
-              <div class="flex items-center justify-between pt-2 border-t border-ink-200/60">
-                <span>Branch Dispatched:</span>
-                <span id="traceDispatched" class="font-bold text-emerald-800 font-mono">dispatchP0Jira()</span>
-              </div>
+          <!-- Live Softmax Distribution Gauges -->
+          <div class="mt-6">
+            <div class="text-xs font-mono font-bold uppercase text-ink-600 mb-2.5">
+              Softmax Probability Distribution
+            </div>
+            <div id="probDistributionBars" class="space-y-2 font-mono text-xs">
+              <!-- Dynamically rendered -->
             </div>
           </div>
         </div>
 
-        <!-- Real-Time Metrics Strip -->
-        <div class="mt-6 pt-4 border-t border-ink-100 grid grid-cols-3 gap-2 text-center font-mono">
+        <!-- Telemetry Footer Strip -->
+        <div class="mt-6 pt-4 border-t border-ink-100 grid grid-cols-3 gap-2 text-center font-mono text-xs">
           <div>
-            <div id="meterLatency" class="text-base font-bold text-ink-900">0.12ms</div>
-            <div class="text-[10px] text-ink-500 uppercase">Clock</div>
+            <div id="meterLatency" class="text-base font-bold text-ink-900">0.05ms</div>
+            <div class="text-[10px] text-ink-500 uppercase">Forward Pass</div>
           </div>
           <div>
-            <div id="meterBrier" class="text-base font-bold text-ink-900">0.099</div>
-            <div class="text-[10px] text-ink-500 uppercase">Brier ECE</div>
+            <div id="meterConfidence" class="text-base font-bold text-emerald-700">0.96</div>
+            <div class="text-[10px] text-ink-500 uppercase">Top Probability</div>
           </div>
           <div>
-            <div class="text-base font-bold text-emerald-700">0 bytes</div>
-            <div class="text-[10px] text-ink-500 uppercase">Allocations</div>
+            <div class="text-base font-bold text-ink-900">0 bytes</div>
+            <div class="text-[10px] text-ink-500 uppercase">GC Allocations</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODE 2: ZERO-SHOT ARRAY CLASSIFIER -->
+    <div id="panel-zeroshot" class="hidden rounded-2xl border border-ink-200 bg-white p-6 shadow-sm">
+      <div class="max-w-3xl mb-4">
+        <h3 class="text-lg font-bold text-ink-900">Zero-Shot Array Classification</h3>
+        <p class="text-xs text-ink-600">Pass an array of arbitrary labels to pick the winning category: <code>hev(text, labels)</code>.</p>
+      </div>
+
+      <!-- Dataset Preset Pills -->
+      <div class="flex items-center gap-2 mb-4 flex-wrap">
+        <span class="text-xs font-mono text-ink-500">Benchmark Presets:</span>
+        <button onclick="setZeroShotPreset('triage')" id="btn-zs-triage" class="px-3 py-1 rounded-lg text-xs font-mono bg-ink-900 text-white font-semibold">
+          Triage (4-way)
+        </button>
+        <button onclick="setZeroShotPreset('agnews')" id="btn-zs-agnews" class="px-3 py-1 rounded-lg text-xs font-mono bg-ink-100 text-ink-800 hover:bg-ink-200 font-medium">
+          AG News (4-way)
+        </button>
+        <button onclick="setZeroShotPreset('emotion')" id="btn-zs-emotion" class="px-3 py-1 rounded-lg text-xs font-mono bg-ink-100 text-ink-800 hover:bg-ink-200 font-medium">
+          Emotion (6-way)
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div class="md:col-span-6 space-y-3">
+          <label class="block text-xs font-mono uppercase text-ink-500 font-semibold">Test Input</label>
+          <textarea id="zeroShotInput" rows="3" class="w-full p-3.5 rounded-xl bg-canvas border border-ink-200 font-mono text-xs focus:ring-2 focus:ring-peach-300" oninput="runZeroShotEval()">Astronomers detect quantum magnetic oscillations in deep space galaxy</textarea>
+          <div class="p-3 rounded-lg bg-ink-900 text-white font-mono text-xs">
+            <span class="text-peach-400">const</span> category = <span class="text-peach-400">await</span> hev(text, <span id="zeroShotLabelsCode" class="text-amber-300">['World', 'Sports', 'Business', 'Sci/Tech']</span>);
+          </div>
+        </div>
+
+        <div class="md:col-span-6 space-y-3">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="font-bold uppercase text-ink-600">Softmax Ranking</span>
+            <span id="zeroShotLatency" class="text-emerald-700 font-semibold">0.04 ms</span>
+          </div>
+          <div id="zeroShotResultsList" class="space-y-2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODE 3: BOOLEAN PREDICATE (NOUL) -->
+    <div id="panel-predicate" class="hidden rounded-2xl border border-ink-200 bg-white p-6 shadow-sm">
+      <div class="max-w-3xl mb-4">
+        <h3 class="text-lg font-bold text-ink-900">Boolean Predicate (Noul Mode)</h3>
+        <p class="text-xs text-ink-600">Evaluates natural language truth statements as true booleans: <code>hev(text, 'is spam')</code>.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div class="md:col-span-6 space-y-3">
+          <label class="block text-xs font-mono uppercase text-ink-500 font-semibold">Test Input</label>
+          <textarea id="predicateInput" rows="2" class="w-full p-3.5 rounded-xl bg-canvas border border-ink-200 font-mono text-xs focus:ring-2 focus:ring-peach-300" oninput="runPredicateEval()">Congratulations! You won a free luxury iPhone gift prize!</textarea>
+          
+          <label class="block text-xs font-mono uppercase text-ink-500 font-semibold">Condition Statement</label>
+          <input type="text" id="predicateCondition" value="is spam" class="w-full p-3 rounded-xl bg-canvas border border-ink-200 font-mono text-xs" oninput="runPredicateEval()" />
+          
+          <div class="flex items-center gap-2">
+            <span class="text-[11px] font-mono text-ink-500">Presets:</span>
+            <button onclick="setPredicatePreset('Congratulations! You won a free luxury iPhone gift prize!', 'is spam')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100">is spam</button>
+            <button onclick="setPredicatePreset('Fatal null pointer exception in auth token parser', 'is critical bug')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100">is critical bug</button>
+            <button onclick="setPredicatePreset('Here is the meeting agenda for tomorrow sync', 'is spam')" class="px-2 py-1 rounded text-[11px] font-mono bg-ink-50 border border-ink-200 hover:bg-ink-100">not spam</button>
+          </div>
+        </div>
+
+        <div class="md:col-span-6 flex flex-col justify-center items-center p-6 rounded-xl bg-canvas border border-ink-200 text-center">
+          <div class="text-xs font-mono uppercase text-ink-500 mb-2">Boolean Output &amp; Calibration</div>
+          <div id="predicateVerdictPill" class="px-6 py-2.5 rounded-2xl text-2xl font-mono font-bold uppercase bg-emerald-100 text-emerald-800 border-2 border-emerald-400">
+            TRUE
+          </div>
+          <div class="mt-3 font-mono text-xs text-ink-700">
+            Probability Score: <span id="predicateScoreDisplay" class="font-bold text-ink-900">0.96</span> · Threshold: 0.50
+          </div>
+          <div class="mt-1 font-mono text-[11px] text-ink-500" id="predicateLatencyDisplay">
+            Latency: 0.03 ms
           </div>
         </div>
       </div>
@@ -693,11 +844,8 @@
 
   <!-- REPL Logic -->
   <script>
-    const DIM = 512;
-    const FNV_PRIME = 0x01000193;
-    const FNV_OFFSET = 0x811c9dc5;
-
     const SEMANTIC_CLUSTERS = {
+      // Software / Triage
       bug: ['error', '500', 'crash', 'broken', 'fail', 'fails', 'failed', 'exception', 'defect', 'issue', 'freeze', 'deadlock', 'panic', 'glitch', 'leak', 'stacktrace', 'null', 'undefined', 'hang', 'slow', 'timeout'],
       feature: ['request', 'add', 'want', 'support', 'wish', 'new', 'implement', 'suggestion', 'enhancement', 'improve', 'option', 'mode', 'export', 'button', 'create'],
       billing: ['invoice', 'charge', 'charges', 'charged', 'payment', 'paid', 'receipt', 'subscription', 'price', 'pricing', 'stripe', 'refund', 'card', 'checkout', 'bill', 'cost', 'fee', 'account'],
@@ -722,255 +870,502 @@
       surprise: ['surprised', 'amazed', 'shocked', 'astonished', 'stunned', 'speechless', 'unbelievable', 'sudden', 'unexpected', 'overwhelmed', 'startled', 'wonder', 'curious', 'impressed', 'confused', 'weird', 'strange', 'bizarre', 'shocking', 'unusual', 'astonishing', 'funny']
     };
 
-    function fnv1a(str) {
-      let hash = FNV_OFFSET;
-      for (let i = 0; i < str.length; i++) {
-        hash ^= str.charCodeAt(i);
-        hash = Math.imul(hash, FNV_PRIME);
-      }
-      return (hash >>> 0) % DIM;
-    }
-
     function stem(w) {
       if (w.length <= 3) return w;
       return w.replace(/(ing|edly|ingly)$/, '').replace(/(ed|ly|es|s)$/, '');
     }
 
-    function getAssociations(tokens) {
-      const associations = new Set();
-      for (const token of tokens) {
-        const s = stem(token);
-        for (const [concept, words] of Object.entries(SEMANTIC_CLUSTERS)) {
-          if (token === concept || s === concept || words.includes(token) || words.includes(s)) {
-            associations.add(`sem:${concept}`);
-            for (const w of words) associations.add(`sem:${w}`);
-          }
-        }
-      }
-      return associations;
+    function tokenize(text) {
+      const clean = String(text || '').toLowerCase().replace(/[^a-z0-9\/]/g, ' ');
+      const words = clean.split(/\s+/).filter(Boolean);
+      const stemmed = words.map(stem);
+      return { words, stemmed };
     }
 
-    function embed(text, isLabel = false) {
-      const clean = String(text || '').toLowerCase().replace(/[^\w\s-]/g, ' ');
-      const rawWords = clean.split(/\s+/).filter(Boolean);
-      const words = [];
-      for (const w of rawWords) {
-        words.push(w);
-        const s = stem(w);
-        if (s !== w) words.push(s);
-      }
-
-      const features = new Map();
-      function addFeature(f, weight = 1.0) {
-        features.set(f, (features.get(f) || 0) + weight);
-      }
-
-      for (const w of words) {
-        addFeature(`w:${w}`, isLabel ? 3.0 : 2.0);
-        if (w.length >= 3) {
-          for (let i = 0; i <= w.length - 3; i++) {
-            addFeature(`c3:${w.slice(i, i + 3)}`, 0.5);
-          }
-        }
-      }
-      for (let i = 0; i < words.length - 1; i++) {
-        addFeature(`bg:${words[i]}_${words[i + 1]}`, isLabel ? 2.5 : 1.5);
-      }
-      for (const a of getAssociations(words)) {
-        addFeature(a, isLabel ? 3.5 : 2.0);
-      }
-
-      const vec = new Float32Array(DIM);
-      for (const [feat, weight] of features) {
-        const idx = fnv1a(feat);
-        const sign = (fnv1a(`${feat}:sign`) & 1) === 0 ? 1 : -1;
-        vec[idx] += weight * sign;
-      }
-      let norm = 0;
-      for (let i = 0; i < DIM; i++) norm += vec[i] * vec[i];
-      norm = Math.sqrt(norm);
-      if (norm > 0) {
-        for (let i = 0; i < DIM; i++) vec[i] /= norm;
-      }
-      return vec;
-    }
-
-    function cosine(a, b) {
-      let dot = 0;
-      for (let i = 0; i < DIM; i++) dot += a[i] * b[i];
-      return dot;
-    }
-
-    function softmax(scores, temperature = 0.12) {
+    function softmax(scores, temperature = 1.0) {
       const maxScore = Math.max(...scores);
       const exps = scores.map(s => Math.exp((s - maxScore) / temperature));
       const sumExp = exps.reduce((acc, v) => acc + v, 0);
       return exps.map(v => v / (sumExp || 1));
     }
 
-    // Switchboard branches definition
-    const BRANCHES = [
-      { id: 0, label: 'bug', op: '>', threshold: 0.8, action: 'dispatchP0Jira' },
-      { id: 1, label: 'bug', op: null, threshold: 0, action: 'queueForReview' },
-      { id: 2, label: 'billing', op: null, threshold: 0, action: 'routeToStripe' },
-      { id: 3, label: 'feature', op: null, threshold: 0, action: 'upvoteRoadmap' },
-      { id: 4, label: 'spam', op: null, threshold: 0, action: 'dropSilently' },
-      { id: 5, label: '_', isFallback: true, action: 'generalInbox' },
-    ];
+    function classifyZeroDep(input, labels) {
+      if (!labels || labels.length === 0) return { label: '', score: 0, probs: {} };
+      const { words, stemmed } = tokenize(input);
+      const rawScores = [];
 
-    const CANDIDATES = ['bug', 'billing', 'feature', 'spam'];
+      for (const label of labels) {
+        const key = label.toLowerCase();
+        const parts = key.split(/[\/\s_-]+/);
 
-    function evaluateSwitchboard() {
-      const text = document.getElementById('eventInput').value;
-      const t0 = performance.now();
+        const cluster = new Set(SEMANTIC_CLUSTERS[key] || SEMANTIC_CLUSTERS[key.replace(/[^a-z]/g, '')] || []);
+        for (const p of parts) {
+          if (SEMANTIC_CLUSTERS[p]) {
+            for (const w of SEMANTIC_CLUSTERS[p]) cluster.add(w);
+          }
+          const s = stem(p);
+          if (SEMANTIC_CLUSTERS[s]) {
+            for (const w of SEMANTIC_CLUSTERS[s]) cluster.add(w);
+          }
+        }
 
-      const inputVec = embed(text, false);
-      const rawScores = CANDIDATES.map(l => Math.max(0.001, cosine(inputVec, embed(l, true))));
+        let score = 0.01;
+        for (let i = 0; i < words.length; i++) {
+          const w = words[i];
+          const s = stemmed[i];
+          if (parts.includes(w) || parts.includes(s)) score += 4.5;
+          if (cluster.has(w) || cluster.has(s)) score += 2.5;
+          if (w.length >= 4 && parts.some(p => p.includes(w) || w.includes(p))) score += 1.0;
+        }
+        rawScores.push(score);
+      }
+
       const probsArr = softmax(rawScores);
-      const t1 = performance.now();
-
+      const probs = {};
       let bestIdx = 0;
       let bestScore = -1;
-      for (let i = 0; i < CANDIDATES.length; i++) {
-        if (probsArr[i] > bestScore) {
-          bestScore = probsArr[i];
+
+      for (let i = 0; i < labels.length; i++) {
+        const p = Math.round(probsArr[i] * 1000) / 1000;
+        probs[labels[i]] = p;
+        if (p > bestScore) {
+          bestScore = p;
           bestIdx = i;
         }
       }
 
-      const winLabel = CANDIDATES[bestIdx];
-      const latency = (t1 - t0).toFixed(2);
-
-      // Evaluate branches in order
-      let activeBranchId = null;
-      const branchStatus = {};
-
-      for (const b of BRANCHES) {
-        if (b.isFallback) continue;
-        if (b.label === winLabel) {
-          let passed = true;
-          if (b.op === '>') passed = bestScore > b.threshold;
-          if (passed) {
-            activeBranchId = b.id;
-            branchStatus[b.id] = { status: 'MATCHED', badgeBg: 'bg-emerald-500 text-white' };
-            break;
-          } else {
-            branchStatus[b.id] = { status: `GUARD FAILED (${bestScore.toFixed(2)} <= ${b.threshold})`, badgeBg: 'bg-amber-500 text-black' };
-          }
-        } else {
-          branchStatus[b.id] = { status: 'LABEL MISMATCH', badgeBg: 'bg-ink-800 text-ink-500' };
-        }
-      }
-
-      if (activeBranchId === null) {
-        activeBranchId = 5; // fallback
-        branchStatus[5] = { status: 'FALLBACK EXECUTED', badgeBg: 'bg-emerald-500 text-white' };
-      }
-
-      // Update code line highlights
-      for (let i = 0; i < BRANCHES.length; i++) {
-        const lineEl = document.getElementById(`code-branch-${i}`);
-        const badgeEl = document.getElementById(`badge-branch-${i}`);
-        if (i === activeBranchId) {
-          lineEl.className = 'py-1 px-2 rounded transition-all flex items-center justify-between branch-active';
-          badgeEl.className = 'text-[9px] px-1.5 py-0.5 rounded font-bold uppercase bg-emerald-500 text-white';
-          badgeEl.textContent = 'EXECUTED';
-          badgeEl.classList.remove('hidden');
-        } else {
-          const info = branchStatus[i];
-          if (info && info.status.startsWith('GUARD FAILED')) {
-            lineEl.className = 'py-1 px-2 rounded transition-all flex items-center justify-between bg-amber-950/40 border-l-2 border-amber-500';
-            badgeEl.className = 'text-[9px] px-1.5 py-0.5 rounded font-bold uppercase bg-amber-500 text-black';
-            badgeEl.textContent = 'GUARD FAILED';
-            badgeEl.classList.remove('hidden');
-          } else {
-            lineEl.className = 'py-1 px-2 rounded transition-all flex items-center justify-between branch-skipped';
-            badgeEl.classList.add('hidden');
-          }
-        }
-      }
-
-      // Update Trace
-      document.getElementById('traceLatency').textContent = `${latency} ms`;
-      document.getElementById('meterLatency').textContent = `${latency}ms`;
-      document.getElementById('traceTopLabel').textContent = winLabel;
-      document.getElementById('traceConfidence').textContent = bestScore.toFixed(3);
-      document.getElementById('traceDispatched').textContent = `${BRANCHES.find(b => b.id === activeBranchId).action}(payload)`;
+      return {
+        label: labels[bestIdx],
+        score: bestScore,
+        probs
+      };
     }
 
-    function setEvent(text) {
-      document.getElementById('eventInput').value = text;
+    function judgePredicateZeroDep(input, condition) {
+      const cleanCond = condition.replace(/^(is|are|has|contains)\s+/i, '').trim();
+      const { words, stemmed } = tokenize(input);
+      const key = cleanCond.toLowerCase();
+      const parts = key.split(/[\/\s_-]+/);
+
+      const cluster = new Set(SEMANTIC_CLUSTERS[key] || SEMANTIC_CLUSTERS[key.replace(/[^a-z]/g, '')] || []);
+      for (const p of parts) {
+        if (SEMANTIC_CLUSTERS[p]) {
+          for (const w of SEMANTIC_CLUSTERS[p]) cluster.add(w);
+        }
+        const s = stem(p);
+        if (SEMANTIC_CLUSTERS[s]) {
+          for (const w of SEMANTIC_CLUSTERS[s]) cluster.add(w);
+        }
+      }
+
+      let evidence = 0;
+      for (let i = 0; i < words.length; i++) {
+        const w = words[i];
+        const s = stemmed[i];
+        if (parts.includes(w) || parts.includes(s)) evidence += 4.5;
+        if (cluster.has(w) || cluster.has(s)) evidence += 2.5;
+        if (w.length >= 4 && parts.some(p => p.includes(w) || w.includes(p))) evidence += 1.0;
+      }
+
+      const nullHypothesis = 1.5;
+      const probs = softmax([evidence, nullHypothesis], 0.5);
+      const score = Math.round(probs[0] * 1000) / 1000;
+
+      return {
+        value: score >= 0.5,
+        score
+      };
+    }
+
+    // Mode Switcher Logic
+    function setMode(mode) {
+      const tabs = {
+        pattern: document.getElementById('mode-tab-pattern'),
+        zeroshot: document.getElementById('mode-tab-zeroshot'),
+        predicate: document.getElementById('mode-tab-predicate')
+      };
+      const panels = {
+        pattern: document.getElementById('panel-pattern'),
+        zeroshot: document.getElementById('panel-zeroshot'),
+        predicate: document.getElementById('panel-predicate')
+      };
+
+      for (const key of ['pattern', 'zeroshot', 'predicate']) {
+        if (!tabs[key] || !panels[key]) continue;
+        if (key === mode) {
+          tabs[key].className = 'px-4 py-2 rounded-xl text-xs font-mono font-bold bg-ink-900 text-white shadow-sm transition-all flex items-center gap-2 shrink-0';
+          const dot = tabs[key].querySelector('span');
+          if (dot) dot.className = 'w-2 h-2 rounded-full bg-peach-400';
+          panels[key].classList.remove('hidden');
+        } else {
+          tabs[key].className = 'px-4 py-2 rounded-xl text-xs font-mono font-medium text-ink-600 hover:text-ink-900 hover:bg-ink-100 transition-all flex items-center gap-2 shrink-0';
+          const dot = tabs[key].querySelector('span');
+          if (dot) dot.className = 'w-2 h-2 rounded-full bg-ink-400';
+          panels[key].classList.add('hidden');
+        }
+      }
+
+      if (mode === 'pattern') evaluateSwitchboard();
+      if (mode === 'zeroshot') runZeroShotEval();
+      if (mode === 'predicate') runPredicateEval();
+    }
+
+    // Confidence Slider Handler
+    function onSliderChange(val) {
+      const num = parseFloat(val);
+      const display = document.getElementById('sliderValDisplay');
+      if (display) display.textContent = `@ >${num.toFixed(2)}`;
+      const branch0Span = document.getElementById('branch-0-code');
+      if (branch0Span) branch0Span.textContent = `'bug @ >${num.toFixed(2)}'`;
       evaluateSwitchboard();
     }
 
-    document.getElementById('eventInput').addEventListener('input', evaluateSwitchboard);
-    evaluateSwitchboard();
+    // Mode 1: Switchboard Pattern Matcher Engine
+    const CANDIDATES = ['bug', 'billing', 'feature', 'spam'];
+    const CLASS_COLORS = {
+      bug: { bar: 'bg-emerald-400', text: 'text-emerald-400' },
+      billing: { bar: 'bg-sky-400', text: 'text-sky-400' },
+      feature: { bar: 'bg-peach-400', text: 'text-peach-400' },
+      spam: { bar: 'bg-coral-400', text: 'text-coral-400' }
+    };
 
-    // Stream simulation
+    function evaluateSwitchboard() {
+      const inputEl = document.getElementById('eventInput');
+      if (!inputEl) return;
+      const text = inputEl.value;
+      const slider = document.getElementById('guardSlider');
+      const threshold = parseFloat(slider ? slider.value : 0.80) || 0.80;
+
+      const t0 = performance.now();
+      const res = classifyZeroDep(text, CANDIDATES);
+      const t1 = performance.now();
+      const latency = Math.max(0.02, t1 - t0);
+
+      const winLabel = res.label;
+      const winScore = res.score;
+      const probs = res.probs;
+
+      // Update branch progress meters
+      const bugPct = Math.round((probs['bug'] || 0) * 100);
+      const billPct = Math.round((probs['billing'] || 0) * 100);
+      const featPct = Math.round((probs['feature'] || 0) * 100);
+      const spamPct = Math.round((probs['spam'] || 0) * 100);
+
+      const bar0 = document.getElementById('bar-branch-0');
+      const bar1 = document.getElementById('bar-branch-1');
+      const bar2 = document.getElementById('bar-branch-2');
+      const bar3 = document.getElementById('bar-branch-3');
+      const bar4 = document.getElementById('bar-branch-4');
+
+      if (bar0) bar0.style.width = `${bugPct}%`;
+      if (bar1) bar1.style.width = `${bugPct}%`;
+      if (bar2) bar2.style.width = `${billPct}%`;
+      if (bar3) bar3.style.width = `${featPct}%`;
+      if (bar4) bar4.style.width = `${spamPct}%`;
+
+      // Softmax Distribution Bars in Right Column
+      const distContainer = document.getElementById('probDistributionBars');
+      if (distContainer) {
+        distContainer.innerHTML = CANDIDATES.map(cat => {
+          const pct = Math.round((probs[cat] || 0) * 100);
+          const isWinner = cat === winLabel;
+          const color = CLASS_COLORS[cat];
+          return `
+            <div class="space-y-1">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="${isWinner ? 'font-bold text-ink-950 flex items-center gap-1.5' : 'text-ink-600'}">
+                  ${isWinner ? '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600 inline-block"></span>' : ''}
+                  ${cat}
+                </span>
+                <span class="font-bold ${isWinner ? 'text-ink-900' : 'text-ink-500'}">${pct}%</span>
+              </div>
+              <div class="w-full bg-ink-100 h-2 rounded-full overflow-hidden flex">
+                <div class="${color.bar} h-full transition-all duration-300 rounded-full" style="width: ${pct}%"></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Branch Resolution Decision
+      let activeBranchId = 5;
+      let guardFailed = false;
+
+      if (winLabel === 'bug' && winScore > 0.35) {
+        if (winScore > threshold) {
+          activeBranchId = 0;
+        } else {
+          guardFailed = true;
+          activeBranchId = 1;
+        }
+      } else if (winLabel === 'billing' && winScore > 0.35) {
+        activeBranchId = 2;
+      } else if (winLabel === 'feature' && winScore > 0.35) {
+        activeBranchId = 3;
+      } else if (winLabel === 'spam' && winScore > 0.35) {
+        activeBranchId = 4;
+      } else {
+        activeBranchId = 5;
+      }
+
+      // Update Switchboard Branch Highlights
+      for (let i = 0; i <= 5; i++) {
+        const lineEl = document.getElementById(`code-branch-${i}`);
+        const badgeEl = document.getElementById(`badge-branch-${i}`);
+        if (!lineEl || !badgeEl) continue;
+
+        if (i === activeBranchId) {
+          lineEl.className = 'p-2.5 rounded-lg border border-emerald-500/80 bg-emerald-950/40 transition-all space-y-1.5 shadow-sm';
+          badgeEl.className = 'text-[10px] px-2 py-0.5 rounded font-bold uppercase bg-emerald-500 text-white inline-block';
+          badgeEl.textContent = 'EXECUTED';
+        } else if (i === 0 && guardFailed) {
+          lineEl.className = 'p-2.5 rounded-lg border border-amber-500/80 bg-amber-950/30 transition-all space-y-1.5';
+          badgeEl.className = 'text-[10px] px-2 py-0.5 rounded font-bold uppercase bg-amber-500 text-ink-950 inline-block';
+          badgeEl.textContent = `GUARD FAILED (${(winScore * 100).toFixed(0)}% <= ${(threshold * 100).toFixed(0)}%)`;
+        } else {
+          lineEl.className = 'p-2.5 rounded-lg border border-transparent bg-transparent opacity-40 transition-all space-y-1.5 hover:opacity-75';
+          badgeEl.className = 'text-[10px] px-2 py-0.5 rounded font-bold uppercase hidden';
+          badgeEl.textContent = '';
+        }
+      }
+
+      // Update Dispatched Call Banner
+      const activeCallPreview = document.getElementById('activeCallPreview');
+      const actionNames = [
+        '→ dispatchP0Jira(event, meta)',
+        '→ queueForReview(event, meta)',
+        '→ routeToStripe(event, meta)',
+        '→ upvoteRoadmap(event, meta)',
+        '→ dropSilently()',
+        '→ generalInbox(event, meta)'
+      ];
+      const actionColors = [
+        'text-emerald-400 border-emerald-800/80',
+        'text-amber-300 border-amber-800/80',
+        'text-sky-300 border-sky-800/80',
+        'text-peach-300 border-peach-800/80',
+        'text-coral-400 border-coral-800/80',
+        'text-ink-300 border-ink-700'
+      ];
+      if (activeCallPreview) {
+        activeCallPreview.textContent = actionNames[activeBranchId];
+        activeCallPreview.className = `text-xs font-mono font-bold bg-ink-950/90 p-2.5 rounded-lg border truncate transition-colors ${actionColors[activeBranchId]}`;
+      }
+
+      // Update Explanation Card
+      const reasonEl = document.getElementById('routingReasonText');
+      if (reasonEl) {
+        if (activeBranchId === 0) {
+          reasonEl.innerHTML = `Classification: <span class="font-mono font-bold text-emerald-700">'bug'</span> with <span class="font-mono font-bold">${(winScore * 100).toFixed(1)}%</span> confidence. Because confidence exceeds guard threshold (<span class="font-mono font-semibold">${(winScore * 100).toFixed(1)}% &gt; ${(threshold * 100).toFixed(0)}%</span>), confidence guard passed and autonomously dispatched <code class="bg-emerald-100 text-emerald-900 px-1.5 py-0.5 rounded font-mono font-bold">dispatchP0Jira()</code> without human intervention.`;
+        } else if (activeBranchId === 1) {
+          reasonEl.innerHTML = `<span class="font-bold text-amber-800">Confidence Guard Tripped:</span> Classification is <span class="font-mono font-bold text-amber-900">'bug'</span> with <span class="font-mono font-bold">${(winScore * 100).toFixed(1)}%</span> confidence, but Branch 0 requires <span class="font-mono font-bold">&gt; ${(threshold * 100).toFixed(0)}%</span>. Execution safely fell through to unshielded review branch <code class="bg-amber-100 text-amber-900 px-1.5 py-0.5 rounded font-mono font-bold">queueForReview()</code>. Drag the slider below ${(winScore * 100).toFixed(0)}% to watch it promote to P0!`;
+        } else if (activeBranchId === 2) {
+          reasonEl.innerHTML = `Classification: <span class="font-mono font-bold text-sky-700">'billing'</span> with <span class="font-mono font-bold">${(winScore * 100).toFixed(1)}%</span> confidence. Directly routed to financial pipeline <code class="bg-sky-100 text-sky-900 px-1.5 py-0.5 rounded font-mono font-bold">routeToStripe()</code>.`;
+        } else if (activeBranchId === 3) {
+          reasonEl.innerHTML = `Classification: <span class="font-mono font-bold text-peach-800">'feature'</span> with <span class="font-mono font-bold">${(winScore * 100).toFixed(1)}%</span> confidence. Dispatched to product roadmap voter <code class="bg-peach-100 text-peach-900 px-1.5 py-0.5 rounded font-mono font-bold">upvoteRoadmap()</code>.`;
+        } else if (activeBranchId === 4) {
+          reasonEl.innerHTML = `Classification: <span class="font-mono font-bold text-coral-800">'spam'</span> with <span class="font-mono font-bold">${(winScore * 100).toFixed(1)}%</span> confidence. Discarded silently via <code class="bg-coral-100 text-coral-900 px-1.5 py-0.5 rounded font-mono font-bold">dropSilently()</code>.`;
+        } else {
+          reasonEl.innerHTML = `Classification score fell below categorical clarity. Defaulted safely to wildcard fallback <code class="bg-ink-100 text-ink-900 px-1.5 py-0.5 rounded font-mono font-bold">generalInbox()</code>.`;
+        }
+      }
+
+      // Telemetry Strips
+      const traceLat = document.getElementById('traceLatency');
+      if (traceLat) traceLat.textContent = `${latency.toFixed(2)} ms`;
+      const meterLat = document.getElementById('meterLatency');
+      if (meterLat) meterLat.textContent = `${latency.toFixed(2)}ms`;
+      const meterConf = document.getElementById('meterConfidence');
+      if (meterConf) meterConf.textContent = winScore.toFixed(2);
+    }
+
+    function setEvent(text) {
+      const el = document.getElementById('eventInput');
+      if (el) el.value = text;
+      evaluateSwitchboard();
+    }
+
+    const eventInputEl = document.getElementById('eventInput');
+    if (eventInputEl) eventInputEl.addEventListener('input', evaluateSwitchboard);
+
+    // Mode 2: Zero-Shot Array Classifier Helpers
+    const ZEROSHOT_PRESETS = {
+      triage: {
+        text: "Fatal error: checkout button throws 500 internal server error",
+        labels: ['bug', 'billing', 'feature', 'spam']
+      },
+      agnews: {
+        text: "Astronomers detect quantum magnetic oscillations in deep space galaxy",
+        labels: ['World', 'Sports', 'Business', 'Sci/Tech']
+      },
+      emotion: {
+        text: "I am so incredibly proud, honored, and thrilled for our team achievement today",
+        labels: ['sadness', 'joy', 'love', 'anger', 'fear', 'surprise']
+      }
+    };
+
+    let currentZeroShotPreset = 'triage';
+
+    function setZeroShotPreset(presetKey) {
+      currentZeroShotPreset = presetKey;
+      const p = ZEROSHOT_PRESETS[presetKey];
+      if (!p) return;
+
+      const input = document.getElementById('zeroShotInput');
+      if (input) input.value = p.text;
+      const code = document.getElementById('zeroShotLabelsCode');
+      if (code) code.textContent = JSON.stringify(p.labels);
+
+      ['triage', 'agnews', 'emotion'].forEach(k => {
+        const btn = document.getElementById(`btn-zs-${k}`);
+        if (btn) {
+          if (k === presetKey) {
+            btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-ink-900 text-white font-semibold';
+          } else {
+            btn.className = 'px-3 py-1 rounded-lg text-xs font-mono bg-ink-100 text-ink-800 hover:bg-ink-200 font-medium';
+          }
+        }
+      });
+
+      runZeroShotEval();
+    }
+
+    function runZeroShotEval() {
+      const input = document.getElementById('zeroShotInput');
+      if (!input) return;
+      const text = input.value;
+      const p = ZEROSHOT_PRESETS[currentZeroShotPreset];
+      const labels = p ? p.labels : ['bug', 'billing', 'feature', 'spam'];
+
+      const t0 = performance.now();
+      const res = classifyZeroDep(text, labels);
+      const t1 = performance.now();
+      const latency = Math.max(0.02, t1 - t0);
+
+      const latDisplay = document.getElementById('zeroShotLatency');
+      if (latDisplay) latDisplay.textContent = `${latency.toFixed(2)} ms`;
+
+      const listEl = document.getElementById('zeroShotResultsList');
+      if (listEl) {
+        const sorted = [...labels].sort((a, b) => (res.probs[b] || 0) - (res.probs[a] || 0));
+        listEl.innerHTML = sorted.map((lbl, idx) => {
+          const score = res.probs[lbl] || 0;
+          const pct = (score * 100).toFixed(1);
+          const isWinner = idx === 0;
+          return `
+            <div class="p-3 rounded-xl border ${isWinner ? 'bg-emerald-50/60 border-emerald-300 shadow-sm' : 'bg-canvas border-ink-200/80'} transition-all">
+              <div class="flex items-center justify-between font-mono text-xs mb-1.5">
+                <span class="font-bold flex items-center gap-2 ${isWinner ? 'text-emerald-900' : 'text-ink-800'}">
+                  ${isWinner ? '<span class="px-1.5 py-0.5 rounded bg-emerald-600 text-white text-[10px] font-bold uppercase">WINNER</span>' : ''}
+                  ${lbl}
+                </span>
+                <span class="font-bold ${isWinner ? 'text-emerald-700' : 'text-ink-600'}">${pct}%</span>
+              </div>
+              <div class="w-full bg-ink-100 h-2 rounded-full overflow-hidden flex">
+                <div class="${isWinner ? 'bg-emerald-500' : 'bg-ink-400'} h-full transition-all duration-300 rounded-full" style="width: ${pct}%"></div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    // Mode 3: Boolean Predicate Helpers
+    function setPredicatePreset(text, condition) {
+      const input = document.getElementById('predicateInput');
+      const cond = document.getElementById('predicateCondition');
+      if (input) input.value = text;
+      if (cond) cond.value = condition;
+      runPredicateEval();
+    }
+
+    function runPredicateEval() {
+      const input = document.getElementById('predicateInput');
+      const condInput = document.getElementById('predicateCondition');
+      if (!input || !condInput) return;
+      const text = input.value;
+      const cond = condInput.value;
+
+      const t0 = performance.now();
+      const res = judgePredicateZeroDep(text, cond);
+      const t1 = performance.now();
+      const latency = Math.max(0.02, t1 - t0);
+
+      const pill = document.getElementById('predicateVerdictPill');
+      if (pill) {
+        if (res.value) {
+          pill.className = 'px-8 py-3 rounded-2xl text-3xl font-mono font-bold uppercase bg-emerald-100 text-emerald-800 border-2 border-emerald-500 shadow-sm flex items-center gap-2';
+          pill.innerHTML = `<span>TRUE</span> <span class="text-emerald-600 text-2xl">✓</span>`;
+        } else {
+          pill.className = 'px-8 py-3 rounded-2xl text-3xl font-mono font-bold uppercase bg-coral-100 text-coral-800 border-2 border-coral-500 shadow-sm flex items-center gap-2';
+          pill.innerHTML = `<span>FALSE</span> <span class="text-coral-600 text-2xl">✗</span>`;
+        }
+      }
+
+      const scoreEl = document.getElementById('predicateScoreDisplay');
+      if (scoreEl) scoreEl.textContent = res.score.toFixed(2);
+
+      const latEl = document.getElementById('predicateLatencyDisplay');
+      if (latEl) latEl.textContent = `Latency: ${latency.toFixed(2)} ms`;
+    }
+
+    // High-Throughput Stream Simulation
     const BATCH_SAMPLE = [
       { text: "Fatal error: postgres connection pool deadlock 500", target: "dispatchP0Jira" },
       { text: "Why was my company credit card billed twice?", target: "routeToStripe" },
       { text: "Add dark mode theme option to settings page", target: "upvoteRoadmap" },
       { text: "Claim free Bitcoin luxury prize right now", target: "dropSilently" },
-      { text: "Minor cosmetic alignment on profile picture button", target: "queueForReview" },
+      { text: "Minor cosmetic button padding slightly off", target: "queueForReview" },
       { text: "Random obscure question with no category", target: "generalInbox" },
     ];
 
     function runBatchStream() {
       const list = document.getElementById('batchStreamList');
+      if (!list) return;
       list.innerHTML = '';
 
       BATCH_SAMPLE.forEach((item, idx) => {
         setTimeout(() => {
           const t0 = performance.now();
-          const inputVec = embed(item.text, false);
-          const rawScores = CANDIDATES.map(l => Math.max(0.001, cosine(inputVec, embed(l, true))));
-          const probsArr = softmax(rawScores);
+          const res = classifyZeroDep(item.text, CANDIDATES);
           const t1 = performance.now();
-
-          let bestIdx = 0;
-          let bestScore = -1;
-          for (let i = 0; i < CANDIDATES.length; i++) {
-            if (probsArr[i] > bestScore) {
-              bestScore = probsArr[i];
-              bestIdx = i;
-            }
-          }
-          const winLabel = CANDIDATES[bestIdx];
+          const latency = Math.max(0.02, t1 - t0);
 
           let routed = 'generalInbox';
-          if (winLabel === 'bug' && bestScore > 0.8) routed = 'dispatchP0Jira';
-          else if (winLabel === 'bug') routed = 'queueForReview';
-          else if (winLabel === 'billing') routed = 'routeToStripe';
-          else if (winLabel === 'feature') routed = 'upvoteRoadmap';
-          else if (winLabel === 'spam') routed = 'dropSilently';
+          if (res.label === 'bug' && res.score > 0.80) routed = 'dispatchP0Jira';
+          else if (res.label === 'bug') routed = 'queueForReview';
+          else if (res.label === 'billing') routed = 'routeToStripe';
+          else if (res.label === 'feature') routed = 'upvoteRoadmap';
+          else if (res.label === 'spam') routed = 'dropSilently';
 
           const row = document.createElement('div');
-          row.className = 'p-3 rounded-xl bg-canvas border border-ink-200/80 flex items-center justify-between gap-4 animate-fade-in';
+          row.className = 'p-3 rounded-xl bg-canvas border border-ink-200/80 flex items-center justify-between gap-4 transition-all';
           row.innerHTML = `
             <div class="flex-1 truncate">
-              <span class="text-ink-400 mr-2">#${idx+1}</span>
+              <span class="text-ink-400 mr-2 font-mono text-[11px]">#${idx+1}</span>
               <span class="text-ink-800 font-medium">${item.text}</span>
             </div>
             <div class="flex items-center gap-3 shrink-0">
-              <span class="text-[11px] font-mono text-ink-500">${(t1 - t0).toFixed(2)}ms</span>
+              <span class="text-[11px] font-mono text-ink-500">${latency.toFixed(2)}ms</span>
               <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold font-mono bg-ink-900 text-white">
                 → ${routed}()
               </span>
             </div>
           `;
           list.appendChild(row);
-        }, idx * 120);
+        }, idx * 100);
       });
     }
 
-    // Live device detection badge
+    // Live Device Badge
     const devBadge = document.getElementById('device-badge');
     if (devBadge) {
       const hasGpu = typeof navigator !== 'undefined' && 'gpu' in navigator;
-      devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${hasGpu ? 'bg-emerald-600' : 'bg-sky-600'}"></span>Device: ${hasGpu ? 'WebGPU Ready' : 'Browser CPU'} (0.05ms)`;
+      devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${hasGpu ? 'bg-emerald-600' : 'bg-sky-600'}"></span>Device: ${hasGpu ? 'WebGPU Ready' : 'Browser CPU'} (0.04ms)`;
     }
 
+    // Initial Execution
+    evaluateSwitchboard();
     runBatchStream();
   </script>
 </body>
