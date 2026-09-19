@@ -59,20 +59,20 @@ const spamEmails = await emails.filterAsync?.(isSpam);
 
 ## Empirical benchmark
 
-Evaluated on standard zero-shot benchmarks used by Jev (`classifier.dev`):
+Evaluated on standard zero-shot benchmarks used by TypeSafe Jev:
 
 ### AG News (4-way topic)
 | Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
 |---|---|---|---|
 | **hev (in-tree)** | **84.0%** | **0.088 ms** | **Zero (0)** |
-| Jev-1.13 | 87.7% | ~2.1 ms | System One |
+| Jev (TypeSafe) | 87.7% | ~2.1 ms | TypeSafe API |
 | Fastino / GLiNER2.5 | 81.2% | ~14.2 ms | Optional npm |
 
 ### Emotion (6-way affective)
 | Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
 |---|---|---|---|
 | **hev (in-tree)** | **83.0%** | **0.034 ms** | **Zero (0)** |
-| Jev-1.13 | 60.5% | ~2.3 ms | System One |
+| Jev (TypeSafe) | 60.5% | ~2.3 ms | TypeSafe API |
 | Fastino / GLiNER2.5 | 58.2% | ~14.8 ms | Optional npm |
 
 Run `npm run bench` to reproduce across `bench/ag_news.json` and `bench/emotion.json`.

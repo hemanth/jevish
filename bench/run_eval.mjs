@@ -12,7 +12,7 @@ const benchmarks = [
     file: path.join(__dirname, 'ag_news.json'),
     baselines: [
       { name: 'hev (in-tree built-in)', engine: 'in-tree' },
-      { name: 'Jev-1.13 (classifier.dev)', top1: '87.7%', meanLat: '~2.1 ms', p95Lat: '~3.4 ms', brier: '0.091', deps: 'System One' },
+      { name: 'Jev (TypeSafe)', top1: '87.7%', meanLat: '~2.1 ms', p95Lat: '~3.4 ms', brier: '0.091', deps: 'TypeSafe API' },
       { name: 'Fastino / GLiNER2.5', top1: '81.2%', meanLat: '~14.2 ms', p95Lat: '~22.5 ms', brier: '0.118', deps: 'Optional npm' },
       { name: 'SetFit / MiniLM-L6', top1: '74.6%', meanLat: '~18.0 ms', p95Lat: '~28.0 ms', brier: '0.142', deps: 'Python/Torch' },
     ]
@@ -22,7 +22,7 @@ const benchmarks = [
     file: path.join(__dirname, 'emotion.json'),
     baselines: [
       { name: 'hev (in-tree built-in)', engine: 'in-tree' },
-      { name: 'Jev-1.13 (classifier.dev)', top1: '60.5%', meanLat: '~2.3 ms', p95Lat: '~3.8 ms', brier: '0.165', deps: 'System One' },
+      { name: 'Jev (TypeSafe)', top1: '60.5%', meanLat: '~2.3 ms', p95Lat: '~3.8 ms', brier: '0.165', deps: 'TypeSafe API' },
       { name: 'Fastino / GLiNER2.5', top1: '58.2%', meanLat: '~14.8 ms', p95Lat: '~24.1 ms', brier: '0.184', deps: 'Optional npm' },
       { name: 'ModernBERT / Cross-Encoder', top1: '62.0%', meanLat: '~35.0 ms', p95Lat: '~52.0 ms', brier: '0.158', deps: 'PyTorch' },
     ]
@@ -75,7 +75,7 @@ function evaluateDataset(dataset) {
 
 console.log('='.repeat(80));
 console.log('hev Empirical Evaluation against Standard Academic Benchmarks');
-console.log('(Standard datasets used by Jev / classifier.dev for zero-shot evaluation)');
+console.log('(Standard datasets used by TypeSafe Jev for zero-shot evaluation)');
 console.log('='.repeat(80));
 
 for (const b of benchmarks) {
@@ -93,4 +93,4 @@ for (const b of benchmarks) {
   }
 }
 
-console.log('\n* Baselines referenced from published classifier.dev benchmark suites and evaluation protocols.\n');
+console.log('\n* Baselines referenced from published TypeSafe System One benchmark suites and evaluation protocols.\n');
