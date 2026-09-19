@@ -1,0 +1,51 @@
+{
+  "name": "hevu",
+  "version": "0.1.0",
+  "description": "Semantic pattern matching and zero-shot judgment in JavaScript.",
+  "type": "module",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    }
+  },
+  "files": [
+    "lib/",
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/index.test.js",
+    "bench": "node bench/run_eval.mjs",
+    "demo": "node examples/quickstart.js",
+    "playground": "node serve-playground.mjs"
+  },
+  "keywords": [
+    "hev",
+    "hevu",
+    "pattern-matching",
+    "semantic",
+    "classification",
+    "zero-shot",
+    "system-one",
+    "routing",
+    "nlp",
+    "functional"
+  ],
+  "author": "Hemanth HM <hemanth@h3manth.com> (https://h3manth.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "optionalDependencies": {
+    "@fastino/gliner25-long-context": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hemanth/hev"
+  }
+}
