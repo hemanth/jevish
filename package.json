@@ -1,5 +1,5 @@
 {
-  "name": "hevu",
+  "name": "hev",
   "version": "0.1.0",
   "description": "Semantic pattern matching and zero-shot judgment in JavaScript.",
   "type": "module",
@@ -26,7 +26,6 @@
   },
   "keywords": [
     "hev",
-    "hevu",
     "pattern-matching",
     "semantic",
     "classification",

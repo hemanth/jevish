@@ -1,17 +1,17 @@
-# hevu
+# hev
 
 Semantic pattern matching and zero-shot judgment in JavaScript. Sub-millisecond, calibrated, local-first.
 
 [**Live Interactive Playground →**](https://hemanth.github.io/hev/)
 
 ```bash
-npm install hevu
+npm install hev
 ```
 
 ## Quick start
 
 ```js
-import hev from 'hevu';
+import hev from 'hev';
 
 await hev('Checkout button returns 500 internal server error', {
   'bug @ >0.8': (t, meta) => fileJira(t, meta.score),
@@ -63,7 +63,7 @@ Measured across 50 canonical golden test cases in `bench/dataset.json`:
 
 | Engine | Top-1 Accuracy | Top-3 Recall | Mean Latency | p95 Latency | Brier Score | Dependencies |
 |---|---|---|---|---|---|---|
-| **hevu (in-tree built-in)** | **86.0%** | **98.0%** | **0.206 ms** | **0.936 ms** | **0.099** | **Zero (0)** |
+| **hev (in-tree built-in)** | **86.0%** | **98.0%** | **0.206 ms** | **0.936 ms** | **0.099** | **Zero (0)** |
 | Fastino / GLiNER2.5 | 94.0%* | 98.5%* | ~14 ms | ~22 ms | 0.082 | Optional npm |
 | TypeSafe (Jev Cloud) | 98.0%* | 100.0%* | ~240 ms | ~310 ms | 0.045 | API Key |
 
