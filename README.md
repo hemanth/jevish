@@ -1,8 +1,8 @@
-# hev
+# jevish
 
 Semantic pattern matching and zero-shot judgment in JavaScript. Sub-millisecond, calibrated, local-first.
 
-[**Live Interactive Playground →**](https://hemanth.github.io/hev/)
+[**Live Interactive Playground →**](https://hemanth.github.io/jevish/)
 
 ```bash
 npm install jevish
