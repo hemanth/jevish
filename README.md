@@ -64,16 +64,17 @@ Evaluated on standard zero-shot benchmarks used by TypeSafe Jev:
 ### AG News (4-way topic)
 | Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
 |---|---|---|---|
-| **hev (in-tree)** | **84.0%** | **0.051 ms** | **Zero (0)** |
-| Jev (TypeSafe API) | 84.0% | ~148 ms | TypeSafe API |
+| Jev (TypeSafe API) | 83.0% | ~137 ms | TypeSafe API |
 | Fastino / GLiNER2.5 | 81.2% | ~14.2 ms | Optional npm |
+| **hev (in-tree lexical)** | **36.0%** | **0.038 ms** | **Zero (0)** |
 
 ### Emotion (6-way affective)
 | Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
 |---|---|---|---|
-| **hev (in-tree)** | **83.0%** | **0.084 ms** | **Zero (0)** |
-| Jev (TypeSafe API) | 70.0% | ~138 ms | TypeSafe API |
+| Jev (TypeSafe API) | 70.0% | ~126 ms | TypeSafe API |
+| ModernBERT / Cross-Enc | 62.0% | ~35.0 ms | PyTorch |
 | Fastino / GLiNER2.5 | 58.2% | ~14.8 ms | Optional npm |
+| **hev (in-tree lexical)** | **36.0%** | **0.028 ms** | **Zero (0)** |
 
 Run `npm run bench` to reproduce across `bench/ag_news.json` and `bench/emotion.json`.
 

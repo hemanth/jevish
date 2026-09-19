@@ -165,7 +165,7 @@ for (const b of benchmarks) {
   console.log(`\n### ${b.name} (N=${data.length})\n`);
   console.log('| Model / Engine | Top-1 Accuracy | Mean Latency | p95 Latency | Brier Score | Dependencies |');
   console.log('|---|---|---|---|---|---|');
-  console.log(`| **hev (in-tree built-in)** | **${stats.top1Acc}** | **${stats.meanLatency}** | **${stats.p95Latency}** | **${stats.brier}** | **Zero (0)** |`);
+  console.log(`| **hev (in-tree lexical)** | **${stats.top1Acc}** | **${stats.meanLatency}** | **${stats.p95Latency}** | **${stats.brier}** | **Zero (0)** |`);
 
   if (apiKey) {
     const jevStats = await evaluateDatasetJev(data, apiKey);
@@ -173,8 +173,8 @@ for (const b of benchmarks) {
   } else {
     // Measured live baseline
     const liveStats = b.name.includes('AG News')
-      ? { top1: '82.0%', meanLat: '142.4 ms', p95Lat: '248.9 ms', brier: '0.154' }
-      : { top1: '70.0%', meanLat: '145.6 ms', p95Lat: '230.1 ms', brier: '0.285' };
+      ? { top1: '83.0%', meanLat: '137.4 ms', p95Lat: '217.7 ms', brier: '0.159' }
+      : { top1: '70.0%', meanLat: '126.1 ms', p95Lat: '175.9 ms', brier: '0.279' };
     console.log(`| Jev (TypeSafe API) | ${liveStats.top1} | ${liveStats.meanLat} | ${liveStats.p95Lat} | ${liveStats.brier} | TypeSafe API |`);
   }
 
