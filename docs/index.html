@@ -479,22 +479,53 @@
     </div>
   </section>
 
-  <!-- Section: Architecture Blueprint -->
+  <!-- Section: Architecture & Execution Path Blueprints -->
   <section id="architecture" class="scroll-mt-20 py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-ink-200/60">
     <div class="max-w-3xl mb-8">
       <div class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-peach-800 font-semibold mb-2">
-        Systems Architecture
+        Systems Architecture &amp; Execution Path
       </div>
       <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-900">
-        Architecture Blueprint
+        Architecture &amp; Execution Path Blueprints
       </h2>
       <p class="text-ink-700 text-sm mt-1">
-        Authored per <code>hemanth-diagram-style</code> and <code>diagram-design</code>. Pure monochrome `#000000` on `#ffffff` with an inverted solid-black focal card.
+        Authored strictly per <code>hemanth-diagram-style</code> and <code>diagram-design</code>. Pure monochrome ink-on-paper clarity with inverted solid-black focal cards and orthogonal routing.
       </p>
     </div>
 
-    <div class="p-6 sm:p-8 rounded-2xl bg-white border border-ink-200 shadow-sm text-center">
-      <img src="flow-diagram.svg" alt="hev Architecture Blueprint" class="w-full max-w-4xl mx-auto rounded-lg" />
+    <!-- Stacked Blueprint Cards -->
+    <div class="space-y-8">
+      <!-- 1. Execution Path Blueprint -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-white border border-ink-200 shadow-sm">
+        <div class="flex items-center justify-between pb-4 mb-4 border-b border-ink-100 flex-wrap gap-2">
+          <div>
+            <span class="font-mono text-xs font-bold text-ink-900 uppercase tracking-wide">01 / End-to-End Execution Path</span>
+            <div class="text-xs text-ink-500 mt-0.5">Ingress Reflection → Hardware Probe → Atomic Forward Pass → Confidence Gate Arbiter → Branch Resolution</div>
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-peach-100 text-peach-800 border border-peach-200">
+            0.05ms Forward Pass
+          </span>
+        </div>
+        <div class="overflow-x-auto text-center">
+          <img src="execution-path.svg" alt="hev End-to-End Execution Path Blueprint" class="w-full max-w-5xl mx-auto rounded-lg" />
+        </div>
+      </div>
+
+      <!-- 2. Systems Architecture Blueprint -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-white border border-ink-200 shadow-sm">
+        <div class="flex items-center justify-between pb-4 mb-4 border-b border-ink-100 flex-wrap gap-2">
+          <div>
+            <span class="font-mono text-xs font-bold text-ink-900 uppercase tracking-wide">02 / Progressive Inference Tiers</span>
+            <div class="text-xs text-ink-500 mt-0.5">Tier 1: Built-in Zero-Dep · Tier 2: Fastino / GLiNER Local Neural · Tier 3: TypeSafe Jev (Cloud)</div>
+          </div>
+          <span class="px-2.5 py-1 rounded-full text-[11px] font-mono font-semibold bg-sage-100 text-sage-800 border border-sage-200">
+            Hybrid Hardware Hierarchy
+          </span>
+        </div>
+        <div class="overflow-x-auto text-center">
+          <img src="flow-diagram.svg" alt="hev Progressive Inference Architecture" class="w-full max-w-5xl mx-auto rounded-lg" />
+        </div>
+      </div>
     </div>
   </section>
 

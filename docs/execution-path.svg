@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 540" width="100%" height="100%">
+  <defs>
+    <style>
+      .hdr { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; fill: #000000; letter-spacing: 0.16em; }
+      .node-title { font-family: 'Geist', -apple-system, sans-serif; font-size: 13px; font-weight: 600; fill: #000000; text-anchor: middle; }
+      .node-sub { font-family: 'Geist Mono', monospace; font-size: 8.5px; fill: #555555; text-anchor: middle; }
+      .focal-title { font-family: 'Geist', -apple-system, sans-serif; font-size: 13.5px; font-weight: 600; fill: #ffffff; text-anchor: middle; }
+      .focal-sub { font-family: 'Geist Mono', monospace; font-size: 8.5px; fill: #cccccc; text-anchor: middle; }
+      .badge-text { font-family: 'Geist Mono', monospace; font-size: 7.5px; font-weight: 600; fill: #000000; text-anchor: middle; letter-spacing: 0.06em; }
+      .focal-badge-text { font-family: 'Geist Mono', monospace; font-size: 7.5px; font-weight: 600; fill: #ffffff; text-anchor: middle; letter-spacing: 0.06em; }
+      .edge { stroke: #000000; stroke-width: 1.2; fill: none; }
+      .edge-dashed { stroke: #000000; stroke-width: 1.2; stroke-dasharray: 4,4; fill: none; }
+      .edge-tag { font-family: 'Geist Mono', monospace; font-size: 8px; font-weight: 600; fill: #555555; }
+      .cluster-solid { fill: #ffffff; stroke: #000000; stroke-width: 1.2; rx: 14; }
+      .cluster-dashed { fill: #ffffff; stroke: #000000; stroke-width: 1.0; stroke-dasharray: 4,4; rx: 14; }
+      .card { fill: #ffffff; stroke: #000000; stroke-width: 1.2; rx: 8; }
+      .focal-card { fill: #000000; stroke: #000000; stroke-width: 1.2; rx: 8; }
+      .badge { fill: #ffffff; stroke: #000000; stroke-width: 0.8; rx: 3; }
+      .focal-badge { fill: #000000; stroke: #ffffff; stroke-width: 0.8; rx: 3; }
+    </style>
+    <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#000000" />
+    </marker>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1080" height="540" fill="#ffffff" />
+
+  <!-- SECTION 1: INGRESS -->
+  <text class="hdr" x="30" y="44">01 / INGRESS</text>
+  <rect x="30" y="60" width="185" height="440" class="cluster-dashed" />
+
+  <!-- Node 1A: Callsite Payload -->
+  <g class="node">
+    <rect class="card" x="45" y="85" width="155" height="85" />
+    <rect class="badge" x="55" y="95" width="55" height="15" />
+    <text class="badge-text" x="82" y="106">CALLSITE</text>
+    <text class="node-title" x="122" y="132">hev(input, ...)</text>
+    <text class="node-sub" x="122" y="152">Text + Branch Map</text>
+  </g>
+
+  <!-- Node 1B: Reflection -->
+  <g class="node">
+    <rect class="card" x="45" y="195" width="155" height="135" />
+    <rect class="badge" x="55" y="205" width="75" height="15" />
+    <text class="badge-text" x="92" y="216">TYPE PROBE</text>
+    <text class="node-title" x="122" y="238">Intent Reflection</text>
+    <text class="node-sub" x="122" y="260">Object → Matcher</text>
+    <text class="node-sub" x="122" y="276">Array  → Zero-Shot</text>
+    <text class="node-sub" x="122" y="292">String → Predicate</text>
+    <text class="node-sub" x="122" y="308">1-Arg  → Auto-Curry</text>
+  </g>
+
+  <!-- Node 1C: Pipeline -->
+  <g class="node">
+    <rect class="card" x="45" y="355" width="155" height="85" />
+    <rect class="badge" x="55" y="365" width="65" height="15" />
+    <text class="badge-text" x="87" y="376">PIPELINE</text>
+    <text class="node-title" x="122" y="402">Point-Free</text>
+    <text class="node-sub" x="122" y="422">events.map(hev(...))</text>
+  </g>
+
+  <!-- SECTION 2: RUNTIME & DEVICE PROBE -->
+  <text class="hdr" x="245" y="44">02 / RUNTIME &amp; HARDWARE</text>
+  <rect x="245" y="60" width="200" height="440" class="cluster-solid" />
+
+  <!-- Node 2A: Device Probe -->
+  <g class="node">
+    <rect class="card" x="260" y="85" width="170" height="120" />
+    <rect class="badge" x="270" y="95" width="85" height="15" />
+    <text class="badge-text" x="312" y="106">DEVICE PROBE</text>
+    <text class="node-title" x="345" y="132">Hardware Hierarchy</text>
+    <text class="node-sub" x="345" y="154">Node: CUDA → MPS → CPU</text>
+    <text class="node-sub" x="345" y="172">Web:  WebGPU → WASM → CPU</text>
+    <text class="node-sub" x="345" y="190">hev.device() Active Probe</text>
+  </g>
+
+  <!-- Node 2B: Tier Selection -->
+  <g class="node">
+    <rect class="card" x="260" y="235" width="170" height="130" />
+    <rect class="badge" x="270" y="245" width="70" height="15" />
+    <text class="badge-text" x="305" y="256">TIER SELECT</text>
+    <text class="node-title" x="345" y="280">Inference Tier</text>
+    <text class="node-sub" x="345" y="304">Tier 1: Fastino / GLiNER</text>
+    <text class="node-sub" x="345" y="322">Tier 2: TypeSafe Jev API</text>
+    <text class="node-sub" x="345" y="340">Tier 3: Built-in Zero-Dep</text>
+  </g>
+
+  <!-- Node 2C: Fast Path -->
+  <g class="node">
+    <rect class="card" x="260" y="395" width="170" height="85" />
+    <rect class="badge" x="270" y="405" width="60" height="15" />
+    <text class="badge-text" x="300" y="416">IN-TREE</text>
+    <text class="node-title" x="345" y="438">Zero-Dep Fast Path</text>
+    <text class="node-sub" x="345" y="458">0ms Cold Start · 8.6 kB</text>
+  </g>
+
+  <!-- SECTION 3: IN-TREE FORWARD PASS -->
+  <text class="hdr" x="475" y="44">03 / ATOMIC FORWARD PASS</text>
+  <rect x="475" y="60" width="200" height="440" class="cluster-solid" />
+
+  <!-- Node 3A: Tokenizer -->
+  <g class="node">
+    <rect class="card" x="490" y="85" width="170" height="135" />
+    <rect class="badge" x="500" y="95" width="70" height="15" />
+    <text class="badge-text" x="535" y="106">TOKENIZER</text>
+    <text class="node-title" x="575" y="132">Feature Hashing</text>
+    <text class="node-sub" x="575" y="154">Suffix Stemming (Porter)</text>
+    <text class="node-sub" x="575" y="172">Subword 3-Grams (Typo)</text>
+    <text class="node-sub" x="575" y="190">FNV-1a 512-Dim Vectors</text>
+    <text class="node-sub" x="575" y="206">Cluster Overlap Lexicon</text>
+  </g>
+
+  <!-- Node 3B: Softmax -->
+  <g class="node">
+    <rect class="card" x="490" y="250" width="170" height="115" />
+    <rect class="badge" x="500" y="260" width="80" height="15" />
+    <text class="badge-text" x="540" y="271">CALIBRATION</text>
+    <text class="node-title" x="575" y="295">Softmax Logits</text>
+    <text class="node-sub" x="575" y="320">Temperature T = 0.15</text>
+    <text class="node-sub" x="575" y="338">L1/L2 CPU Cache Execution</text>
+    <text class="node-sub" x="575" y="354">Mean Latency: 0.052ms</text>
+  </g>
+
+  <!-- SECTION 4: GUARD ARBITER (HERO FOCAL CARD) -->
+  <text class="hdr" x="705" y="44">04 / GUARD ARBITER</text>
+  <rect x="705" y="60" width="185" height="440" class="cluster-dashed" />
+
+  <!-- Single Inverted Hero Focal Card -->
+  <g class="node-focal">
+    <rect class="focal-card" x="715" y="125" width="165" height="270" />
+    <rect class="focal-badge" x="727" y="140" width="95" height="17" />
+    <text class="focal-badge-text" x="774" y="152">GUARD ARBITER</text>
+    <text class="focal-title" x="797" y="190">Confidence Gate</text>
+    <text class="focal-sub" x="797" y="220">Pattern '@ &gt;threshold'</text>
+    <text class="focal-sub" x="797" y="240">Single Forward Pass</text>
+    <text class="focal-sub" x="797" y="260">score &gt;= 0.8 → PASS</text>
+    <text class="focal-sub" x="797" y="280">score &lt; 0.8 → FALL</text>
+    <text class="focal-sub" x="797" y="310">Injects (text, meta)</text>
+    <text class="focal-sub" x="797" y="330">Zero Double-Execution</text>
+    <text class="focal-sub" x="797" y="350">Deterministic Resolution</text>
+  </g>
+
+  <!-- SECTION 5: DISPATCH & RESOLUTION -->
+  <text class="hdr" x="920" y="44">05 / RESOLUTION</text>
+  <rect x="920" y="60" width="140" height="440" class="cluster-dashed" />
+
+  <!-- Branch 5A: Guarded -->
+  <g class="node">
+    <rect class="card" x="930" y="90" width="120" height="90" />
+    <rect class="badge" x="938" y="100" width="60" height="14" />
+    <text class="badge-text" x="968" y="111">GUARDED</text>
+    <text class="node-title" x="990" y="138">High-Conf</text>
+    <text class="node-sub" x="990" y="158">fileJira(t, meta)</text>
+  </g>
+
+  <!-- Branch 5B: Standard -->
+  <g class="node">
+    <rect class="card" x="930" y="225" width="120" height="90" />
+    <rect class="badge" x="938" y="235" width="55" height="14" />
+    <text class="badge-text" x="965" y="246">STANDARD</text>
+    <text class="node-title" x="990" y="272">Triage P2</text>
+    <text class="node-sub" x="990" y="292">queueReview(t)</text>
+  </g>
+
+  <!-- Branch 5C: Fallback -->
+  <g class="node">
+    <rect class="card" x="930" y="360" width="120" height="90" />
+    <rect class="badge" x="938" y="370" width="55" height="14" />
+    <text class="badge-text" x="965" y="381">FALLBACK</text>
+    <text class="node-title" x="990" y="408">Catch-all _</text>
+    <text class="node-sub" x="990" y="428">logInbox(t)</text>
+  </g>
+
+  <!-- ORTHOGONAL CONNECTIONS (Right angles with corner arcs) -->
+  <!-- 1A down to 1B -->
+  <path class="edge" d="M 122,170 L 122,195" marker-end="url(#arr)" />
+
+  <!-- 1B down to 1C -->
+  <path class="edge-dashed" d="M 122,330 L 122,355" marker-end="url(#arr)" />
+
+  <!-- 1B to 2A -->
+  <path class="edge" d="M 200,262 L 225,262 Q 235,262 235,245 L 235,155 Q 235,145 245,145 L 260,145" marker-end="url(#arr)" />
+
+  <!-- 2A down to 2B -->
+  <path class="edge" d="M 345,205 L 345,235" marker-end="url(#arr)" />
+
+  <!-- 2B down to 2C -->
+  <path class="edge" d="M 345,365 L 345,395" marker-end="url(#arr)" />
+
+  <!-- 2C to 3A -->
+  <path class="edge" d="M 430,435 L 455,435 Q 465,435 465,410 L 465,162 Q 465,152 475,152 L 490,152" marker-end="url(#arr)" />
+
+  <!-- 3A down to 3B -->
+  <path class="edge" d="M 575,220 L 575,250" marker-end="url(#arr)" />
+
+  <!-- 3B to Focal Arbiter 4 -->
+  <path class="edge" d="M 660,307 L 685,307 Q 695,307 695,280 L 695,265 Q 695,255 705,255 L 715,255" marker-end="url(#arr)" />
+
+  <!-- Focal Arbiter 4 to Branch 5A (Guarded @ >0.8) -->
+  <path class="edge" d="M 880,185 L 900,185 Q 910,185 910,170 L 910,145 Q 910,135 920,135 L 930,135" marker-end="url(#arr)" />
+  <text class="edge-tag" x="888" y="172">@ &gt;0.8</text>
+
+  <!-- Focal Arbiter 4 to Branch 5B (Standard match) -->
+  <path class="edge" d="M 880,270 L 930,270" marker-end="url(#arr)" />
+  <text class="edge-tag" x="888" y="262">match</text>
+
+  <!-- Focal Arbiter 4 to Branch 5C (Fallback _) -->
+  <path class="edge" d="M 880,355 L 900,355 Q 910,355 910,370 L 910,395 Q 910,405 920,405 L 930,405" marker-end="url(#arr)" />
+  <text class="edge-tag" x="888" y="380">fall _</text>
+
+</svg>
