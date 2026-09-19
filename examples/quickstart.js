@@ -31,3 +31,8 @@ const tickets = [
 
 const results = await Promise.all(tickets.map(triage));
 console.log(results);
+
+console.log('\n--- 5. Runtime Engine Telemetry ---');
+const meta = await hev.detailed('Database connection pool exhausted', ['bug', 'feature']);
+console.log(`Resolved: ${meta.label} (score: ${meta.score})`);
+console.log(`Engine:   ${meta.engine} (${meta.device})`);
