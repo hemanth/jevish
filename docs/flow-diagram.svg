@@ -1,99 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="100%" height="100%">
   <defs>
     <style>
-      .text-title { font-family: 'Geist', -apple-system, sans-serif; font-weight: 600; font-size: 14px; fill: #000000; }
-      .text-sub { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #666666; }
-      .text-mono { font-family: 'Geist Mono', monospace; font-size: 12px; fill: #000000; }
-      .text-focal { font-family: 'Geist', -apple-system, sans-serif; font-weight: 600; font-size: 15px; fill: #ffffff; }
-      .text-focal-sub { font-family: 'Geist Mono', monospace; font-size: 11px; fill: #cccccc; }
-      .box { fill: #ffffff; stroke: #000000; stroke-width: 1.2; rx: 6; }
-      .box-dashed { fill: #ffffff; stroke: #000000; stroke-width: 1.2; stroke-dasharray: 4 4; rx: 6; }
-      .focal { fill: #000000; stroke: #000000; stroke-width: 1.2; rx: 8; }
-      .badge { fill: #f4f4f5; stroke: #000000; stroke-width: 1.0; rx: 3; }
-      .badge-text { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 500; fill: #000000; }
+      .hdr { font-family: 'Geist Mono', monospace; font-size: 10px; font-weight: 600; fill: #000000; letter-spacing: 0.16em; }
+      .node-title { font-family: 'Geist', -apple-system, sans-serif; font-size: 13px; font-weight: 600; fill: #000000; text-anchor: middle; }
+      .node-sub { font-family: 'Geist Mono', monospace; font-size: 8.5px; fill: #555555; text-anchor: middle; }
+      .focal-title { font-family: 'Geist', -apple-system, sans-serif; font-size: 14px; font-weight: 600; fill: #ffffff; text-anchor: middle; }
+      .focal-sub { font-family: 'Geist Mono', monospace; font-size: 8.5px; fill: #cccccc; text-anchor: middle; }
+      .badge-text { font-family: 'Geist Mono', monospace; font-size: 7.5px; font-weight: 600; fill: #000000; text-anchor: middle; letter-spacing: 0.06em; }
+      .focal-badge-text { font-family: 'Geist Mono', monospace; font-size: 7.5px; font-weight: 600; fill: #ffffff; text-anchor: middle; letter-spacing: 0.06em; }
       .edge { stroke: #000000; stroke-width: 1.2; fill: none; }
-      .arrow { fill: #000000; }
+      .edge-dashed { stroke: #000000; stroke-width: 1.2; stroke-dasharray: 4,4; fill: none; }
+      .cluster-solid { fill: #ffffff; stroke: #000000; stroke-width: 1.2; rx: 14; }
+      .cluster-dashed { fill: #ffffff; stroke: #000000; stroke-width: 1.0; stroke-dasharray: 4,4; rx: 14; }
+      .card { fill: #ffffff; stroke: #000000; stroke-width: 1.2; rx: 8; }
+      .focal-card { fill: #000000; stroke: #000000; stroke-width: 1.2; rx: 8; }
+      .badge { fill: #ffffff; stroke: #000000; stroke-width: 0.8; rx: 3; }
+      .focal-badge { fill: #000000; stroke: #ffffff; stroke-width: 0.8; rx: 3; }
     </style>
-    <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M 0 1.5 L 8 5 L 0 8.5 z" class="arrow" />
+    <marker id="arr" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#000000" />
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="480" fill="#ffffff" />
+  <!-- Canvas -->
+  <rect width="1000" height="520" fill="#ffffff" />
 
-  <!-- Input Sources -->
-  <g transform="translate(40, 70)">
-    <rect class="box" width="220" height="80" />
-    <rect class="badge" x="12" y="12" width="70" height="18" />
-    <text class="badge-text" x="20" y="25">INPUT</text>
-    <text class="text-title" x="12" y="50">Natural Language</text>
-    <text class="text-sub" x="12" y="68">"Checkout returns 500 error"</text>
+  <!-- SECTION 1: INGRESS -->
+  <text class="hdr" x="40" y="44">01 / INGRESS</text>
+  <g class="cluster-dashed">
+    <rect x="40" y="60" width="220" height="420" class="cluster-dashed" />
   </g>
 
-  <g transform="translate(40, 200)">
-    <rect class="box" width="220" height="120" />
-    <rect class="badge" x="12" y="12" width="84" height="18" />
-    <text class="badge-text" x="18" y="25">PATTERNS</text>
-    <text class="text-title" x="12" y="48">Branch Dispatch</text>
-    <text class="text-sub" x="12" y="68">'bug @ >0.8' => fileJira</text>
-    <text class="text-sub" x="12" y="86">'billing'    => openStripe</text>
-    <text class="text-sub" x="12" y="104">_            => logInbox</text>
+  <!-- Ingress Card 1: Text -->
+  <g class="node">
+    <rect class="card" x="60" y="86" width="180" height="100" />
+    <rect class="badge" x="72" y="98" width="60" height="16" />
+    <text class="badge-text" x="102" y="110">PAYLOAD</text>
+    <text class="node-title" x="150" y="142">Input Text</text>
+    <text class="node-sub" x="150" y="164">"Checkout fails with 500"</text>
   </g>
 
-  <!-- Central Focal Card: hev Decision Engine -->
-  <g transform="translate(330, 110)">
-    <rect class="focal" width="240" height="180" />
-    <rect fill="#222222" stroke="#444444" stroke-width="1.0" rx="3" x="16" y="16" width="90" height="20" />
-    <text style="font-family: 'Geist Mono', monospace; font-size: 11px; fill: #ffffff; font-weight: 600;" x="24" y="30">hev ENGINE</text>
-    <text class="text-focal" x="16" y="65">Single-Pass Arbiter</text>
-    <text class="text-focal-sub" x="16" y="88">1. Intent Type Detection</text>
-    <text class="text-focal-sub" x="16" y="106">2. Single Forward Pass</text>
-    <text class="text-focal-sub" x="16" y="124">3. Calibrated Probabilities</text>
-    <text class="text-focal-sub" x="16" y="142">4. Guard Evaluation</text>
-    <text class="text-focal-sub" x="16" y="160">&lt; 0.2ms latency</text>
+  <!-- Ingress Card 2: Patterns -->
+  <g class="node">
+    <rect class="card" x="60" y="210" width="180" height="120" />
+    <rect class="badge" x="72" y="222" width="70" height="16" />
+    <text class="badge-text" x="107" y="234">DISPATCH</text>
+    <text class="node-title" x="150" y="264">Pattern Map</text>
+    <text class="node-sub" x="150" y="286">'bug @ >0.8' => fileJira</text>
+    <text class="node-sub" x="150" y="302">'billing'    => openStripe</text>
+    <text class="node-sub" x="150" y="318">_            => inbox</text>
   </g>
 
-  <!-- Execution Tiers -->
-  <g transform="translate(640, 50)">
-    <rect class="box" width="220" height="75" />
-    <rect class="badge" x="12" y="12" width="60" height="18" />
-    <text class="badge-text" x="18" y="25">TIER 1</text>
-    <text class="text-title" x="12" y="48">Zero-Dep Built-in</text>
-    <text class="text-sub" x="12" y="66">Pure JS, 0.2ms, Offline</text>
+  <!-- Ingress Card 3: Predicate / Scale -->
+  <g class="node">
+    <rect class="card" x="60" y="354" width="180" height="100" />
+    <rect class="badge" x="72" y="366" width="70" height="16" />
+    <text class="badge-text" x="107" y="378">PREDICATE</text>
+    <text class="node-title" x="150" y="410">Noul Condition</text>
+    <text class="node-sub" x="150" y="432">'is spam' · 'p1..p3'</text>
   </g>
 
-  <g transform="translate(640, 150)">
-    <rect class="box" width="220" height="75" />
-    <rect class="badge" x="12" y="12" width="60" height="18" />
-    <text class="badge-text" x="18" y="25">TIER 2</text>
-    <text class="text-title" x="12" y="48">GLiNER 2.5 (Local)</text>
-    <text class="text-sub" x="12" y="66">fastino ONNX, 14ms</text>
+  <!-- SECTION 2: HEV ENGINE RUNTIME -->
+  <text class="hdr" x="300" y="44">02 / HEV ARBITER (LOCAL IN-TREE)</text>
+  <rect x="300" y="60" width="360" height="420" class="cluster-solid" />
+
+  <!-- Single Focal Node: Decision Engine (Solid Black Hero) -->
+  <g class="node-focal">
+    <rect class="focal-card" x="330" y="90" width="300" height="170" />
+    <rect class="focal-badge" x="346" y="106" width="90" height="18" />
+    <text class="focal-badge-text" x="391" y="119">CORE ARBITER</text>
+    <text class="focal-title" x="480" y="152">hev Decision Engine</text>
+    <text class="focal-sub" x="480" y="176">1. Intent Type Reflection</text>
+    <text class="focal-sub" x="480" y="194">2. Single-Pass Unified Schema</text>
+    <text class="focal-sub" x="480" y="212">3. Calibrated Softmax Logits</text>
+    <text class="focal-sub" x="480" y="230">4. Confidence Guard Evaluator</text>
   </g>
 
-  <g transform="translate(640, 250)">
-    <rect class="box-dashed" width="220" height="75" />
-    <rect class="badge" x="12" y="12" width="60" height="18" />
-    <text class="badge-text" x="18" y="25">TIER 3</text>
-    <text class="text-title" x="12" y="48">System One (Cloud)</text>
-    <text class="text-sub" x="12" y="66">TypeSafe Jev, 240ms</text>
+  <!-- Step 2: Action Dispatch Node -->
+  <g class="node">
+    <rect class="card" x="330" y="290" width="300" height="96" />
+    <rect class="badge" x="346" y="302" width="76" height="16" />
+    <text class="badge-text" x="384" y="314">EXECUTION</text>
+    <text class="node-title" x="480" y="344">Branch Execution</text>
+    <text class="node-sub" x="480" y="366">handler(text, { score, probs })</text>
   </g>
 
-  <!-- Output Action -->
-  <g transform="translate(330, 360)">
-    <rect class="box" width="240" height="70" />
-    <rect class="badge" x="12" y="12" width="70" height="18" />
-    <text class="badge-text" x="20" y="25">OUTPUT</text>
-    <text class="text-title" x="12" y="48">Executed Action / Label</text>
-    <text class="text-sub" x="12" y="64">fileJira(text, { score: 0.94 })</text>
+  <!-- In-Tree Zero-Dep Core Node -->
+  <g class="node">
+    <rect class="card" x="330" y="406" width="300" height="60" />
+    <rect class="badge" x="346" y="416" width="60" height="14" />
+    <text class="badge-text" x="376" y="427">IN-TREE</text>
+    <text class="node-sub" x="500" y="438" style="font-size: 10px; font-weight: 600; fill: #000;">Pure JS Hashed N-Grams · 0.2ms</text>
   </g>
 
-  <!-- Connectors -->
-  <path class="edge" d="M 260 110 L 330 160" marker-end="url(#arrow)" />
-  <path class="edge" d="M 260 260 L 330 230" marker-end="url(#arrow)" />
-  <path class="edge" d="M 570 150 L 640 90" marker-end="url(#arrow)" />
-  <path class="edge" d="M 570 200 L 640 185" marker-end="url(#arrow)" />
-  <path class="edge" d="M 570 250 L 640 285" marker-end="url(#arrow)" />
-  <path class="edge" d="M 450 290 L 450 360" marker-end="url(#arrow)" />
+  <!-- SECTION 3: INFERENCE TIERS -->
+  <text class="hdr" x="700" y="44">03 / PROGRESSIVE ACCELERATION</text>
+  <rect x="700" y="60" width="260" height="420" class="cluster-dashed" />
+
+  <!-- Tier 1: Built-in -->
+  <g class="node">
+    <rect class="card" x="720" y="90" width="220" height="80" />
+    <rect class="badge" x="734" y="102" width="56" height="15" />
+    <text class="badge-text" x="762" y="113">TIER 1</text>
+    <text class="node-title" x="830" y="138">In-Tree Baseline</text>
+    <text class="node-sub" x="830" y="156">0ms Cold Start · Zero-Dep</text>
+  </g>
+
+  <!-- Tier 2: GLiNER 2.5 -->
+  <g class="node">
+    <rect class="card" x="720" y="196" width="220" height="96" />
+    <rect class="badge" x="734" y="208" width="80" height="15" />
+    <text class="badge-text" x="774" y="219">TIER 2 (LOCAL)</text>
+    <text class="node-title" x="830" y="244">Fastino / GLiNER 2.5</text>
+    <text class="node-sub" x="830" y="264">ONNX Runtime · ~14ms</text>
+    <text class="node-sub" x="830" y="278">Long Context · MPS/WASM</text>
+  </g>
+
+  <!-- Tier 3: TypeSafe Cloud -->
+  <g class="node">
+    <rect class="card" x="720" y="320" width="220" height="96" />
+    <rect class="badge" x="734" y="332" width="80" height="15" />
+    <text class="badge-text" x="774" y="343">TIER 3 (CLOUD)</text>
+    <text class="node-title" x="830" y="368">System One (Jev)</text>
+    <text class="node-sub" x="830" y="388">TypeSafe HTTP API · ~240ms</text>
+    <text class="node-sub" x="830" y="402">TYPESAFE_API_KEY Required</text>
+  </g>
+
+  <!-- ORTHOGONAL CONNECTIONS (Right angles with corner arcs) -->
+  <!-- Ingress 1 to Arbiter -->
+  <path class="edge" d="M 240,136 L 280,136 Q 290,136 290,146 L 290,150 Q 290,160 300,160 L 330,160" marker-end="url(#arr)" />
+
+  <!-- Ingress 2 to Arbiter -->
+  <path class="edge" d="M 240,270 L 280,270 Q 290,270 290,250 L 290,210 Q 290,200 300,200 L 330,200" marker-end="url(#arr)" />
+
+  <!-- Arbiter down to Dispatch -->
+  <path class="edge" d="M 480,260 L 480,290" marker-end="url(#arr)" />
+
+  <!-- Arbiter out to Tier 1 -->
+  <path class="edge" d="M 630,130 L 720,130" marker-end="url(#arr)" />
+
+  <!-- Arbiter out to Tier 2 -->
+  <path class="edge" d="M 630,180 L 670,180 Q 680,180 680,200 L 680,230 Q 680,244 690,244 L 720,244" marker-end="url(#arr)" />
+
+  <!-- Arbiter out to Tier 3 -->
+  <path class="edge-dashed" d="M 630,220 L 660,220 Q 670,220 670,240 L 670,350 Q 670,368 690,368 L 720,368" marker-end="url(#arr)" />
 
 </svg>
