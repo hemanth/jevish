@@ -77,7 +77,10 @@ Evaluated on standard zero-shot benchmarks used by Jev (`classifier.dev`):
 
 Run `npm run bench` to reproduce across `bench/ag_news.json` and `bench/emotion.json`.
 
-## Demo
+## Runtime & devices
+
+Runs anywhere: Node.js, Bun, Deno, Cloudflare Workers, and modern browsers (8.6 kB). Detects `CUDA` → `MPS` → `CPU` (or `WebGPU` → `WASM` in browser) via `hev.device()`.
+
 
 ```bash
 npm run demo

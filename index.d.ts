@@ -1,20 +1,25 @@
+export type ComputeDevice = 'cuda' | 'mps' | 'cpu' | 'webgpu' | 'wasm' | 'cloud';
+
 export interface ClassificationMeta {
   label: string;
   score: number;
   probs: Record<string, number>;
   engine: 'gliner' | 'typesafe' | 'builtin';
+  device?: ComputeDevice;
 }
 
 export interface PredicateMeta {
   value: boolean;
   score: number;
   engine: 'gliner' | 'typesafe' | 'builtin';
+  device?: ComputeDevice;
 }
 
 export interface HevOptions {
   meta?: boolean;
   apiKey?: string;
   endpoint?: string;
+  device?: 'auto' | ComputeDevice;
   engine?: any;
 }
 
@@ -44,8 +49,10 @@ export interface HevFunction {
   is(condition: string, options?: HevOptions): (text: string, opts?: HevOptions) => Promise<boolean>;
   pick(labels: string[], options?: HevOptions): (text: string, opts?: HevOptions) => Promise<string>;
   match<T = any>(branches: BranchMap<T>, options?: HevOptions): (text: string, opts?: HevOptions) => Promise<T>;
+  device(): ComputeDevice;
 }
 
 declare const hev: HevFunction;
 export default hev;
 export { hev };
+

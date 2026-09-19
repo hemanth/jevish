@@ -1,4 +1,4 @@
-import { defaultEngine, Engine } from './lib/engine.js';
+import { defaultEngine, Engine, detectDevice } from './lib/engine.js';
 import { matchObject } from './lib/matcher.js';
 
 /**
@@ -91,5 +91,14 @@ hev.match = function match(branches, options = {}) {
   return (text, opts) => hev(text, branches, { ...options, ...opts });
 };
 
+/**
+ * Current active compute device ('cuda' | 'mps' | 'cpu' | 'webgpu' | 'wasm')
+ */
+hev.device = function device() {
+  return defaultEngine.activeDevice;
+};
+
 hev.Engine = Engine;
-export { hev, matchObject, Engine };
+hev.detectDevice = detectDevice;
+export { hev, matchObject, Engine, detectDevice };
+

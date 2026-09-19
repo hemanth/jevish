@@ -105,3 +105,12 @@ test('9. Handler receives (text, meta)', async () => {
   assert.equal(passedMeta.label, 'bug report');
   assert.ok(passedMeta.score > 0);
 });
+
+test('10. Hardware device detection & metadata reporting', async () => {
+  const currentDevice = hev.device();
+  assert.ok(['cuda', 'mps', 'cpu', 'webgpu', 'wasm'].includes(currentDevice));
+
+  const meta = await hev.detailed('Fatal crash in memory manager', ['bug', 'feature']);
+  assert.equal(meta.device, 'cpu'); // Built-in in-tree runs in L1/L2 CPU cache
+});
+
