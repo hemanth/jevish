@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import hev from '../index.js';
+import jevish, { hev, jevish as namedJevish } from '../index.js';
 
 test('1. Zero-shot classification (array mode)', async () => {
   const result = await hev('The checkout button returns a 500 internal server error', [
@@ -124,4 +124,11 @@ test('11. Speculative cascade execution mode', async () => {
   assert.equal(meta.engine, 'cascade');
   assert.equal(typeof meta.fastPath, 'boolean');
   assert.equal(meta.fastPath, true);
+});
+
+test('12. Module exports both default jevish and hev', async () => {
+  assert.equal(typeof jevish, 'function');
+  assert.equal(typeof namedJevish, 'function');
+  assert.equal(typeof hev, 'function');
+  assert.equal(jevish, hev);
 });

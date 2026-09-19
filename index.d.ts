@@ -52,7 +52,8 @@ export interface HevFunction {
   device(): ComputeDevice;
 }
 
+declare const jevish: HevFunction;
 declare const hev: HevFunction;
-export default hev;
-export { hev };
+export default jevish;
+export { jevish, hev };
 

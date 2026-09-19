@@ -9,7 +9,7 @@ import { matchObject } from './lib/matcher.js';
  * @param {Array|Record<string, any>|string} [arg2] - Patterns (Array, Object) or Condition (string)
  * @param {object} [options]
  */
-export default function hev(arg1, arg2, options = {}) {
+function hev(arg1, arg2, options = {}) {
   // 1. Currying: hev(['bug', 'feature']) or hev({ bug: fn, _: fn })
   if (arguments.length === 1 && (Array.isArray(arg1) || (arg1 && typeof arg1 === 'object'))) {
     return (text, opts) => hev(text, arg1, { ...options, ...opts });
@@ -100,5 +100,7 @@ hev.device = function device() {
 
 hev.Engine = Engine;
 hev.detectDevice = detectDevice;
-export { hev, matchObject, Engine, detectDevice };
+const jevish = hev;
+export default jevish;
+export { jevish, hev, matchObject, Engine, detectDevice };
 

@@ -11,9 +11,9 @@ npm install jevish
 ## Quick start
 
 ```js
-import hev from 'jevish';
+import jevish from 'jevish';
 
-await hev('Checkout button returns 500 internal server error', {
+await jevish('Checkout button returns 500 internal server error', {
   'bug @ >0.8': (t, meta) => fileJira(t, meta.score),
   'bug':        (t) => queueTriage(t),
   'billing':    (t) => openStripe(t),
@@ -21,14 +21,14 @@ await hev('Checkout button returns 500 internal server error', {
 });
 ```
 
-`hev()` evaluates semantic pattern handlers, zero-shot arrays, or boolean predicates in a single forward pass. That's the whole API.
+`jevish()` evaluates semantic pattern handlers, zero-shot arrays, or boolean predicates in a single forward pass. That's the whole API.
 
 ## Zero-shot classification
 
 Pass an array of labels to get the winning category:
 
 ```js
-const category = await hev('Can you provide an invoice for last month?', [
+const category = await jevish('Can you provide an invoice for last month?', [
   'bug',
   'feature',
   'billing',
@@ -36,10 +36,10 @@ const category = await hev('Can you provide an invoice for last month?', [
 // => 'billing'
 ```
 
-Access calibrated probabilities via `hev.detailed()`:
+Access calibrated probabilities via `jevish.detailed()`:
 
 ```js
-const meta = await hev.detailed('Database connection pool exhausted', ['bug', 'feature']);
+const meta = await jevish.detailed('Database connection pool exhausted', ['bug', 'feature']);
 console.log(meta.score); // 0.96
 console.log(meta.probs); // { bug: 0.96, feature: 0.04 }
 ```
@@ -49,8 +49,8 @@ console.log(meta.probs); // { bug: 0.96, feature: 0.04 }
 Every mode auto-curries when called with only the patterns:
 
 ```js
-const triage = hev(['bug', 'feature', 'billing']);
-const isSpam = hev.is('spam');
+const triage = jevish(['bug', 'feature', 'billing']);
+const isSpam = jevish.is('spam');
 
 const tickets = await fetchInbox();
 const categories = await Promise.all(tickets.map(triage));
@@ -62,7 +62,7 @@ const spamEmails = await emails.filterAsync?.(isSpam);
 Evaluated on standard zero-shot benchmarks used by TypeSafe Jev:
 
 ### Hugging Face Benchmarks (N=100 per task)
-| Task / Dataset | `hev (in-tree)` | `hev (cascade)` | Jev (TypeSafe API) |
+| Task / Dataset | `jevish (in-tree)` | `jevish (cascade)` | Jev (TypeSafe API) |
 |---|---|---|---|
 | **Intent Routing** (`banking77`) | **86.0%** (0.05 ms) | **99.0%** (29 ms) | **100.0%** (139 ms) |
 | **Spam Guardrails** (`sms_spam`) | **72.0%** (0.02 ms) | **98.0%** (134 ms) | **98.0%** (146 ms) |
@@ -72,7 +72,7 @@ Run `npm run bench` to reproduce live across all canonical Hugging Face datasets
 
 ## Runtime & devices
 
-Runs anywhere: Node.js, Bun, Deno, Cloudflare Workers, and modern browsers (8.6 kB). Detects `CUDA` → `MPS` → `CPU` (or `WebGPU` → `WASM` in browser) via `hev.device()`. [View Execution Path Blueprint →](docs/execution-path.svg)
+Runs anywhere: Node.js, Bun, Deno, Cloudflare Workers, and modern browsers (8.6 kB). Detects `CUDA` → `MPS` → `CPU` (or `WebGPU` → `WASM` in browser) via `jevish.device()`. [View Execution Path Blueprint →](docs/execution-path.svg)
 
 
 ```bash
