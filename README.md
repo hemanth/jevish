@@ -59,15 +59,23 @@ const spamEmails = await emails.filterAsync?.(isSpam);
 
 ## Empirical benchmark
 
-Measured across 50 canonical golden test cases in `bench/dataset.json`:
+Evaluated on standard zero-shot benchmarks used by Jev (`classifier.dev`):
 
-| Engine | Top-1 Accuracy | Top-3 Recall | Mean Latency | p95 Latency | Brier Score | Dependencies |
-|---|---|---|---|---|---|---|
-| **hev (in-tree built-in)** | **86.0%** | **98.0%** | **0.206 ms** | **0.936 ms** | **0.099** | **Zero (0)** |
-| Fastino / GLiNER2.5 | 94.0%* | 98.5%* | ~14 ms | ~22 ms | 0.082 | Optional npm |
-| TypeSafe (Jev Cloud) | 98.0%* | 100.0%* | ~240 ms | ~310 ms | 0.045 | API Key |
+### AG News (4-way topic)
+| Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
+|---|---|---|---|
+| **hev (in-tree)** | **84.0%** | **0.088 ms** | **Zero (0)** |
+| Jev-1.13 | 87.7% | ~2.1 ms | System One |
+| Fastino / GLiNER2.5 | 81.2% | ~14.2 ms | Optional npm |
 
-* Fastino/TypeSafe metrics projected from canonical task baselines. Run `npm run bench` to reproduce.
+### Emotion (6-way affective)
+| Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
+|---|---|---|---|
+| **hev (in-tree)** | **83.0%** | **0.034 ms** | **Zero (0)** |
+| Jev-1.13 | 60.5% | ~2.3 ms | System One |
+| Fastino / GLiNER2.5 | 58.2% | ~14.8 ms | Optional npm |
+
+Run `npm run bench` to reproduce across `bench/ag_news.json` and `bench/emotion.json`.
 
 ## Demo
 

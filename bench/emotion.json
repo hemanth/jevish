@@ -1,0 +1,1202 @@
+[
+  {
+    "text": "im feeling rather rotten so im not very ambitious right now",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "im updating my blog because i feel shitty",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i never make her separate from me because i don t ever want her to feel like i m ashamed with her",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i left with my bouquet of red and yellow tulips under my arm feeling slightly more optimistic than when i arrived",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i was feeling a little vain when i did this one",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i cant walk into a shop anywhere where i do not feel uncomfortable",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i felt anger when at the end of a telephone call",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i explain why i clung to a relationship with a boy who was in many ways immature and uncommitted despite the excitement i should have been feeling for getting accepted into the masters program at the university of virginia",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i like to have the same breathless feeling as a reader eager to see what will happen next",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i jest i feel grumpy tired and pre menstrual which i probably am but then again its only been a week and im about as fit as a walrus on vacation for the summer",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i don t feel particularly agitated",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i feel beautifully emotional knowing that these women of whom i knew just a handful were holding me and my baba on our journey",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i pay attention it deepens into a feeling of being invaded and helpless",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i just feel extremely comfortable with the group of people that i dont even need to hide myself",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i find myself in the odd position of feeling supportive of",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "love"
+  },
+  {
+    "text": "i was feeling as heartbroken as im sure katniss was",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel a little mellow today",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel like my only role now would be to tear your sails with my pessimism and discontent",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel just bcoz a fight we get mad to each other n u wanna make a publicity n let the world knows about our fight",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i feel like reds and purples are just so rich and kind of perfect",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "im not sure the feeling of loss will ever go away but it may dull to a sweet feeling of nostalgia at what i shared in this life with my dad and the luck i had to have a dad for years",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel like ive gotten to know many of you through comments and emails and for that im appreciative and glad you are a part of this little space",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i survey my own posts over the last few years and only feel pleased with vague snippets of a few of them only feel that little bits of them capture what its like to be me or someone like me in dublin in the st century",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i also tell you in hopes that anyone who is still feeling stigmatized or ashamed of their mental health issues will let go of the stigma let go of the shame",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i don t feel guilty like i m not going to be able to cook for him",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i hate it when i feel fearful for absolutely no reason",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i am feeling outraged it shows everywhere",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i stole a book from one of my all time favorite authors and now i feel like a rotten person",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i do feel insecure sometimes but who doesnt",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i highly recommend visiting on a wednesday if youre able because its less crowded so you get to ask the farmers more questions without feeling rude for holding up a line",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "ive been missing him and feeling so restless at home thinking of him",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i posted on my facebook page earlier this week ive been feeling a little grumpy and out of sorts the past few days",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i start to feel emotional",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel so cold a href http irish",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i feel like i m defective or something for not having baby fever",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel more virtuous than when i eat veggies dipped in hummus",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel very honoured to be included in a magzine which prioritises health and clean living so highly im curious do any of you read magazines concerned with health and clean lifestyles such as the green parent",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i spent the last two weeks of school feeling miserable",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "im feeling very peaceful about our wedding again now after having",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i had been talking to coach claudia barcomb and coach ali boe for a long time and they both made me feel very welcomed at union",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel if i completely hated things i d exercise my democratic right speak my mind in what ever ways possible and try to enact a change",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i feel humiliated embarrassed or foolish i will remember that others have felt the same way because of the same kinds of things and i will be kind and helpful and accepting",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel reassured that i am dealing with my diet in the right way and that all is good",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel i have to agree with her even though i can imagine some rather unpleasant possible cases",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "im in such a happy mood today i feel almost delighted and i havent done anything different today then i normally have it is wonderful",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "im feeling really out of place and irritated",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i also know that i feel nothing than a friendly affection to them too",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel like i had a rather productive weekend and i cant always say that no matter how much i get done",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "im feeling insecure at the moment",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i was feeling pretty anxious all day but my first day at work was a very good day and that helped a lot",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i stood up to you i finally stood up to you and now i feel like im being punished if i could go back and do it again",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel a little nervous i go to the gym",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i feel like i could go into any situation and become successful because i ve been competing all my life explained schaub in an interview with the a href http bleacherreport",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i can t stop the anxiety i feel when i m alone when i ve got no distractions",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "im trying to feel out my house style now that im living on my own and have creative carte blanche",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i have tried to see what it would be like if i liked one of my girl friends but it has never really worked and i can only ever feel an emotional connection to them because they are my friends",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i had every intention of doing more gardening this morning while it was still cool but i was just feeling so rotten",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i have a good feeling about this so i am excited",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel like i am just starting to understand the blessings that come from being submissive to the will of the father",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i think about the things ive said and the stuff i have done it makes me feel disgusted in myself when i should be making you happy and smile which i was far from doing",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i woke up yesterday monday morning feeling a little depressed",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel so embarrassed",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i spent wandering around still kinda dazed and not feeling particularly sociable but because id been in hiding for a couple for days and it was getting to be a little unhealthy i made myself go down to the cross and hang out with folks",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i can honestly say that after each sistahs chat i feel invigorated and blessed",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i still feel stupid to be in that class this is all cause off pbss fault",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel a little stunned but can t imagine what the folks who were working in the studio up until this morning are feeling",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "surprise"
+  },
+  {
+    "text": "i admit im feeling a little bit unloved at this point",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel a bit stressed even though all the things i have going on are fun",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "im feeling pretty anxious",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i feel shocked and sad at the fact that there are so many sick people",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "surprise"
+  },
+  {
+    "text": "i think they have always been proponents of the idea and it is just slightly possible that his feelings for a particularly charming new england girl have brought him around to their way of thinking",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel like a naughty school girl because i am falling behind",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "love"
+  },
+  {
+    "text": "i am right handed however i play billiards left handed naturally so me trying to play right handed feels weird",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "surprise"
+  },
+  {
+    "text": "i can feel that they are kind friendly and can understand my feelings",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i were to go overseas or cross the border then i become a foreigner and will feel that way but never in my beloved land",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "love"
+  },
+  {
+    "text": "i feel disgusted in any man in power who talks about electricity being a problem in his area and says even my own house has similar problems",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i feel transcendant and splendid",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i finally arrived home a couple of hours later feeling somewhat exhausted dehydrated and even sun burnt",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i am feeling totally relaxed and comfy",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i want each of you to feel my gentle embrace",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "love"
+  },
+  {
+    "text": "i feel privileged in my world",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i am not a people person but for some fuckin reason people feel that they can come bore me with their fuckin petty garbage",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i realized my mistake and i m really feeling terrible and thinking that i shouldn t do that",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i suppose i feel too trusting sometimes",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i came home waiting for the shower read something which made me upset thats why i feel discontent haha",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i woke up feeling crappy tired and fighting this feeling all day maybe it is all the pollen the barometric pressure i dont know i know i was off kilter",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel like i am in paradise kissing those sweet lips make me feel like i dive into a magical world of love",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i am feeling so happy",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i am running at an approximate minute pace which i feel is quite acceptable",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i feel so disappointed when my ex girlfriend doesn t call me back",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i have a feeling that people are using it more than they need to and enjoying the feeling as it flies carefree off the tongue but that is alright with me",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "joy"
+  },
+  {
+    "text": "i am feeling uncertain of the merits of posting to this blog with the frequency or earnestness i had been over the previous year",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "i just plain feel envious of the self confidence they had",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i was feeling weird the other day and it went away about minutes after i took my metformin",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "fear"
+  },
+  {
+    "text": "when a friend dropped a frog down my neck",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "im feeling angry at someone i do something thoughtful for her and my feelings toward her soften",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i love neglecting this blog but sometimes i feel for my faithful readers",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "love"
+  },
+  {
+    "text": "i lay in bed feeling as though i were awaiting an unwelcome visitor nevertheless i told myself i was strong and thought of good things until i felt better",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  },
+  {
+    "text": "i feel my heart is tortured by what i have done",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "anger"
+  },
+  {
+    "text": "i was still feeling weepy and strung out so maggie treated me to ice cream and a movie a href http www",
+    "candidates": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "expected": "sadness"
+  }
+]
