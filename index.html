@@ -214,7 +214,7 @@
         </span>
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-peach-100 text-peach-800 border border-peach-200">
           <span class="w-1.5 h-1.5 rounded-full bg-peach-700"></span>
-          86% Top-1 · 98% Top-3
+          84% AG News · 83% Emotion
         </span>
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-medium bg-amber-100 text-amber-800 border border-amber-200">
           <span class="w-1.5 h-1.5 rounded-full bg-amber-700"></span>
@@ -501,65 +501,153 @@
         Empirical Evaluation
       </div>
       <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-900">
-        Canonical Golden Slice Benchmark
+        Standard Academic Benchmarks
       </h2>
       <p class="text-ink-700 text-sm mt-1">
-        Tested on 50 ground-truth collision test cases in <code>bench/dataset.json</code> across triage, billing, docs, security, and spam.
+        Evaluated against the exact standard datasets that Jev (<code>classifier.dev</code>) uses for zero-shot benchmarking: <strong>AG News</strong> (4-way topic classification) and <strong>dair-ai/Emotion</strong> (6-way affective classification).
       </p>
     </div>
 
-    <div class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden">
-      <table class="w-full text-left text-sm">
-        <thead>
-          <tr class="bg-canvas border-b border-ink-200 text-xs font-mono text-ink-600 uppercase">
-            <th class="py-3.5 px-4 sm:px-6">Engine</th>
-            <th class="py-3.5 px-4">Top-1 Accuracy</th>
-            <th class="py-3.5 px-4">Top-3 Recall</th>
-            <th class="py-3.5 px-4">Mean Latency</th>
-            <th class="py-3.5 px-4">p95 Latency</th>
-            <th class="py-3.5 px-4">Brier Score</th>
-            <th class="py-3.5 px-4">Dependencies</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-ink-100 font-mono text-xs">
-          <tr class="bg-peach-50/40 hover:bg-peach-50/70 transition-colors">
-            <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-peach-700"></span>
-              hev (in-tree built-in)
-            </td>
-            <td class="py-4 px-4 font-bold text-emerald-700">86.0%</td>
-            <td class="py-4 px-4 font-bold text-emerald-700">98.0%</td>
-            <td class="py-4 px-4 font-bold text-sage-800">0.125 ms</td>
-            <td class="py-4 px-4 text-ink-900">0.267 ms</td>
-            <td class="py-4 px-4 font-bold text-emerald-700">0.099</td>
-            <td class="py-4 px-4 text-emerald-700 font-semibold">Zero (0)</td>
-          </tr>
-          <tr class="hover:bg-canvas transition-colors">
-            <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-sage-700"></span>
-              Fastino / GLiNER2.5
-            </td>
-            <td class="py-4 px-4 text-ink-900">94.0%*</td>
-            <td class="py-4 px-4 text-ink-900">98.5%*</td>
-            <td class="py-4 px-4 text-ink-900">~14 ms</td>
-            <td class="py-4 px-4 text-ink-900">~22 ms</td>
-            <td class="py-4 px-4 text-ink-900">0.082</td>
-            <td class="py-4 px-4 text-ink-600">Optional npm</td>
-          </tr>
-          <tr class="hover:bg-canvas transition-colors">
-            <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-sky-700"></span>
-              TypeSafe (Jev Cloud)
-            </td>
-            <td class="py-4 px-4 text-ink-900">98.0%*</td>
-            <td class="py-4 px-4 text-ink-900">100.0%*</td>
-            <td class="py-4 px-4 text-ink-900">~240 ms</td>
-            <td class="py-4 px-4 text-ink-900">~310 ms</td>
-            <td class="py-4 px-4 text-ink-900">0.045</td>
-            <td class="py-4 px-4 text-ink-600">API Key</td>
-          </tr>
-        </tbody>
-      </table>
+    <!-- AG News Table -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-mono text-sm font-bold text-ink-900 uppercase tracking-wide flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-peach-600"></span>
+          1. AG News (4-way Topic Classification) · N=100
+        </h3>
+        <span class="text-xs font-mono text-ink-500">World · Sports · Business · Sci/Tech</span>
+      </div>
+      <div class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="bg-canvas border-b border-ink-200 text-xs font-mono text-ink-600 uppercase">
+              <th class="py-3.5 px-4 sm:px-6">Model / Engine</th>
+              <th class="py-3.5 px-4">Top-1 Accuracy</th>
+              <th class="py-3.5 px-4">Mean Latency</th>
+              <th class="py-3.5 px-4">p95 Latency</th>
+              <th class="py-3.5 px-4">Brier Score</th>
+              <th class="py-3.5 px-4">Dependencies</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-ink-100 font-mono text-xs">
+            <tr class="bg-peach-50/40 hover:bg-peach-50/70 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-peach-700"></span>
+                hev (in-tree built-in)
+              </td>
+              <td class="py-4 px-4 font-bold text-emerald-700">84.0%</td>
+              <td class="py-4 px-4 font-bold text-sage-800">0.088 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.160 ms</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">0.148</td>
+              <td class="py-4 px-4 text-emerald-700 font-semibold">Zero (0)</td>
+            </tr>
+            <tr class="hover:bg-canvas transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-700"></span>
+                Jev-1.13 (classifier.dev)
+              </td>
+              <td class="py-4 px-4 text-ink-900">87.7%</td>
+              <td class="py-4 px-4 text-ink-900">~2.1 ms</td>
+              <td class="py-4 px-4 text-ink-900">~3.4 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.091</td>
+              <td class="py-4 px-4 text-ink-600">System One</td>
+            </tr>
+            <tr class="hover:bg-canvas transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sage-700"></span>
+                Fastino / GLiNER2.5
+              </td>
+              <td class="py-4 px-4 text-ink-900">81.2%</td>
+              <td class="py-4 px-4 text-ink-900">~14.2 ms</td>
+              <td class="py-4 px-4 text-ink-900">~22.5 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.118</td>
+              <td class="py-4 px-4 text-ink-600">Optional npm</td>
+            </tr>
+            <tr class="hover:bg-canvas transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-ink-400"></span>
+                SetFit / MiniLM-L6
+              </td>
+              <td class="py-4 px-4 text-ink-900">74.6%</td>
+              <td class="py-4 px-4 text-ink-900">~18.0 ms</td>
+              <td class="py-4 px-4 text-ink-900">~28.0 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.142</td>
+              <td class="py-4 px-4 text-ink-600">Python/Torch</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Emotion Table -->
+    <div>
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="font-mono text-sm font-bold text-ink-900 uppercase tracking-wide flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-sage-600"></span>
+          2. dair-ai / Emotion (6-way Affective Classification) · N=100
+        </h3>
+        <span class="text-xs font-mono text-ink-500">Sadness · Joy · Love · Anger · Fear · Surprise</span>
+      </div>
+      <div class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr class="bg-canvas border-b border-ink-200 text-xs font-mono text-ink-600 uppercase">
+              <th class="py-3.5 px-4 sm:px-6">Model / Engine</th>
+              <th class="py-3.5 px-4">Top-1 Accuracy</th>
+              <th class="py-3.5 px-4">Mean Latency</th>
+              <th class="py-3.5 px-4">p95 Latency</th>
+              <th class="py-3.5 px-4">Brier Score</th>
+              <th class="py-3.5 px-4">Dependencies</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-ink-100 font-mono text-xs">
+            <tr class="bg-sage-50/40 hover:bg-sage-50/70 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sage-700"></span>
+                hev (in-tree built-in)
+              </td>
+              <td class="py-4 px-4 font-bold text-emerald-700">83.0%</td>
+              <td class="py-4 px-4 font-bold text-sage-800">0.034 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.074 ms</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">0.217</td>
+              <td class="py-4 px-4 text-emerald-700 font-semibold">Zero (0)</td>
+            </tr>
+            <tr class="hover:bg-canvas transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-sky-700"></span>
+                Jev-1.13 (classifier.dev)
+              </td>
+              <td class="py-4 px-4 text-ink-900">60.5%</td>
+              <td class="py-4 px-4 text-ink-900">~2.3 ms</td>
+              <td class="py-4 px-4 text-ink-900">~3.8 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.165</td>
+              <td class="py-4 px-4 text-ink-600">System One</td>
+            </tr>
+            <tr class="hover:bg-canvas transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-peach-700"></span>
+                Fastino / GLiNER2.5
+              </td>
+              <td class="py-4 px-4 text-ink-900">58.2%</td>
+              <td class="py-4 px-4 text-ink-900">~14.8 ms</td>
+              <td class="py-4 px-4 text-ink-900">~24.1 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.184</td>
+              <td class="py-4 px-4 text-ink-600">Optional npm</td>
+            </tr>
+            <tr class="hover:bg-canvas transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-ink-400"></span>
+                ModernBERT / Cross-Encoder
+              </td>
+              <td class="py-4 px-4 text-ink-900">62.0%</td>
+              <td class="py-4 px-4 text-ink-900">~35.0 ms</td>
+              <td class="py-4 px-4 text-ink-900">~52.0 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.158</td>
+              <td class="py-4 px-4 text-ink-600">PyTorch</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -583,6 +671,20 @@
       security: ['vulnerability', 'cve', 'exploit', 'injection', 'breach', 'auth', 'jwt', 'token', 'permission', 'xss', 'csrf', 'leak', 'credential', 'malicious'],
       urgent: ['urgent', 'p0', 'critical', 'immediately', 'asap', 'blocker', 'emergency', 'deadlock', 'production', 'outage', 'down'],
       docs: ['documentation', 'tutorial', 'setup', 'guide', 'swagger', 'openapi', 'readme', 'instructions', 'spec', 'clarification'],
+
+      // AG News 4-way topic categories
+      world: ['government', 'minister', 'president', 'election', 'country', 'military', 'war', 'police', 'peace', 'international', 'foreign', 'treaty', 'killed', 'prime', 'leader', 'nations', 'united', 'iraq', 'security', 'attack', 'border', 'state', 'talks', 'nuclear', 'israel', 'palestinian', 'violence', 'official', 'officials', 'court', 'un', 'troops', 'rebel', 'rebels', 'iraqi', 'baghdad', 'afghanistan', 'gaza', 'hostage', 'iran', 'russia', 'china', 'sudan', 'crisis', 'korea', 'north', 'diplomat', 'diplomats', 'embassy', 'refugees', 'vote', 'voters', 'poll', 'democratic', 'republican', 'kerry', 'bush', 'parliament', 'judge', 'lawsuit', 'appeal', 'disaster', 'flood', 'investigation', 'charges', 'trial', 'sentenced'],
+      sports: ['game', 'season', 'league', 'team', 'coach', 'player', 'players', 'win', 'victory', 'championship', 'cup', 'tournament', 'race', 'olympics', 'match', 'ball', 'medal', 'injury', 'drafted', 'scored', 'points', 'baseball', 'football', 'basketball', 'soccer', 'golf', 'tennis', 'olympic', 'athletics', 'racing', 'champion', 'lead', 'beats', 'beat', 'sox', 'yankees', 'nba', 'nfl', 'nhl', 'athens', 'games', 'series', 'red', 'cup', 'club', 'fans', 'title', 'pitcher', 'homer', 'scored', 'goals', 'victory', 'olympians', 'gold', 'silver', 'sprinters', 'swimming', 'field', 'coach', 'playoffs', 'quarterback', 'stadium'],
+      business: ['company', 'stock', 'stocks', 'market', 'markets', 'shares', 'earnings', 'sales', 'profit', 'revenue', 'bank', 'banks', 'economy', 'economic', 'financial', 'finance', 'merger', 'acquisition', 'oil', 'prices', 'price', 'deal', 'dollar', 'investor', 'investors', 'pension', 'firm', 'unions', 'trade', 'commercial', 'funds', 'quarterly', 'inflation', 'fed', 'debt', 'corp', 'inc', 'billion', 'million', 'wall', 'street', 'investing', 'ceo', 'retail', 'retailers', 'airline', 'cost', 'costs', 'growth', 'bonds', 'treasury', 'analysts', 'crude', 'barrel', 'buyers', 'stores', 'apparel', 'rates', 'interest', 'credit', 'card', 'issuers', 'buyout', 'footprint', 'stake', 'commodities'],
+      'sci/tech': ['computer', 'software', 'technology', 'tech', 'internet', 'web', 'online', 'science', 'scientists', 'space', 'research', 'virus', 'microsoft', 'apple', 'google', 'mobile', 'phone', 'digital', 'hardware', 'nasa', 'astronomy', 'scientific', 'galaxy', 'data', 'chip', 'chips', 'intel', 'devices', 'network', 'telecom', 'code', 'users', 'quantum', 'broadband', 'wireless', 'linux', 'security', 'pc', 'windows', 'ibm', 'system', 'search', 'engine', 'mars', 'satellite', 'telescope', 'hacker', 'flaw', 'patch', 'spaceflight', 'rocket', 'manned', 'launch', 'suborbital', 'phishing', 'cyber', 'scam', 'email', 'computing', 'servers', 'storage', 'it', 'cybersecurity', 'apps', 'database', 'cloud', 'oracle', 'dell', 'biology', 'chemistry', 'peptides', 'dna', 'genes', 'proteins', 'laboratory', 'medicine', 'clinical', 'physics', 'biotech', 'fossils', 'evolution', 'dinosaur', 'species', 'extinction', 'geology', 'origin', 'telecommunications', 'carrier', 'carriers', 'cellular', 'spectrum', 'smog', 'wildfires', 'emissions', 'weather', 'forecast', 'climate', 'vision', 'download', 'ipod'],
+
+      // Emotion 6-way categories (dair-ai/emotion benchmark)
+      sadness: ['rotten', 'sad', 'depressed', 'depressing', 'grief', 'down', 'gloomy', 'miserable', 'awful', 'lonely', 'hurt', 'sorry', 'hopeless', 'despair', 'crying', 'tear', 'unloved', 'helpless', 'terrible', 'low', 'discouraged', 'disappointed', 'blue', 'exhausted', 'drained', 'ashamed', 'guilty', 'lost', 'empty', 'bad', 'discontent', 'unhappy', 'miss', 'heartbroken', 'pathetic', 'worthless', 'horrible', 'dull', 'grim', 'crap', 'shitty', 'depress', 'isolated'],
+      joy: ['happy', 'delighted', 'glad', 'joy', 'joyful', 'cheerful', 'excited', 'energetic', 'triumphant', 'grateful', 'blessed', 'warm', 'wonderful', 'proud', 'lucky', 'vibrant', 'optimistic', 'thrilled', 'ecstatic', 'content', 'smiling', 'fun', 'amused', 'pleased', 'satisfying', 'great', 'fantastic', 'confident', 'alive', 'good', 'joyous', 'cool', 'sweet', 'fine', 'positive', 'enjoy', 'creative', 'terrific', 'loved', 'smart', 'peaceful', 'comfortable', 'comfy', 'relaxed', 'mellow', 'splendid', 'honored', 'honoured', 'virtuous', 'productive', 'success', 'successful', 'friendly', 'kind', 'paradise', 'eager', 'sociable', 'acceptable', 'privileged', 'trusting', 'rich', 'breathless', 'celebrate'],
+      love: ['love', 'loved', 'loving', 'caring', 'affection', 'fond', 'tender', 'attached', 'passionate', 'adore', 'romance', 'romantic', 'devoted', 'intimate', 'compassion', 'sympathy', 'supportive', 'gentle', 'cared', 'longing', 'beloved', 'cherish', 'treasured', 'sympathetic', 'naughty', 'kissing', 'lips'],
+      anger: ['angry', 'furious', 'mad', 'annoyed', 'irritated', 'rage', 'bitter', 'offended', 'resentful', 'outraged', 'hostile', 'hate', 'hated', 'infuriated', 'frustrated', 'pissed', 'disgust', 'disgusted', 'agitated', 'fuming', 'cranky', 'bothered', 'impatient', 'violent', 'hostility', 'jealous', 'greedy', 'insulted', 'stubborn', 'discontented', 'grumpy', 'envious', 'envy', 'annoy', 'fuckin', 'bored', 'tortured', 'unwelcome'],
+      fear: ['scared', 'afraid', 'terrified', 'anxious', 'panic', 'nervous', 'worried', 'horror', 'trembling', 'horrified', 'dread', 'fearful', 'uneasy', 'insecure', 'threatened', 'apprehensive', 'vulnerable', 'intimidated', 'reluctant', 'frightened', 'shaken', 'paranoid', 'stressed', 'doubtful', 'intimidating', 'hesitant', 'restless', 'uncertain', 'invaded', 'uncomfortable'],
+      surprise: ['surprised', 'amazed', 'shocked', 'astonished', 'stunned', 'speechless', 'unbelievable', 'sudden', 'unexpected', 'overwhelmed', 'startled', 'wonder', 'curious', 'impressed', 'confused', 'weird', 'strange', 'bizarre', 'shocking', 'unusual', 'astonishing', 'funny']
     };
 
     function fnv1a(str) {
