@@ -1,6 +1,6 @@
 # jevish
 
-Semantic pattern matching and zero-shot judgment in JavaScript. Sub-millisecond, calibrated, local-first.
+Semantic pattern matching and zero-shot judgment in JavaScript. Jev-ish: behaves like TypeSafe Jev in local CPU cache (<0.05ms, 0 deps), and speculatively escalates to cloud Jev when needed.
 
 [**Live Interactive Playground →**](https://hemanth.github.io/jevish/)
 
@@ -56,6 +56,10 @@ const tickets = await fetchInbox();
 const categories = await Promise.all(tickets.map(triage));
 const spamEmails = await emails.filterAsync?.(isSpam);
 ```
+
+## Speculative cascade
+
+Pass `{ cascade: true }` to resolve unambiguous queries in CPU cache (0.05ms, $0 cost) while speculatively escalating tough edge cases to TypeSafe Jev cloud to guarantee 99%+ accuracy (76% fast-path rate on banking intents).
 
 ## Empirical benchmark
 
