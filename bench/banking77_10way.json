@@ -1,0 +1,2802 @@
+[
+  {
+    "text": "How do I locate my card?",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I still have not received my new card, I ordered over a week ago.",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I ordered a card but it has not arrived. Help please!",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is there a way to know when my card will arrive?",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "My card has not arrived yet.",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "When will I get my card?",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Do you know if there is a tracking number for the new card you sent me?",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "i have not received my card",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "still waiting on that card",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is it normal to have to wait over a week for my new card?",
+    "expected": "card_arrival",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I need to know your exchange rates.",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "What exchange rates do you offer?",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How did you come up with your exchange rates?",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Where do you guys acquire your exchange rate?",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do I find the exchange rate?",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "What are your international exchange rates?",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How often do your exchange rates change",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Please advise what is the exchange rate",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How are exchange rates calculated?",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "what are exchange rates based on",
+    "expected": "exchange_rate",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "When traveling, can I auto top-up my card at certain times?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is there a limit when using auto top-up?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Will it automatically top-up or do I need to do that manually if there isn't much cash left?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I'm running out of money, can I  auto top up?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do I use auto top up?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can it automatically top-up money if there isn't much left?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "If there isn't much money left can it automatically top-up?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I read about the auto-top up function, but can't find it in the app.",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can I have it add money at certain time intervals when I travel?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I'm going to be away for awhile, can I have it add money automatically in certain intervals?",
+    "expected": "automatic_top_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "My entire gym bag, including my wallet, was stolen out of my locker today. Everything in my wallet is gone - how do I block the card to make it can't be used?",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I can't find my card and think it may have been stolen.",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Someone stole my card. I need to report it stolen. I made a police report already, but how do I report it with you?",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I cant find my card, it's gone.",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "My card is lost! What can I do?",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I lost my card",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Oh no!  I lost my card!  Help!",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I believe my card has been stolen, what can I do about this situation? It's urgent.",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Help! Someone stole my card!",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Help.  I have a stolen card!",
+    "expected": "lost_or_stolen_card",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do I get my PIN unlocked?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Where can I view my PIN?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Will you reinstate my PIN?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I accidentally blocked my PIN. How do I reset it?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do I unblock my pin after entering it wrong too many times?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I used the wrong ping too many times and now the account is blocked.  How do I unblock?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I need help because I drunken blocked my card?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do I reset my PIN, I can't seem to use my card?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "When I put the wrong pin too much, I got blocked, so can you help me unblock my pin",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "My pin was blocked, how do I make it so I can use it?",
+    "expected": "pin_blocked",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I made a transaction this morning and would like to revert it.",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can i cancel a charge?",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can I cancel my transaction?",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I made a transaction but did it to the wrong account.",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Tell me how to cancel a transfer.",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I need you to cancel a transfer that I made.  It is the wrong account number and the app won't let me stop the transaction.  Please stop it!",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I need to cancel my recent transfer immediately, I made a mistake there, please help quickly before it goes through",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I would like to revert a transaction I did this morning",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "If I make a transaction can I cancel it?",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How can I cancel a transfer?",
+    "expected": "cancel_transfer",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Do all ATMs take this card?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Which ATMs accept this card?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Where is the closest Mastercard ATM?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is there a list of ATM machines?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Are there any specific ATMs that this card can be used at?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do I know which ATMs will accept this card?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Which ATM's accept my card?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is there any nearby ATM's?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Where are the locations of ATMs that accept this card?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Which ATMs accept this placard ?",
+    "expected": "atm_support",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "The refund isn't showing up on my account.",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "My refund is missing from my statement.",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I requested a refund, and never received it. What can I do?",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I was supposed to get a purchase refunded but I don't see the money in my account",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "There's a refund missing from my statement",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I need help. I asked for a refund from a merchant a while ago, but I have not gotten my money back. I keep checking my account, but nothing is showing up. What should I do now?",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I am awaiting my refund",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How long does it take for a refund?",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Help! I keep checking my account, but my refund is not showing. I requested that a seller refund my money a while back, but there is no money showing in my account. What can you do for me?",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can you tell me why my refund is not showing in my statement?",
+    "expected": "Refund_not_showing_up",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is the top up feature available on the Apple Watch?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can I use the system Google Pay for top-ups?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "My top-up for Google Pay isn't working",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can I add money with Apple Pay?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can I use my Apple Watch to to top up?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Does Apple Pay give the option to top up?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Top up on my Google Pay isn't working.",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is it possible to top up with Apple Pay?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "do i have to setup apple pay to use it",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Can I use Apple Pay to top up?",
+    "expected": "apple_pay_or_google_pay",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "What can I use to verify my identify?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "What do you need to verify my identity?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I need to verify my identity, but how do I do that?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How can I verify my indentity?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "What is needed to prove my identity?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "What do you need for my identity check?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "How do you verify an identity?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Is there a specific type you need for identity verification?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "I got a message that I need to verify my identity; what do I do?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  },
+  {
+    "text": "Are there any documents needed for the identity check?",
+    "expected": "verify_my_identity",
+    "candidates": [
+      "card_arrival",
+      "lost_or_stolen_card",
+      "cancel_transfer",
+      "pin_blocked",
+      "Refund_not_showing_up",
+      "apple_pay_or_google_pay",
+      "automatic_top_up",
+      "atm_support",
+      "exchange_rate",
+      "verify_my_identity"
+    ],
+    "descriptions": {
+      "card_arrival": "track, locate, or check delivery of newly ordered card",
+      "lost_or_stolen_card": "report lost, stolen, or compromised bank card",
+      "cancel_transfer": "cancel or reverse a pending bank transfer",
+      "pin_blocked": "reset or unblock locked card pin code",
+      "Refund_not_showing_up": "refund not showing up or missing in account",
+      "apple_pay_or_google_pay": "set up apple pay, google pay, or phone wallet",
+      "automatic_top_up": "set up, change, or turn on auto top-up payments",
+      "atm_support": "cash machine or atm withdrawal issues",
+      "exchange_rate": "foreign currency exchange rate or conversion fees",
+      "verify_my_identity": "identity verification, passport, or photo id upload"
+    }
+  }
+]

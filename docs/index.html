@@ -813,14 +813,14 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
       </p>
     </div>
 
-    <!-- AG News Table -->
+    <!-- Banking77 Table -->
     <div class="mb-8">
       <div class="flex items-center justify-between mb-3">
         <h3 class="font-mono text-sm font-bold text-ink-900 uppercase tracking-wide flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-peach-600"></span>
-          1. AG News (4-way Topic Classification) · N=100
+          1. PolyAI / Banking77 (10-way Customer Intent Routing) · N=100
         </h3>
-        <span class="text-xs font-mono text-ink-500">World · Sports · Business · Sci/Tech</span>
+        <span class="text-xs font-mono text-ink-500">Hugging Face mteb/banking77</span>
       </div>
       <div class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden">
         <table class="w-full text-left text-sm">
@@ -831,67 +831,56 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
               <th class="py-3.5 px-4">Mean Latency</th>
               <th class="py-3.5 px-4">p95 Latency</th>
               <th class="py-3.5 px-4">Brier Score</th>
-              <th class="py-3.5 px-4">Dependencies</th>
+              <th class="py-3.5 px-4">Fast-Path / Runtime</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-ink-100 font-mono text-xs">
             <tr class="bg-peach-50/40 hover:bg-peach-50/70 transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-peach-700"></span>
-                hev (in-tree lexical)
+                hev (in-tree pure JS)
               </td>
-              <td class="py-4 px-4 font-bold text-ink-700">36.0%</td>
-              <td class="py-4 px-4 font-bold text-sage-800">0.038 ms</td>
-              <td class="py-4 px-4 text-ink-900">0.100 ms</td>
-              <td class="py-4 px-4 font-mono text-ink-700">0.546</td>
-              <td class="py-4 px-4 text-emerald-700 font-semibold">Zero (0)</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">86.0%</td>
+              <td class="py-4 px-4 font-bold text-sage-800">0.05 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.13 ms</td>
+              <td class="py-4 px-4 font-mono text-ink-700">0.128</td>
+              <td class="py-4 px-4 text-emerald-700 font-semibold">100% (local)</td>
+            </tr>
+            <tr class="bg-emerald-50/30 hover:bg-emerald-50/50 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                hev (speculative cascade)
+              </td>
+              <td class="py-4 px-4 font-bold text-emerald-700">99.0%</td>
+              <td class="py-4 px-4 font-bold text-sage-800">29.86 ms</td>
+              <td class="py-4 px-4 text-ink-900">147.94 ms</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">0.013</td>
+              <td class="py-4 px-4 text-emerald-700 font-semibold">76% fast path</td>
             </tr>
             <tr class="hover:bg-canvas transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sky-700"></span>
                 Jev (TypeSafe live API)
               </td>
-              <td class="py-4 px-4 font-bold text-emerald-700">83.0%</td>
-              <td class="py-4 px-4 text-ink-900">137.4 ms</td>
-              <td class="py-4 px-4 text-ink-900">217.7 ms</td>
-              <td class="py-4 px-4 font-bold text-emerald-700">0.159</td>
-              <td class="py-4 px-4 text-ink-600">TypeSafe API</td>
-            </tr>
-            <tr class="hover:bg-canvas transition-colors">
-              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-sage-700"></span>
-                Fastino / GLiNER2.5
-              </td>
-              <td class="py-4 px-4 text-ink-900">81.2%</td>
-              <td class="py-4 px-4 text-ink-900">~14.2 ms</td>
-              <td class="py-4 px-4 text-ink-900">~22.5 ms</td>
-              <td class="py-4 px-4 text-ink-900">0.118</td>
-              <td class="py-4 px-4 text-ink-600">Optional npm</td>
-            </tr>
-            <tr class="hover:bg-canvas transition-colors">
-              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-ink-400"></span>
-                SetFit / MiniLM-L6
-              </td>
-              <td class="py-4 px-4 text-ink-900">74.6%</td>
-              <td class="py-4 px-4 text-ink-900">~18.0 ms</td>
-              <td class="py-4 px-4 text-ink-900">~28.0 ms</td>
-              <td class="py-4 px-4 text-ink-900">0.142</td>
-              <td class="py-4 px-4 text-ink-600">Python/Torch</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">100.0%</td>
+              <td class="py-4 px-4 text-ink-900">139.03 ms</td>
+              <td class="py-4 px-4 text-ink-900">229.40 ms</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">0.005</td>
+              <td class="py-4 px-4 text-ink-600">0% (cloud API)</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
 
-    <!-- Emotion Table -->
+    <!-- SMS Spam Table -->
     <div>
       <div class="flex items-center justify-between mb-3">
         <h3 class="font-mono text-sm font-bold text-ink-900 uppercase tracking-wide flex items-center gap-2">
           <span class="w-2.5 h-2.5 rounded-full bg-sage-600"></span>
-          2. dair-ai / Emotion (6-way Affective Classification) · N=100
+          2. ucirvine / SMS Spam (Guardrails & Detection) · N=100
         </h3>
-        <span class="text-xs font-mono text-ink-500">Sadness · Joy · Love · Anger · Fear · Surprise</span>
+        <span class="text-xs font-mono text-ink-500">Hugging Face ucirvine/sms_spam</span>
       </div>
       <div class="rounded-2xl border border-ink-200 bg-white shadow-sm overflow-hidden">
         <table class="w-full text-left text-sm">
@@ -902,53 +891,42 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
               <th class="py-3.5 px-4">Mean Latency</th>
               <th class="py-3.5 px-4">p95 Latency</th>
               <th class="py-3.5 px-4">Brier Score</th>
-              <th class="py-3.5 px-4">Dependencies</th>
+              <th class="py-3.5 px-4">Fast-Path / Runtime</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-ink-100 font-mono text-xs">
             <tr class="bg-sage-50/40 hover:bg-sage-50/70 transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sage-700"></span>
-                hev (in-tree lexical)
+                hev (in-tree pure JS)
               </td>
-              <td class="py-4 px-4 font-bold text-ink-700">36.0%</td>
-              <td class="py-4 px-4 font-bold text-sage-800">0.028 ms</td>
-              <td class="py-4 px-4 text-ink-900">0.064 ms</td>
-              <td class="py-4 px-4 font-mono text-ink-700">0.665</td>
-              <td class="py-4 px-4 text-emerald-700 font-semibold">Zero (0)</td>
+              <td class="py-4 px-4 font-bold text-ink-700">72.0%</td>
+              <td class="py-4 px-4 font-bold text-sage-800">0.02 ms</td>
+              <td class="py-4 px-4 text-ink-900">0.03 ms</td>
+              <td class="py-4 px-4 font-mono text-ink-700">0.252</td>
+              <td class="py-4 px-4 text-emerald-700 font-semibold">100% (local)</td>
+            </tr>
+            <tr class="bg-emerald-50/30 hover:bg-emerald-50/50 transition-colors">
+              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                hev (speculative cascade)
+              </td>
+              <td class="py-4 px-4 font-bold text-emerald-700">98.0%</td>
+              <td class="py-4 px-4 font-bold text-sage-800">134.12 ms</td>
+              <td class="py-4 px-4 text-ink-900">224.11 ms</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">0.038</td>
+              <td class="py-4 px-4 text-emerald-700 font-semibold">Hybrid</td>
             </tr>
             <tr class="hover:bg-canvas transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sky-700"></span>
                 Jev (TypeSafe live API)
               </td>
-              <td class="py-4 px-4 font-bold text-emerald-700">70.0%</td>
-              <td class="py-4 px-4 text-ink-900">126.1 ms</td>
-              <td class="py-4 px-4 text-ink-900">175.9 ms</td>
-              <td class="py-4 px-4 text-ink-900 font-mono">0.279</td>
-              <td class="py-4 px-4 text-ink-600">TypeSafe API</td>
-            </tr>
-            <tr class="hover:bg-canvas transition-colors">
-              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-peach-700"></span>
-                Fastino / GLiNER2.5
-              </td>
-              <td class="py-4 px-4 text-ink-900">58.2%</td>
-              <td class="py-4 px-4 text-ink-900">~14.8 ms</td>
-              <td class="py-4 px-4 text-ink-900">~24.1 ms</td>
-              <td class="py-4 px-4 text-ink-900">0.184</td>
-              <td class="py-4 px-4 text-ink-600">Optional npm</td>
-            </tr>
-            <tr class="hover:bg-canvas transition-colors">
-              <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-ink-400"></span>
-                ModernBERT / Cross-Encoder
-              </td>
-              <td class="py-4 px-4 text-ink-900">62.0%</td>
-              <td class="py-4 px-4 text-ink-900">~35.0 ms</td>
-              <td class="py-4 px-4 text-ink-900">~52.0 ms</td>
-              <td class="py-4 px-4 text-ink-900">0.158</td>
-              <td class="py-4 px-4 text-ink-600">PyTorch</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">98.0%</td>
+              <td class="py-4 px-4 text-ink-900">146.26 ms</td>
+              <td class="py-4 px-4 text-ink-900">236.76 ms</td>
+              <td class="py-4 px-4 font-bold text-emerald-700">0.040</td>
+              <td class="py-4 px-4 text-ink-600">0% (cloud API)</td>
             </tr>
           </tbody>
         </table>

@@ -114,3 +114,14 @@ test('10. Hardware device detection & metadata reporting', async () => {
   assert.ok(['cpu', 'mps', 'cuda', 'cloud'].includes(meta.device));
 });
 
+test('11. Speculative cascade execution mode', async () => {
+  const meta = await hev.detailed('Checkout crashed with 500 internal server error', [
+    'bug: 500 error crash',
+    'billing: payment invoice'
+  ], { cascade: true });
+
+  assert.equal(meta.label, 'bug: 500 error crash');
+  assert.equal(meta.engine, 'cascade');
+  assert.equal(typeof meta.fastPath, 'boolean');
+  assert.equal(meta.fastPath, true);
+});

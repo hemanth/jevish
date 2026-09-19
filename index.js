@@ -27,7 +27,7 @@ export default function hev(arg1, arg2, options = {}) {
   // 3. Zero-shot Classification: hev(text, ['bug', 'feature'])
   if (Array.isArray(patterns)) {
     const engine = options.engine || defaultEngine;
-    return engine.classify(input, patterns).then(result => {
+    return engine.classify(input, patterns, options).then(result => {
       if (options.meta) {
         return result;
       }
@@ -38,7 +38,7 @@ export default function hev(arg1, arg2, options = {}) {
   // 4. Boolean Predicate (Noul): hev(text, 'is spam')
   if (typeof patterns === 'string') {
     const engine = options.engine || defaultEngine;
-    return engine.predicate(input, patterns).then(result => {
+    return engine.predicate(input, patterns, options).then(result => {
       if (options.meta) {
         return result;
       }
@@ -54,7 +54,7 @@ export default function hev(arg1, arg2, options = {}) {
  */
 hev.detailed = async function detailed(input, labels, options = {}) {
   const engine = options.engine || defaultEngine;
-  return engine.classify(String(input || ''), labels);
+  return engine.classify(String(input || ''), labels, options);
 };
 
 /**

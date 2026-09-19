@@ -61,22 +61,14 @@ const spamEmails = await emails.filterAsync?.(isSpam);
 
 Evaluated on standard zero-shot benchmarks used by TypeSafe Jev:
 
-### AG News (4-way topic)
-| Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
+### Hugging Face Benchmarks (N=100 per task)
+| Task / Dataset | `hev (in-tree)` | `hev (cascade)` | Jev (TypeSafe API) |
 |---|---|---|---|
-| Jev (TypeSafe API) | 83.0% | ~137 ms | TypeSafe API |
-| Fastino / GLiNER2.5 | 81.2% | ~14.2 ms | Optional npm |
-| **hev (in-tree lexical)** | **36.0%** | **0.038 ms** | **Zero (0)** |
+| **Intent Routing** (`banking77`) | **86.0%** (0.05 ms) | **99.0%** (29 ms) | **100.0%** (139 ms) |
+| **Spam Guardrails** (`sms_spam`) | **72.0%** (0.02 ms) | **98.0%** (134 ms) | **98.0%** (146 ms) |
+| **Topic Triage** (`ag_news`) | **33.0%** (0.06 ms) | **79.0%** (140 ms) | **82.0%** (149 ms) |
 
-### Emotion (6-way affective)
-| Model / Engine | Top-1 Acc | Latency (mean) | Dependencies |
-|---|---|---|---|
-| Jev (TypeSafe API) | 70.0% | ~126 ms | TypeSafe API |
-| ModernBERT / Cross-Enc | 62.0% | ~35.0 ms | PyTorch |
-| Fastino / GLiNER2.5 | 58.2% | ~14.8 ms | Optional npm |
-| **hev (in-tree lexical)** | **36.0%** | **0.028 ms** | **Zero (0)** |
-
-Run `npm run bench` to reproduce across `bench/ag_news.json` and `bench/emotion.json`.
+Run `npm run bench` to reproduce live across all canonical Hugging Face datasets.
 
 ## Runtime & devices
 

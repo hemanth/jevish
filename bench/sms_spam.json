@@ -1,0 +1,602 @@
+[
+  {
+    "text": "Oh k...i'm watching here:)",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Urgent UR awarded a complimentary trip to EuroDisinc Trav, Aco&Entry41 Or \u00a31000. To claim txt DIS to 87121 18+6*\u00a31.50(moreFrmMob. ShrAcomOrSglSuplt)10, LS1 3AJ",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Got c... I lazy to type... I forgot \u00fc in lect... I saw a pouch but like not v nice...",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You are a winner U have been specially selected 2 receive \u00a31000 cash or a 4* holiday (flights inc) speak to a live operator 2 claim 0871277810810",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "-PLS STOP bootydelious (32/F) is inviting you to be her friend. Reply YES-434 or NO-434 See her: www.SMS.ac/u/bootydelious STOP? Send STOP FRND to 62468",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "SMS. ac Blind Date 4U!: Rodds1 is 21/m from Aberdeen, United Kingdom. Check Him out http://img. sms. ac/W/icmb3cktz8r7!-4 no Blind Dates send HIDE",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "TheMob> Check out our newest selection of content, Games, Tones, Gossip, babes and sport, Keep your mobile fit and funky text WAP to 82468",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hmmm... Guess we can go 4 kb n power yoga... Haha, dunno we can tahan power yoga anot... Thk got lo oso, forgot liao...",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "December only! Had your mobile 11mths+? You are entitled to update to the latest colour camera mobile for Free! Call The Mobile Update Co FREE on 08002986906",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hello my boytoy ... Geeee I miss you already and I just woke up. I wish you were here in bed with me, cuddling me. I love you ...",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Mm that time you dont like fun",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "100 dating service cal;l 09064012103 box334sk38ch",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Send a logo 2 ur lover - 2 names joined by a heart. Txt LOVE NAME1 NAME2 MOBNO eg LOVE ADAM EVE 07123456789 to 87077 Yahoo! POBox36504W45WQ TxtNO 4 no ads 150p",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "GENT! We are trying to contact you. Last weekends draw shows that you won a \u00a31000 prize GUARANTEED. Call 09064012160. Claim Code K52. Valid 12hrs only. 150ppm",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Gud mrng dear have a nice day",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You have an important customer service announcement. Call FREEPHONE 0800 542 0825 now!",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Speaking of does he have any cash yet?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Under the sea, there lays a rock. In the rock, there is an envelope. In the envelope, there is a paper. On the paper, there are 3 words... '",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Thats a bit weird, even ?- where is the do supposed to be happening? But good idea, sure they will be in pub!",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "U are subscribed to the best Mobile Content Service in the UK for \u00a33 per 10 days until you send STOP to 82324. Helpline 08706091795",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Romantic Paris. 2 nights, 2 flights from \u00a379 Book now 4 next year. Call 08704439680Ts&Cs apply.",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "UR awarded a City Break and could WIN a \u00a3200 Summer Shopping spree every WK. Txt STORE to 88039 . SkilGme. TsCs087147403231Winawk!Age16 \u00a31.50perWKsub",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Lol I know! They're so dramatic. Schools already closed for tomorrow. Apparently we can't drive in the inch of snow were supposed to get.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Lol! U drunkard! Just doing my hair at d moment. Yeah still up 4 tonight. Wats the plan?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You have an important customer service announcement from PREMIER. Call FREEPHONE 0800 542 0578 now!",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Orange customer, you may now claim your FREE CAMERA PHONE upgrade for your loyalty. Call now on 0207 153 9996. Offer ends 14thMarch. T&C's apply. Opt-out availa",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "U have a secret admirer. REVEAL who thinks U R So special. Call 09065174042. To opt out Reply REVEAL STOP. 1.50 per msg recd. Cust care 07821230901",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hello. We need some posh birds and chaps to user trial prods for champneys. Can i put you down? I need your address and dob asap. Ta r",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Well am officially in a philosophical hole, so if u wanna call am at home ready to be saved!",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Y dun cut too short leh. U dun like ah? She failed. She's quite sad.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Why do you ask princess?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Your free ringtone is waiting to be collected. Simply text the password \"MIX\" to 85069 to verify. Get Usher and Britney. FML, PO Box 5249, MK17 92H. 450Ppw 16",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hey what's up charles sorry about the late reply.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Dont talk to him ever ok its my word.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "My sort code is and acc no is . The bank is natwest. Can you reply to confirm i've sent this to the right person!",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "URGENT! We are trying to contact U. Todays draw shows that you have won a \u00a3800 prize GUARANTEED. Call 09050001808 from land line. Claim M95. Valid12hrs only",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Eh u send wrongly lar...",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "We know someone who you know that fancies you. Call 09058097218 to find out who. POBox 6, LS15HB 150p",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Do u noe wat time e place dat sells 4d closes?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Bored of speed dating? Try SPEEDCHAT, txt SPEEDCHAT to 80155, if you don't like em txt SWAP and get a new chatter! Chat80155 POBox36504W45WQ 150p/msg rcd 16",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Ur HMV Quiz cash-balance is currently \u00a3500 - to maximize ur cash-in now send HMV1 to 86688 only 150p/msg",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Got what it takes 2 take part in the WRC Rally in Oz? U can with Lucozade Energy! Text RALLY LE to 61200 (25p), see packs or lucozade.co.uk/wrc & itcould be u!",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Me also da, i feel yesterday night wait til 2day night dear.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You have 1 new voicemail. Please call 08719181513.",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "No. 1 Nokia Tone 4 ur mob every week! Just txt NOK to 87021. 1st Tone FREE ! so get txtin now and tell ur friends. 150p/tone. 16 reply HL 4info",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "What your plan for pongal?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Enjoy the jamster videosound gold club with your credits for 2 new videosounds+2 logos+musicnews! get more fun from jamster.co.uk! 16+only Help? call: 09701213186",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Sometimes we put walls around our hearts,not just to be safe from getting hurt.. But to find out who cares enough to break the walls &amp; get closer.. GOODNOON:)",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Every monday..nxt week vl be completing..",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Yetunde, i'm sorry but moji and i seem too busy to be able to go shopping. Can you just please find some other way to get what you wanted us to get. Please forgive me. You can reply free via yahoo messenger.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "HOT LIVE FANTASIES call now 08707509020 Just 20p per min NTT Ltd, PO Box 1327 Croydon CR9 5WB 0870..k",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "500 New Mobiles from 2004, MUST GO! Txt: NOKIA to No: 89545 & collect yours today!From ONLY \u00a31 www.4-tc.biz 2optout 087187262701.50gbp/mtmsg18 TXTAUCTION",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Actually getting ready to leave the house.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Congratulations ur awarded either \u00a3500 of CD gift vouchers & Free entry 2 our \u00a3100 weekly draw txt MUSIC to 87066 TnCs www.Ldew.com 1 win150ppmx3age16",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "For sale - arsenal dartboard. Good condition but no doubles or trebles!",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Don't look back at the building because you have no coat and i don't want you to get more sick. Just hurry home and wear a coat to the gym!!!",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hello from Orange. For 1 month's free access to games, news and sport, plus 10 free texts and 20 photo messages, reply YES. Terms apply: www.orange.co.uk/ow",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "500 free text msgs. Just text ok to 80488 and we'll credit your account",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "FreeMsg:Feelin kinda lnly hope u like 2 keep me company! Jst got a cam moby wanna c my pic?Txt or reply DATE to 82242 Msg150p 2rcv Hlp 08712317606 stop to 82242",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Monthly password for wap. mobsi.com is 391784. Use your wap phone not PC.",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "UR GOING 2 BAHAMAS! CallFREEFONE 08081560665 and speak to a live operator to claim either Bahamas cruise of\u00a32000 CASH 18+only. To opt out txt X to 07786200117",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Jus came back fr lunch wif my sis only. U leh?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "BIG BROTHER ALERT! The computer has selected u for 10k cash or #150 voucher. Call 09064018838. NTT PO Box CRO1327 18+ BT Landline Cost 150ppm mobiles vary",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "My uncles in Atlanta. Wish you guys a great semester.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "God bless.get good sleep my dear...i will pray!",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Todays Voda numbers ending 1225 are selected to receive a \u00a350award. If you have a match please call 08712300220 quoting claim code 3100 standard rates app",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "I'll probably be by tomorrow (or even later tonight if something's going on)",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hack Chat. Get backdoor entry into 121 chat rooms at a fraction of the cost. Reply NEO69 or call 09050280520, to subscribe 25p pm. DPS, Bcm box 8027 Ldn, wc1n3xx",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You have WON a guaranteed \u00a31000 cash or a \u00a32000 prize.To claim yr prize call our customer service representative on",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "HMV BONUS SPECIAL 500 pounds of genuine HMV vouchers to be won. Just answer 4 easy questions. Play Now! Send HMV to 86688 More info:www.100percent-real.com",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Free 1st week entry 2 TEXTPOD 4 a chance 2 win 40GB iPod or \u00a3250 cash every wk. Txt VPOD to 81303 Ts&Cs www.textpod.net custcare 08712405020.",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Did either of you have any idea's? Do you know of anyplaces doing something?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "More people are dogging in your area now. Call 09090204448 and join like minded guys. Why not arrange 1 yourself. There's 1 this evening. A\u00a31.50 minAPN LS278BB",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "I cant pick the phone right now. Pls send a message",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Guess what! Somebody you know secretly fancies you! Wanna find out who it is? Give us a call on 09065394973 from Landline DATEBox1282EssexCM61XN 150p/min 18",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You have won a guaranteed \u00a3200 award or even \u00a31000 cashto claim UR award call free on 08000407165 (18+) 2 stop getstop on 88222 PHP",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Okay... I booked all already... Including the one at bugis.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hey hun-onbus goin 2 meet him. He wants 2go out 4a meal but I donyt feel like it cuz have 2 get last bus home!But hes sweet latelyxxx",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Final Chance! Claim ur \u00a3150 worth of discount vouchers today! Text YES to 85023 now! SavaMob, member offers mobile! T Cs SavaMob POBOX84, M263UZ. \u00a33.00 Subs 16",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "FREE2DAY sexy St George's Day pic of Jordan!Txt PIC to 89080 dont miss out, then every wk a saucy celeb!4 more pics c PocketBabe.co.uk 0870241182716 \u00a33/wk",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Do we have any spare power supplies",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "FreeMsg: Hey - I'm Buffy. 25 and love to satisfy men. Home alone feeling randy. Reply 2 C my PIX! QlynnBV Help08700621170150p a msg Send stop to stop txts",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Sunshine Hols. To claim ur med holiday send a stamped self address envelope to Drinks on Us UK, PO Box 113, Bray, Wicklow, Eire. Quiz Starts Saturday! Unsub Stop",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "You have WON a guaranteed \u00a31000 cash or a \u00a32000 prize. To claim yr prize call our customer service representative on 08714712379 between 10am-7pm Cost 10p",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Give her something to drink, if she takes it and doesn't vomit then you her temp might drop. If she unmits however let me know.",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Back 2 work 2morro half term over! Can U C me 2nite 4 some sexy passion B4 I have 2 go back? Chat NOW 09099726481 Luv DENA Calls \u00a31/minMobsmoreLKPOBOX177HP51FL",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Haha i think i did too",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "We can make a baby in yo tho",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Should I be stalking u?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Double your mins & txts on Orange or 1/2 price linerental - Motorola and SonyEricsson with B/Tooth FREE-Nokia FREE Call MobileUpd8 on 08000839402 or2optout/HV9D",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "No message..no responce..what happend?",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Anything lar...",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Eat at old airport road... But now 630 oredi... Got a lot of pple...",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Princess, i like to make love &lt;#&gt; times per night. Hope thats not a problem!",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "U have won a nokia 6230 plus a free digital camera. This is what u get when u win our FREE auction. To take part send NOKIA to 83383 now. POBOX114/14TCR/W1 16",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "FreeMSG You have been awarded a FREE mini DIGITAL CAMERA, just reply SNAP to collect your prize! (quizclub Opt out? Stop 80122300p/wk SP:RWM Ph:08704050406)",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Join the UK's horniest Dogging service and u can have sex 2nite!. Just sign up and follow the instructions. Txt ENTRY to 69888 now! Nyt.EC2A.3LP.msg@150p",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Awesome, text me when you're restocked",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Thanks for sending this mental ability question..",
+    "expected": false,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  },
+  {
+    "text": "Hello darling how are you today? I would love to have a chat, why dont you tell me what you look like and what you are in to sexy?",
+    "expected": true,
+    "condition": "is spam",
+    "description": "Unsolicited advertising, scams, prize or subscription bait"
+  }
+]
