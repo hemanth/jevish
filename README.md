@@ -79,7 +79,7 @@ Run `npm run bench` to reproduce across `bench/ag_news.json` and `bench/emotion.
 
 ## Runtime & devices
 
-Runs anywhere: Node.js, Bun, Deno, Cloudflare Workers, and modern browsers (8.6 kB). Detects `CUDA` → `MPS` → `CPU` (or `WebGPU` → `WASM` in browser) via `hev.device()`.
+Runs anywhere: Node.js, Bun, Deno, Cloudflare Workers, and modern browsers (8.6 kB). Detects `CUDA` → `MPS` → `CPU` (or `WebGPU` → `WASM` in browser) via `hev.device()`. [View Execution Path Blueprint →](docs/execution-path.svg)
 
 
 ```bash
