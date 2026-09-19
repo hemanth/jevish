@@ -5,13 +5,13 @@ Semantic pattern matching and zero-shot judgment in JavaScript. Sub-millisecond,
 [**Live Interactive Playground →**](https://hemanth.github.io/hev/)
 
 ```bash
-npm install hev
+npm install jevish
 ```
 
 ## Quick start
 
 ```js
-import hev from 'hev';
+import hev from 'jevish';
 
 await hev('Checkout button returns 500 internal server error', {
   'bug @ >0.8': (t, meta) => fileJira(t, meta.score),

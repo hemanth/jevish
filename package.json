@@ -1,7 +1,7 @@
 {
-  "name": "hev",
+  "name": "jevish",
   "version": "0.1.0",
-  "description": "Semantic pattern matching and zero-shot judgment in JavaScript.",
+  "description": "Semantic pattern matching and zero-shot judgment in JavaScript. Jev-ish, sub-millisecond, local-first.",
   "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
@@ -45,6 +45,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hemanth/hev"
+    "url": "git+https://github.com/hemanth/hev.git"
   }
 }
