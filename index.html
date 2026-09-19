@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>hev | Semantic Pattern Matching & Control Flow in JavaScript</title>
+  <title>jevish | Semantic Pattern Matching & Control Flow in JavaScript</title>
   <meta name="description" content="Deterministic semantic pattern matching and control flow for JavaScript. Sub-millisecond execution, calibrated confidence guards, zero dependencies." />
   <meta name="theme-color" content="#fbfaf7" />
 
@@ -133,20 +133,20 @@
       <div class="flex items-center gap-3">
         <a href="#hero" class="group flex items-center gap-2.5 font-bold tracking-tight text-ink-900 text-lg">
           <div class="w-8 h-8 rounded-xl bg-ink-900 text-white flex items-center justify-center shadow-sm group-hover:bg-peach-700 transition-colors duration-300 font-mono text-sm font-bold">
-            h
+            j
           </div>
-          <span class="font-mono text-base tracking-tight font-semibold">hev</span>
+          <span class="font-mono text-base tracking-tight font-semibold">jevish</span>
         </a>
 
         <div class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-mono font-medium bg-sage-100 text-sage-800 border border-sage-200">
           <span class="w-1.5 h-1.5 rounded-full bg-sage-700"></span>
-          <span>v0.1.0</span>
+          <span>v0.1.2</span>
         </div>
       </div>
 
       <div class="flex items-center gap-2 sm:gap-3 font-mono text-xs">
         <a href="#why" class="hidden md:inline-flex px-3 py-1.5 rounded-full text-ink-700 hover:text-ink-900 hover:bg-ink-100/70 transition-colors">
-          Why hev
+          Why jevish
         </a>
         <a href="#code-usage" class="hidden md:inline-flex px-3 py-1.5 rounded-full text-ink-700 hover:text-ink-900 hover:bg-ink-100/70 transition-colors">
           Code Usage
@@ -187,9 +187,9 @@
         <div class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white border border-ink-200 shadow-sm font-mono text-xs text-ink-800">
           <div class="flex items-center gap-2">
             <span class="text-ink-400">$</span>
-            <span id="install-cmd-text">npm i hev</span>
+            <span id="install-cmd-text">npm i jevish</span>
           </div>
-          <button type="button" onclick="navigator.clipboard.writeText('npm i hev'); this.textContent='Copied!';" class="micro-sheen px-2.5 py-1 rounded-lg bg-ink-50 hover:bg-ink-100 text-ink-700 text-[11px] font-semibold transition-all border border-ink-200">
+          <button type="button" onclick="navigator.clipboard.writeText('npm i jevish'); this.textContent='Copied!';" class="micro-sheen px-2.5 py-1 rounded-lg bg-ink-50 hover:bg-ink-100 text-ink-700 text-[11px] font-semibold transition-all border border-ink-200">
             Copy
           </button>
         </div>
@@ -242,7 +242,7 @@
       </p>
     </div>
 
-    <!-- Comparative Visual: Switch vs LLM vs hev -->
+    <!-- Comparative Visual: Switch vs LLM vs jevish -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
       <div class="p-6 rounded-2xl bg-white border border-ink-200 shadow-sm flex flex-col justify-between">
         <div>
@@ -272,7 +272,7 @@
 
       <div class="p-6 rounded-2xl bg-sage-50 border border-sage-200 shadow-sm flex flex-col justify-between">
         <div>
-          <div class="text-xs font-mono font-bold uppercase text-sage-800 mb-2">The hev Solution</div>
+          <div class="text-xs font-mono font-bold uppercase text-sage-800 mb-2">The jevish Solution</div>
           <h3 class="text-lg font-bold text-ink-900 mb-2">Semantic Pattern Matcher</h3>
           <p class="text-xs text-ink-700 leading-relaxed">
             Fuzzy pattern matching that runs in 0.12ms in-tree. Single forward pass, calibrated logits, and inline confidence guards.
@@ -296,7 +296,7 @@
           Code Usage &amp; Primitives
         </h2>
         <p class="text-ink-700 text-sm mt-1 max-w-xl">
-          Zero dependencies, sub-millisecond execution. Call <code>hev()</code> as a pattern matcher, a zero-shot classifier, or a boolean predicate.
+          Zero dependencies, sub-millisecond execution. Call <code>jevish()</code> as a pattern matcher, a zero-shot classifier, or a boolean predicate.
         </p>
       </div>
 
@@ -348,10 +348,10 @@
       <!-- Code Panels -->
       <div class="p-6 overflow-x-auto leading-relaxed">
         <!-- 1. Pattern Matching -->
-        <pre id="code-panel-pattern" class="block font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+        <pre id="code-panel-pattern" class="block font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> jevish <span class="text-peach-400">from</span> <span class="text-emerald-300">'jevish'</span>;
 
 <span class="text-ink-500">// Semantic pattern matching with calibrated confidence guards (@ &gt;0.8)</span>
-<span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Checkout button throws 500 internal server error'</span>, {
+<span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">jevish</span>(<span class="text-emerald-300">'Checkout button throws 500 internal server error'</span>, {
   <span class="text-emerald-300">'bug @ &gt;0.8'</span>: (event, meta) =&gt; <span class="text-sky-300 font-semibold">dispatchP0Jira</span>(event, meta.score), <span class="text-ink-500">// High confidence</span>
   <span class="text-emerald-300">'bug'</span>:        (event) =&gt; <span class="text-sky-300 font-semibold">queueForReview</span>(event),               <span class="text-ink-500">// Fallback bug branch</span>
   <span class="text-emerald-300">'billing'</span>:    (event) =&gt; <span class="text-sky-300 font-semibold">routeToStripe</span>(event),
@@ -361,16 +361,16 @@
 });</code></pre>
 
         <!-- 2. Zero-Shot Array -->
-        <pre id="code-panel-zeroshot" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+        <pre id="code-panel-zeroshot" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> jevish <span class="text-peach-400">from</span> <span class="text-emerald-300">'jevish'</span>;
 
 <span class="text-ink-500">// 1. Pass an array of candidate labels — returns the winning string</span>
-<span class="text-peach-400">const</span> category = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Can you provide an invoice for last month subscription?'</span>, [
+<span class="text-peach-400">const</span> category = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">jevish</span>(<span class="text-emerald-300">'Can you provide an invoice for last month subscription?'</span>, [
   <span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>, <span class="text-emerald-300">'billing'</span>, <span class="text-emerald-300">'spam'</span>
 ]);
 <span class="text-ink-500">// =&gt; 'billing'</span>
 
 <span class="text-ink-500">// 2. Access calibrated probabilities, Brier score, and runtime telemetry</span>
-<span class="text-peach-400">const</span> meta = <span class="text-peach-400">await</span> hev.<span class="text-sky-300 font-semibold">detailed</span>(<span class="text-emerald-300">'Database connection pool exhausted'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>]);
+<span class="text-peach-400">const</span> meta = <span class="text-peach-400">await</span> jevish.<span class="text-sky-300 font-semibold">detailed</span>(<span class="text-emerald-300">'Database connection pool exhausted'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>]);
 console.log(meta.label);  <span class="text-ink-500">// 'bug'</span>
 console.log(meta.score);  <span class="text-ink-500">// 0.98 (calibrated top confidence)</span>
 console.log(meta.probs);  <span class="text-ink-500">// { bug: 0.98, feature: 0.02 }</span>
@@ -378,27 +378,27 @@ console.log(meta.engine); <span class="text-ink-500">// 'builtin' (0.05ms) or 't
 console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' | 'webgpu' | 'cloud'</span></code></pre>
 
         <!-- 3. Boolean Predicate -->
-        <pre id="code-panel-predicate" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+        <pre id="code-panel-predicate" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> jevish <span class="text-peach-400">from</span> <span class="text-emerald-300">'jevish'</span>;
 
 <span class="text-ink-500">// Natural language boolean evaluation (Noul mode) returns a boolean</span>
-<span class="text-peach-400">const</span> isSpam = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(
+<span class="text-peach-400">const</span> isSpam = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">jevish</span>(
   <span class="text-emerald-300">'Congratulations! You won a free luxury vacation trip prize right now!'</span>,
   <span class="text-emerald-300">'is promotional spam'</span>
 );
 <span class="text-ink-500">// =&gt; true</span>
 
 <span class="text-ink-500">// Or query raw probability score [0.0 - 1.0]</span>
-<span class="text-peach-400">const</span> confidence = <span class="text-peach-400">await</span> hev.<span class="text-sky-300 font-semibold">score</span>(
+<span class="text-peach-400">const</span> confidence = <span class="text-peach-400">await</span> jevish.<span class="text-sky-300 font-semibold">score</span>(
   <span class="text-emerald-300">'Fatal kernel panic in thread worker 500'</span>,
   <span class="text-emerald-300">'is critical defect'</span>
 );
 <span class="text-ink-500">// =&gt; 0.96</span></code></pre>
 
         <!-- 4. Currying & Pipelines -->
-        <pre id="code-panel-curry" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+        <pre id="code-panel-curry" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> jevish <span class="text-peach-400">from</span> <span class="text-emerald-300">'jevish'</span>;
 
-<span class="text-ink-500">// Point-free currying: calling hev() with only patterns returns a reusable router</span>
-<span class="text-peach-400">const</span> triageRouter = <span class="text-amber-300 font-bold">hev</span>({
+<span class="text-ink-500">// Point-free currying: calling jevish() with only patterns returns a reusable router</span>
+<span class="text-peach-400">const</span> triageRouter = <span class="text-amber-300 font-bold">jevish</span>({
   <span class="text-emerald-300">'bug @ &gt;0.8'</span>: (t) =&gt; <span class="text-sky-300 font-semibold">dispatchP0</span>(t),
   <span class="text-emerald-300">'bug'</span>:        (t) =&gt; <span class="text-sky-300 font-semibold">queueReview</span>(t),
   <span class="text-emerald-300">_</span>:            (t) =&gt; <span class="text-ink-400 font-semibold">backlog</span>(t),
@@ -410,14 +410,14 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
 <span class="text-peach-400">const</span> dispatched = <span class="text-peach-400">await</span> Promise.<span class="text-sky-300 font-semibold">all</span>(inboundEvents.map(triageRouter));
 
 <span class="text-ink-500">// Curried boolean filter helper</span>
-<span class="text-peach-400">const</span> urgentTickets = <span class="text-peach-400">await</span> inboundEvents.filterAsync?.(hev.<span class="text-sky-300 font-semibold">is</span>(<span class="text-emerald-300">'is urgent blocker'</span>));</code></pre>
+<span class="text-peach-400">const</span> urgentTickets = <span class="text-peach-400">await</span> inboundEvents.filterAsync?.(jevish.<span class="text-sky-300 font-semibold">is</span>(<span class="text-emerald-300">'is urgent blocker'</span>));</code></pre>
 
         <!-- 5. TypeSafe Jev (Cloud) -->
-        <pre id="code-panel-typesafe" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> { hev, Engine } <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+        <pre id="code-panel-typesafe" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> { jevish, Engine } <span class="text-peach-400">from</span> <span class="text-emerald-300">'jevish'</span>;
 
 <span class="text-ink-500">// Option A: Auto-connect to TypeSafe System One (Jev) via environment variable</span>
 <span class="text-ink-500">// export TYPESAFE_API_KEY="apikey_..."</span>
-<span class="text-peach-400">const</span> res = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Database deadlock on write'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>]);
+<span class="text-peach-400">const</span> res = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">jevish</span>(<span class="text-emerald-300">'Database deadlock on write'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>]);
 <span class="text-ink-500">// Automatically uses TypeSafe Jev in cloud with full calibrated confidence</span>
 
 <span class="text-ink-500">// Option B: Instantiate custom Engine with explicit credentials</span>
@@ -426,7 +426,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
   endpoint: <span class="text-emerald-300">'https://api.typesafe.ai/v1/systemone'</span>,
 });
 
-<span class="text-peach-400">const</span> classification = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Checkout modal crash'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'billing'</span>], {
+<span class="text-peach-400">const</span> classification = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">jevish</span>(<span class="text-emerald-300">'Checkout modal crash'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'billing'</span>], {
   engine: cloudEngine
 });</code></pre>
       </div>
@@ -512,7 +512,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
           <!-- Code Lines / Switchboard Circuits -->
           <div class="space-y-2 text-ink-200">
             <div class="text-ink-400 text-[11px]">// Pattern Matching &amp; Confidence Routing</div>
-            <div><span class="text-peach-400 font-semibold">await</span> <span class="text-amber-300 font-bold">hev</span>(event, {</div>
+            <div><span class="text-peach-400 font-semibold">await</span> <span class="text-amber-300 font-bold">jevish</span>(event, {</div>
             
             <!-- Branch 0: Guarded Bug -->
             <div id="code-branch-0" class="p-2.5 rounded-lg border border-transparent transition-all space-y-1.5">
@@ -674,7 +674,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
     <div id="panel-zeroshot" class="hidden rounded-2xl border border-ink-200 bg-white p-6 shadow-sm">
       <div class="max-w-3xl mb-4">
         <h3 class="text-lg font-bold text-ink-900">Zero-Shot Array Classification</h3>
-        <p class="text-xs text-ink-600">Pass an array of arbitrary labels to pick the winning category: <code>hev(text, labels)</code>.</p>
+        <p class="text-xs text-ink-600">Pass an array of arbitrary labels to pick the winning category: <code>jevish(text, labels)</code>.</p>
       </div>
 
       <!-- Dataset Preset Pills -->
@@ -696,7 +696,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
           <label class="block text-xs font-mono uppercase text-ink-500 font-semibold">Test Input</label>
           <textarea id="zeroShotInput" rows="3" class="w-full p-3.5 rounded-xl bg-canvas border border-ink-200 font-mono text-xs focus:ring-2 focus:ring-peach-300" oninput="runZeroShotEval()">Astronomers detect quantum magnetic oscillations in deep space galaxy</textarea>
           <div class="p-3 rounded-lg bg-ink-900 text-white font-mono text-xs">
-            <span class="text-peach-400">const</span> category = <span class="text-peach-400">await</span> hev(text, <span id="zeroShotLabelsCode" class="text-amber-300">['World', 'Sports', 'Business', 'Sci/Tech']</span>);
+            <span class="text-peach-400">const</span> category = <span class="text-peach-400">await</span> jevish(text, <span id="zeroShotLabelsCode" class="text-amber-300">['World', 'Sports', 'Business', 'Sci/Tech']</span>);
           </div>
         </div>
 
@@ -714,7 +714,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
     <div id="panel-predicate" class="hidden rounded-2xl border border-ink-200 bg-white p-6 shadow-sm">
       <div class="max-w-3xl mb-4">
         <h3 class="text-lg font-bold text-ink-900">Boolean Predicate (Noul Mode)</h3>
-        <p class="text-xs text-ink-600">Evaluates natural language truth statements as true booleans: <code>hev(text, 'is spam')</code>.</p>
+        <p class="text-xs text-ink-600">Evaluates natural language truth statements as true booleans: <code>jevish(text, 'is spam')</code>.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
@@ -777,7 +777,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
           </span>
         </div>
         <div class="overflow-x-auto text-center">
-          <img src="execution-path.svg" alt="hev End-to-End Execution Path Blueprint" class="w-full max-w-5xl mx-auto rounded-lg" />
+          <img src="execution-path.svg" alt="jevish End-to-End Execution Path Blueprint" class="w-full max-w-5xl mx-auto rounded-lg" />
         </div>
       </div>
 
@@ -793,7 +793,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
           </span>
         </div>
         <div class="overflow-x-auto text-center">
-          <img src="flow-diagram.svg" alt="hev Progressive Inference Architecture" class="w-full max-w-5xl mx-auto rounded-lg" />
+          <img src="flow-diagram.svg" alt="jevish Progressive Inference Architecture" class="w-full max-w-5xl mx-auto rounded-lg" />
         </div>
       </div>
     </div>
@@ -838,7 +838,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
             <tr class="bg-peach-50/40 hover:bg-peach-50/70 transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-peach-700"></span>
-                hev (in-tree pure JS)
+                jevish (in-tree pure JS)
               </td>
               <td class="py-4 px-4 font-bold text-emerald-700">86.0%</td>
               <td class="py-4 px-4 font-bold text-sage-800">0.05 ms</td>
@@ -849,7 +849,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
             <tr class="bg-emerald-50/30 hover:bg-emerald-50/50 transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                hev (speculative cascade)
+                jevish (speculative cascade)
               </td>
               <td class="py-4 px-4 font-bold text-emerald-700">99.0%</td>
               <td class="py-4 px-4 font-bold text-sage-800">29.86 ms</td>
@@ -898,7 +898,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
             <tr class="bg-sage-50/40 hover:bg-sage-50/70 transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-sage-700"></span>
-                hev (in-tree pure JS)
+                jevish (in-tree pure JS)
               </td>
               <td class="py-4 px-4 font-bold text-ink-700">72.0%</td>
               <td class="py-4 px-4 font-bold text-sage-800">0.02 ms</td>
@@ -909,7 +909,7 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
             <tr class="bg-emerald-50/30 hover:bg-emerald-50/50 transition-colors">
               <td class="py-4 px-4 sm:px-6 font-bold text-ink-900 flex items-center gap-2">
                 <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
-                hev (speculative cascade)
+                jevish (speculative cascade)
               </td>
               <td class="py-4 px-4 font-bold text-emerald-700">98.0%</td>
               <td class="py-4 px-4 font-bold text-sage-800">134.12 ms</td>
@@ -1416,10 +1416,10 @@ console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' |
     // Code Snippets Tab Switcher & Clipboard Copy
     let activeCodeTab = 'pattern';
     const codeSnippets = {
-      pattern: `import hev from 'hev';
+      pattern: `import jevish from 'jevish';
 
 // Semantic pattern matching with calibrated confidence guards (@ >0.8)
-await hev('Checkout button throws 500 internal server error', {
+await jevish('Checkout button throws 500 internal server error', {
   'bug @ >0.8': (event, meta) => dispatchP0Jira(event, meta.score), // High confidence
   'bug':        (event) => queueForReview(event),               // Fallback bug branch
   'billing':    (event) => routeToStripe(event),
@@ -1427,40 +1427,40 @@ await hev('Checkout button throws 500 internal server error', {
   'spam':       () => dropSilently(),
   _:            (event) => generalInbox(event),                  // Wildcard catch-all
 });`,
-      zeroshot: `import hev from 'hev';
+      zeroshot: `import jevish from 'jevish';
 
 // 1. Pass an array of candidate labels — returns the winning string
-const category = await hev('Can you provide an invoice for last month subscription?', [
+const category = await jevish('Can you provide an invoice for last month subscription?', [
   'bug', 'feature', 'billing', 'spam'
 ]);
 // => 'billing'
 
 // 2. Access calibrated probabilities, Brier score, and runtime telemetry
-const meta = await hev.detailed('Database connection pool exhausted', ['bug', 'feature']);
+const meta = await jevish.detailed('Database connection pool exhausted', ['bug', 'feature']);
 console.log(meta.label);  // 'bug'
 console.log(meta.score);  // 0.98 (calibrated top confidence)
 console.log(meta.probs);  // { bug: 0.98, feature: 0.02 }
 console.log(meta.engine); // 'builtin' (0.05ms) or 'typesafe' (cloud)
 console.log(meta.device); // 'cpu' | 'mps' | 'cuda' | 'webgpu' | 'cloud'`,
-      predicate: `import hev from 'hev';
+      predicate: `import jevish from 'jevish';
 
 // Natural language boolean evaluation (Noul mode) returns a boolean
-const isSpam = await hev(
+const isSpam = await jevish(
   'Congratulations! You won a free luxury vacation trip prize right now!',
   'is promotional spam'
 );
 // => true
 
 // Or query raw probability score [0.0 - 1.0]
-const confidence = await hev.score(
+const confidence = await jevish.score(
   'Fatal kernel panic in thread worker 500',
   'is critical defect'
 );
 // => 0.96`,
-      curry: `import hev from 'hev';
+      curry: `import jevish from 'jevish';
 
-// Point-free currying: calling hev() with only patterns returns a reusable router
-const triageRouter = hev({
+// Point-free currying: calling jevish() with only patterns returns a reusable router
+const triageRouter = jevish({
   'bug @ >0.8': (t) => dispatchP0(t),
   'bug':        (t) => queueReview(t),
   _:            (t) => backlog(t),
@@ -1472,12 +1472,12 @@ const inboundEvents = await fetchEventQueue();
 const dispatched = await Promise.all(inboundEvents.map(triageRouter));
 
 // Curried boolean filter helper
-const urgentTickets = await inboundEvents.filterAsync?.(hev.is('is urgent blocker'));`,
-      typesafe: `import { hev, Engine } from 'hev';
+const urgentTickets = await inboundEvents.filterAsync?.(jevish.is('is urgent blocker'));`,
+      typesafe: `import { jevish, Engine } from 'jevish';
 
 // Option A: Auto-connect to TypeSafe System One (Jev) via environment variable
 // export TYPESAFE_API_KEY="apikey_..."
-const res = await hev('Database deadlock on write', ['bug', 'feature']);
+const res = await jevish('Database deadlock on write', ['bug', 'feature']);
 // Automatically uses TypeSafe Jev in cloud with full calibrated confidence
 
 // Option B: Instantiate custom Engine with explicit credentials
@@ -1486,7 +1486,7 @@ const cloudEngine = new Engine({
   endpoint: 'https://api.typesafe.ai/v1/systemone',
 });
 
-const classification = await hev('Checkout modal crash', ['bug', 'billing'], {
+const classification = await jevish('Checkout modal crash', ['bug', 'billing'], {
   engine: cloudEngine
 });`
     };
