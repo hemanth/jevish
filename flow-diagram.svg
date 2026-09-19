@@ -60,8 +60,8 @@
     <text class="node-sub" x="150" y="432">'is spam' · 'p1..p3'</text>
   </g>
 
-  <!-- SECTION 2: HEV ENGINE RUNTIME -->
-  <text class="hdr" x="300" y="44">02 / HEV ARBITER (LOCAL IN-TREE)</text>
+  <!-- SECTION 2: JEVISH ENGINE RUNTIME -->
+  <text class="hdr" x="300" y="44">02 / JEVISH ARBITER (LOCAL IN-TREE)</text>
   <rect x="300" y="60" width="360" height="420" class="cluster-solid" />
 
   <!-- Single Focal Node: Decision Engine (Solid Black Hero) -->
@@ -69,7 +69,7 @@
     <rect class="focal-card" x="330" y="90" width="300" height="170" />
     <rect class="focal-badge" x="346" y="106" width="90" height="18" />
     <text class="focal-badge-text" x="391" y="119">CORE ARBITER</text>
-    <text class="focal-title" x="480" y="152">hev Decision Engine</text>
+    <text class="focal-title" x="480" y="152">jevish Decision Engine</text>
     <text class="focal-sub" x="480" y="176">1. Intent Type Reflection</text>
     <text class="focal-sub" x="480" y="194">2. Single-Pass Unified Schema</text>
     <text class="focal-sub" x="480" y="212">3. Calibrated Softmax Logits</text>
