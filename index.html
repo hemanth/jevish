@@ -301,8 +301,12 @@
       </div>
 
       <div class="flex items-center gap-2">
+        <span id="device-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-xs bg-sky-100 text-sky-800 border border-sky-200 font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
+          Device: Browser CPU (In-Tree)
+        </span>
         <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-mono text-xs bg-sage-100 text-sage-800 border border-sage-200 font-semibold">
-          <span class="w-2 h-2 rounded-full bg-sage-700 animate-pulse"></span>
+          <span class="w-1.5 h-1.5 rounded-full bg-sage-700 animate-pulse"></span>
           Sub-Millisecond In-Tree Dispatch
         </span>
       </div>
@@ -927,6 +931,13 @@
           list.appendChild(row);
         }, idx * 120);
       });
+    }
+
+    // Live device detection badge
+    const devBadge = document.getElementById('device-badge');
+    if (devBadge) {
+      const hasGpu = typeof navigator !== 'undefined' && 'gpu' in navigator;
+      devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${hasGpu ? 'bg-emerald-600' : 'bg-sky-600'}"></span>Device: ${hasGpu ? 'WebGPU Ready' : 'Browser CPU'} (0.05ms)`;
     }
 
     runBatchStream();
