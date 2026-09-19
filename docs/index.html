@@ -148,6 +148,9 @@
         <a href="#why" class="hidden md:inline-flex px-3 py-1.5 rounded-full text-ink-700 hover:text-ink-900 hover:bg-ink-100/70 transition-colors">
           Why hev
         </a>
+        <a href="#code-usage" class="hidden md:inline-flex px-3 py-1.5 rounded-full text-ink-700 hover:text-ink-900 hover:bg-ink-100/70 transition-colors">
+          Code Usage
+        </a>
         <a href="#switchboard" class="hidden md:inline-flex px-3 py-1.5 rounded-full text-ink-700 hover:text-ink-900 hover:bg-ink-100/70 transition-colors">
           Switchboard REPL
         </a>
@@ -281,6 +284,154 @@
         <div class="mt-4 pt-3 border-t border-sage-200 font-mono text-[11px] text-emerald-800 font-bold">
           0.12ms • 86% Top-1 • 98% Recall
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Code Usage & Primitives -->
+  <section id="code-usage" class="scroll-mt-20 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-ink-200/60">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6">
+      <div>
+        <div class="inline-flex items-center gap-1.5 text-xs font-mono uppercase tracking-wider text-sage-800 font-semibold mb-2">
+          API &amp; Integration Guide
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-900">
+          Code Usage &amp; Primitives
+        </h2>
+        <p class="text-ink-700 text-sm mt-1 max-w-xl">
+          Zero dependencies, sub-millisecond execution. Call <code>hev()</code> as a pattern matcher, a zero-shot classifier, or a boolean predicate.
+        </p>
+      </div>
+
+      <!-- Quick Install Box -->
+      <div class="flex items-center gap-2 bg-ink-900 text-white px-4 py-2.5 rounded-xl border border-ink-800 shadow-sm font-mono text-xs">
+        <span class="text-ink-400 select-none">$</span>
+        <span class="text-emerald-400 font-semibold">npm install hev</span>
+        <button onclick="navigator.clipboard.writeText('npm install hev'); const btn = this; btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 1500);" class="ml-2 text-[11px] px-2 py-0.5 rounded bg-ink-800 hover:bg-ink-700 text-ink-300 transition-colors">
+          Copy
+        </button>
+      </div>
+    </div>
+
+    <!-- Tabbed Code Box Card -->
+    <div class="rounded-2xl border border-ink-800 bg-ink-900 text-white shadow-lg overflow-hidden font-mono text-xs">
+      <!-- Window Titlebar & Tabs -->
+      <div class="flex items-center justify-between px-4 py-3 border-b border-ink-800 bg-ink-950/80 flex-wrap gap-2">
+        <div class="flex items-center gap-2">
+          <div class="flex items-center gap-1.5 mr-2">
+            <span class="w-3 h-3 rounded-full bg-coral-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+          </div>
+          <div class="flex items-center gap-1 overflow-x-auto">
+            <button id="code-tab-btn-pattern" onclick="switchCodeTab('pattern')" class="px-3 py-1 rounded-lg text-xs font-semibold bg-ink-800 text-white transition-all">
+              1. Pattern Matching
+            </button>
+            <button id="code-tab-btn-zeroshot" onclick="switchCodeTab('zeroshot')" class="px-3 py-1 rounded-lg text-xs font-medium text-ink-400 hover:text-ink-200 hover:bg-ink-800/60 transition-all">
+              2. Zero-Shot Array
+            </button>
+            <button id="code-tab-btn-predicate" onclick="switchCodeTab('predicate')" class="px-3 py-1 rounded-lg text-xs font-medium text-ink-400 hover:text-ink-200 hover:bg-ink-800/60 transition-all">
+              3. Boolean Predicate
+            </button>
+            <button id="code-tab-btn-curry" onclick="switchCodeTab('curry')" class="px-3 py-1 rounded-lg text-xs font-medium text-ink-400 hover:text-ink-200 hover:bg-ink-800/60 transition-all">
+              4. Currying &amp; Pipelines
+            </button>
+            <button id="code-tab-btn-typesafe" onclick="switchCodeTab('typesafe')" class="px-3 py-1 rounded-lg text-xs font-medium text-ink-400 hover:text-ink-200 hover:bg-ink-800/60 transition-all">
+              5. TypeSafe Jev (Cloud)
+            </button>
+          </div>
+        </div>
+
+        <button id="copySnippetBtn" onclick="copyCurrentSnippet()" class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-ink-800 hover:bg-ink-700 text-ink-300 hover:text-white transition-all text-[11px]">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          <span id="copySnippetText">Copy Code</span>
+        </button>
+      </div>
+
+      <!-- Code Panels -->
+      <div class="p-6 overflow-x-auto leading-relaxed">
+        <!-- 1. Pattern Matching -->
+        <pre id="code-panel-pattern" class="block font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+
+<span class="text-ink-500">// Semantic pattern matching with calibrated confidence guards (@ &gt;0.8)</span>
+<span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Checkout button throws 500 internal server error'</span>, {
+  <span class="text-emerald-300">'bug @ &gt;0.8'</span>: (event, meta) =&gt; <span class="text-sky-300 font-semibold">dispatchP0Jira</span>(event, meta.score), <span class="text-ink-500">// High confidence</span>
+  <span class="text-emerald-300">'bug'</span>:        (event) =&gt; <span class="text-sky-300 font-semibold">queueForReview</span>(event),               <span class="text-ink-500">// Fallback bug branch</span>
+  <span class="text-emerald-300">'billing'</span>:    (event) =&gt; <span class="text-sky-300 font-semibold">routeToStripe</span>(event),
+  <span class="text-emerald-300">'feature'</span>:    (event) =&gt; <span class="text-sky-300 font-semibold">upvoteRoadmap</span>(event),
+  <span class="text-emerald-300">'spam'</span>:       () =&gt; <span class="text-coral-400 font-semibold">dropSilently</span>(),
+  <span class="text-emerald-300">_</span>:            (event) =&gt; <span class="text-ink-400 font-semibold">generalInbox</span>(event),                  <span class="text-ink-500">// Wildcard catch-all</span>
+});</code></pre>
+
+        <!-- 2. Zero-Shot Array -->
+        <pre id="code-panel-zeroshot" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+
+<span class="text-ink-500">// 1. Pass an array of candidate labels — returns the winning string</span>
+<span class="text-peach-400">const</span> category = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Can you provide an invoice for last month subscription?'</span>, [
+  <span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>, <span class="text-emerald-300">'billing'</span>, <span class="text-emerald-300">'spam'</span>
+]);
+<span class="text-ink-500">// =&gt; 'billing'</span>
+
+<span class="text-ink-500">// 2. Access calibrated probabilities, Brier score, and runtime telemetry</span>
+<span class="text-peach-400">const</span> meta = <span class="text-peach-400">await</span> hev.<span class="text-sky-300 font-semibold">detailed</span>(<span class="text-emerald-300">'Database connection pool exhausted'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>]);
+console.log(meta.label);  <span class="text-ink-500">// 'bug'</span>
+console.log(meta.score);  <span class="text-ink-500">// 0.98 (calibrated top confidence)</span>
+console.log(meta.probs);  <span class="text-ink-500">// { bug: 0.98, feature: 0.02 }</span>
+console.log(meta.engine); <span class="text-ink-500">// 'builtin' (0.05ms) or 'typesafe' (cloud)</span>
+console.log(meta.device); <span class="text-ink-500">// 'cpu' | 'mps' | 'cuda' | 'webgpu' | 'cloud'</span></code></pre>
+
+        <!-- 3. Boolean Predicate -->
+        <pre id="code-panel-predicate" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+
+<span class="text-ink-500">// Natural language boolean evaluation (Noul mode) returns a boolean</span>
+<span class="text-peach-400">const</span> isSpam = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(
+  <span class="text-emerald-300">'Congratulations! You won a free luxury vacation trip prize right now!'</span>,
+  <span class="text-emerald-300">'is promotional spam'</span>
+);
+<span class="text-ink-500">// =&gt; true</span>
+
+<span class="text-ink-500">// Or query raw probability score [0.0 - 1.0]</span>
+<span class="text-peach-400">const</span> confidence = <span class="text-peach-400">await</span> hev.<span class="text-sky-300 font-semibold">score</span>(
+  <span class="text-emerald-300">'Fatal kernel panic in thread worker 500'</span>,
+  <span class="text-emerald-300">'is critical defect'</span>
+);
+<span class="text-ink-500">// =&gt; 0.96</span></code></pre>
+
+        <!-- 4. Currying & Pipelines -->
+        <pre id="code-panel-curry" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> hev <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+
+<span class="text-ink-500">// Point-free currying: calling hev() with only patterns returns a reusable router</span>
+<span class="text-peach-400">const</span> triageRouter = <span class="text-amber-300 font-bold">hev</span>({
+  <span class="text-emerald-300">'bug @ &gt;0.8'</span>: (t) =&gt; <span class="text-sky-300 font-semibold">dispatchP0</span>(t),
+  <span class="text-emerald-300">'bug'</span>:        (t) =&gt; <span class="text-sky-300 font-semibold">queueReview</span>(t),
+  <span class="text-emerald-300">_</span>:            (t) =&gt; <span class="text-ink-400 font-semibold">backlog</span>(t),
+});
+
+<span class="text-peach-400">const</span> inboundEvents = <span class="text-peach-400">await</span> fetchEventQueue();
+
+<span class="text-ink-500">// Map over high-throughput streams in sub-millisecond time</span>
+<span class="text-peach-400">const</span> dispatched = <span class="text-peach-400">await</span> Promise.<span class="text-sky-300 font-semibold">all</span>(inboundEvents.map(triageRouter));
+
+<span class="text-ink-500">// Curried boolean filter helper</span>
+<span class="text-peach-400">const</span> urgentTickets = <span class="text-peach-400">await</span> inboundEvents.filterAsync?.(hev.<span class="text-sky-300 font-semibold">is</span>(<span class="text-emerald-300">'is urgent blocker'</span>));</code></pre>
+
+        <!-- 5. TypeSafe Jev (Cloud) -->
+        <pre id="code-panel-typesafe" class="hidden font-mono text-[12.5px] text-ink-100"><code><span class="text-peach-400">import</span> { hev, Engine } <span class="text-peach-400">from</span> <span class="text-emerald-300">'hev'</span>;
+
+<span class="text-ink-500">// Option A: Auto-connect to TypeSafe System One (Jev) via environment variable</span>
+<span class="text-ink-500">// export TYPESAFE_API_KEY="apikey_..."</span>
+<span class="text-peach-400">const</span> res = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Database deadlock on write'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'feature'</span>]);
+<span class="text-ink-500">// Automatically uses TypeSafe Jev in cloud with full calibrated confidence</span>
+
+<span class="text-ink-500">// Option B: Instantiate custom Engine with explicit credentials</span>
+<span class="text-peach-400">const</span> cloudEngine = <span class="text-peach-400">new</span> <span class="text-amber-300 font-bold">Engine</span>({
+  apiKey: process.env.TYPESAFE_API_KEY,
+  endpoint: <span class="text-emerald-300">'https://api.typesafe.ai/v1/systemone'</span>,
+});
+
+<span class="text-peach-400">const</span> classification = <span class="text-peach-400">await</span> <span class="text-amber-300 font-bold">hev</span>(<span class="text-emerald-300">'Checkout modal crash'</span>, [<span class="text-emerald-300">'bug'</span>, <span class="text-emerald-300">'billing'</span>], {
+  engine: cloudEngine
+});</code></pre>
       </div>
     </div>
   </section>
@@ -1362,6 +1513,116 @@
     if (devBadge) {
       const hasGpu = typeof navigator !== 'undefined' && 'gpu' in navigator;
       devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${hasGpu ? 'bg-emerald-600' : 'bg-sky-600'}"></span>Device: ${hasGpu ? 'WebGPU Ready' : 'Browser CPU'} (0.04ms)`;
+    }
+
+    // Code Snippets Tab Switcher & Clipboard Copy
+    let activeCodeTab = 'pattern';
+    const codeSnippets = {
+      pattern: `import hev from 'hev';
+
+// Semantic pattern matching with calibrated confidence guards (@ >0.8)
+await hev('Checkout button throws 500 internal server error', {
+  'bug @ >0.8': (event, meta) => dispatchP0Jira(event, meta.score), // High confidence
+  'bug':        (event) => queueForReview(event),               // Fallback bug branch
+  'billing':    (event) => routeToStripe(event),
+  'feature':    (event) => upvoteRoadmap(event),
+  'spam':       () => dropSilently(),
+  _:            (event) => generalInbox(event),                  // Wildcard catch-all
+});`,
+      zeroshot: `import hev from 'hev';
+
+// 1. Pass an array of candidate labels — returns the winning string
+const category = await hev('Can you provide an invoice for last month subscription?', [
+  'bug', 'feature', 'billing', 'spam'
+]);
+// => 'billing'
+
+// 2. Access calibrated probabilities, Brier score, and runtime telemetry
+const meta = await hev.detailed('Database connection pool exhausted', ['bug', 'feature']);
+console.log(meta.label);  // 'bug'
+console.log(meta.score);  // 0.98 (calibrated top confidence)
+console.log(meta.probs);  // { bug: 0.98, feature: 0.02 }
+console.log(meta.engine); // 'builtin' (0.05ms) or 'typesafe' (cloud)
+console.log(meta.device); // 'cpu' | 'mps' | 'cuda' | 'webgpu' | 'cloud'`,
+      predicate: `import hev from 'hev';
+
+// Natural language boolean evaluation (Noul mode) returns a boolean
+const isSpam = await hev(
+  'Congratulations! You won a free luxury vacation trip prize right now!',
+  'is promotional spam'
+);
+// => true
+
+// Or query raw probability score [0.0 - 1.0]
+const confidence = await hev.score(
+  'Fatal kernel panic in thread worker 500',
+  'is critical defect'
+);
+// => 0.96`,
+      curry: `import hev from 'hev';
+
+// Point-free currying: calling hev() with only patterns returns a reusable router
+const triageRouter = hev({
+  'bug @ >0.8': (t) => dispatchP0(t),
+  'bug':        (t) => queueReview(t),
+  _:            (t) => backlog(t),
+});
+
+const inboundEvents = await fetchEventQueue();
+
+// Map over high-throughput streams in sub-millisecond time
+const dispatched = await Promise.all(inboundEvents.map(triageRouter));
+
+// Curried boolean filter helper
+const urgentTickets = await inboundEvents.filterAsync?.(hev.is('is urgent blocker'));`,
+      typesafe: `import { hev, Engine } from 'hev';
+
+// Option A: Auto-connect to TypeSafe System One (Jev) via environment variable
+// export TYPESAFE_API_KEY="apikey_..."
+const res = await hev('Database deadlock on write', ['bug', 'feature']);
+// Automatically uses TypeSafe Jev in cloud with full calibrated confidence
+
+// Option B: Instantiate custom Engine with explicit credentials
+const cloudEngine = new Engine({
+  apiKey: process.env.TYPESAFE_API_KEY,
+  endpoint: 'https://api.typesafe.ai/v1/systemone',
+});
+
+const classification = await hev('Checkout modal crash', ['bug', 'billing'], {
+  engine: cloudEngine
+});`
+    };
+
+    function switchCodeTab(tab) {
+      activeCodeTab = tab;
+      ['pattern', 'zeroshot', 'predicate', 'curry', 'typesafe'].forEach(k => {
+        const btn = document.getElementById(`code-tab-btn-${k}`);
+        const panel = document.getElementById(`code-panel-${k}`);
+        if (btn && panel) {
+          if (k === tab) {
+            btn.className = 'px-3 py-1 rounded-lg text-xs font-semibold bg-ink-800 text-white transition-all';
+            panel.classList.remove('hidden');
+            panel.classList.add('block');
+          } else {
+            btn.className = 'px-3 py-1 rounded-lg text-xs font-medium text-ink-400 hover:text-ink-200 hover:bg-ink-800/60 transition-all';
+            panel.classList.remove('block');
+            panel.classList.add('hidden');
+          }
+        }
+      });
+    }
+
+    function copyCurrentSnippet() {
+      const text = codeSnippets[activeCodeTab] || '';
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          const span = document.getElementById('copySnippetText');
+          if (span) {
+            span.textContent = 'Copied! ✓';
+            setTimeout(() => { span.textContent = 'Copy Code'; }, 1800);
+          }
+        }).catch(() => {});
+      }
     }
 
     // Initial Execution

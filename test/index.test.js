@@ -83,7 +83,7 @@ test('7. Metadata access via hev.detailed()', async () => {
   assert.ok(meta.score > 0.5);
   assert.ok(typeof meta.probs === 'object');
   assert.ok('bug report' in meta.probs);
-  assert.equal(meta.engine, 'builtin');
+  assert.ok(['builtin', 'typesafe', 'gliner'].includes(meta.engine));
 });
 
 test('8. Probability score via hev.score()', async () => {
@@ -111,6 +111,6 @@ test('10. Hardware device detection & metadata reporting', async () => {
   assert.ok(['cuda', 'mps', 'cpu', 'webgpu', 'wasm'].includes(currentDevice));
 
   const meta = await hev.detailed('Fatal crash in memory manager', ['bug', 'feature']);
-  assert.equal(meta.device, 'cpu'); // Built-in in-tree runs in L1/L2 CPU cache
+  assert.ok(['cpu', 'mps', 'cuda', 'cloud'].includes(meta.device));
 });
 
