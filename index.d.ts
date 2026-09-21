@@ -4,15 +4,17 @@ export interface ClassificationMeta {
   label: string;
   score: number;
   probs: Record<string, number>;
-  engine: 'gliner' | 'typesafe' | 'builtin';
+  engine: 'gliner' | 'typesafe' | 'builtin' | 'webml' | 'cascade';
   device?: ComputeDevice;
+  latencyMs?: number;
 }
 
 export interface PredicateMeta {
   value: boolean;
   score: number;
-  engine: 'gliner' | 'typesafe' | 'builtin';
+  engine: 'gliner' | 'typesafe' | 'builtin' | 'webml' | 'cascade';
   device?: ComputeDevice;
+  latencyMs?: number;
 }
 
 export interface HevOptions {
@@ -20,7 +22,9 @@ export interface HevOptions {
   apiKey?: string;
   endpoint?: string;
   device?: 'auto' | ComputeDevice;
-  engine?: any;
+  engine?: 'webml' | 'builtin' | 'typesafe' | 'gliner' | any;
+  model?: string;
+  threshold?: number;
 }
 
 export type HandlerFn<T = any> = (text: string, meta: ClassificationMeta) => T | Promise<T>;
@@ -51,6 +55,17 @@ export interface HevFunction {
   match<T = any>(branches: BranchMap<T>, options?: HevOptions): (text: string, opts?: HevOptions) => Promise<T>;
   device(): ComputeDevice;
 }
+
+export class Engine {
+  constructor(options?: HevOptions);
+  readonly activeDevice: ComputeDevice;
+  classify(input: string, labels: string[], options?: HevOptions): Promise<ClassificationMeta>;
+  predicate(input: string, condition: string, options?: HevOptions): Promise<PredicateMeta>;
+}
+
+export declare const defaultEngine: Engine;
+export declare const webmlEngine: Engine;
+export declare function detectDevice(): ComputeDevice;
 
 declare const jevish: HevFunction;
 declare const hev: HevFunction;

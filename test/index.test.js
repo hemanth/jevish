@@ -132,3 +132,37 @@ test('12. Module exports both default jevish and hev', async () => {
   assert.equal(typeof hev, 'function');
   assert.equal(jevish, hev);
 });
+
+test('13. webml-kit decision engine option', async () => {
+  // Classification via webml engine option
+  const result = await hev('Internal 500 error in database queries on checkout', [
+    'bug',
+    'billing',
+    'feature',
+  ], { engine: 'webml' });
+  assert.equal(result, 'bug');
+
+  // Metadata via detailed with webml engine
+  const meta = await hev.detailed('Customer requested refund for duplicate charge on invoice', [
+    'bug',
+    'billing',
+    'feature',
+  ], { engine: 'webml' });
+  assert.equal(meta.label, 'billing');
+  assert.equal(meta.engine, 'webml');
+  assert.ok(meta.score > 0.5);
+  assert.ok(meta.probs['billing'] > meta.probs['bug']);
+
+  // Pattern matching with confidence guard via webml engine
+  const action = await hev('Production database crash 500 error!', {
+    'bug @ >0.7': () => 'p0-bug',
+    'bug': () => 'review-bug',
+    _: () => 'fallback',
+  }, { engine: 'webml' });
+  assert.equal(action, 'p0-bug');
+
+  // Boolean predicate via webml engine
+  const isBug = await hev('System crashed with fatal exception', 'is this a software bug?', { engine: 'webml' });
+  assert.equal(isBug, true);
+});
+

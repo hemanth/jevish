@@ -1,4 +1,4 @@
-import { defaultEngine, Engine, detectDevice } from './lib/engine.js';
+import { defaultEngine, webmlEngine, Engine, detectDevice } from './lib/engine.js';
 import { matchObject } from './lib/matcher.js';
 
 /**
@@ -26,7 +26,10 @@ function hev(arg1, arg2, options = {}) {
 
   // 3. Zero-shot Classification: hev(text, ['bug', 'feature'])
   if (Array.isArray(patterns)) {
-    const engine = options.engine || defaultEngine;
+    let engine = options.engine || defaultEngine;
+    if (typeof engine === 'string') {
+      engine = new Engine({ type: engine, ...options });
+    }
     return engine.classify(input, patterns, options).then(result => {
       if (options.meta) {
         return result;
@@ -37,7 +40,10 @@ function hev(arg1, arg2, options = {}) {
 
   // 4. Boolean Predicate (Noul): hev(text, 'is spam')
   if (typeof patterns === 'string') {
-    const engine = options.engine || defaultEngine;
+    let engine = options.engine || defaultEngine;
+    if (typeof engine === 'string') {
+      engine = new Engine({ type: engine, ...options });
+    }
     return engine.predicate(input, patterns, options).then(result => {
       if (options.meta) {
         return result;
@@ -53,7 +59,10 @@ function hev(arg1, arg2, options = {}) {
  * Get full classification metadata ({ label, score, probs, engine })
  */
 hev.detailed = async function detailed(input, labels, options = {}) {
-  const engine = options.engine || defaultEngine;
+  let engine = options.engine || defaultEngine;
+  if (typeof engine === 'string') {
+    engine = new Engine({ type: engine, ...options });
+  }
   return engine.classify(String(input || ''), labels, options);
 };
 
@@ -61,7 +70,10 @@ hev.detailed = async function detailed(input, labels, options = {}) {
  * Get raw probability score [0.0 - 1.0] for a condition or label
  */
 hev.score = async function score(input, condition, options = {}) {
-  const engine = options.engine || defaultEngine;
+  let engine = options.engine || defaultEngine;
+  if (typeof engine === 'string') {
+    engine = new Engine({ type: engine, ...options });
+  }
   if (Array.isArray(condition)) {
     const res = await engine.classify(String(input || ''), condition);
     return res.score;
@@ -100,7 +112,8 @@ hev.device = function device() {
 
 hev.Engine = Engine;
 hev.detectDevice = detectDevice;
+hev.webmlEngine = webmlEngine;
 const jevish = hev;
 export default jevish;
-export { jevish, hev, matchObject, Engine, detectDevice };
+export { jevish, hev, matchObject, Engine, detectDevice, webmlEngine };
 

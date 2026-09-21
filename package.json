@@ -46,5 +46,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hemanth/jevish.git"
+  },
+  "dependencies": {
+    "webml-kit": "^0.4.0"
   }
 }

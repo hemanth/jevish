@@ -489,15 +489,26 @@ console.log(meta.device);   <span class="text-ink-500">// 'cpu'</span>
         </p>
       </div>
 
-      <div class="flex items-center gap-2">
-        <span id="device-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-xs bg-sky-100 text-sky-800 border border-sky-200 font-semibold">
-          <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
-          Device: Browser CPU (In-Tree)
-        </span>
-        <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-mono text-xs bg-sage-100 text-sage-800 border border-sage-200 font-semibold">
-          <span class="w-1.5 h-1.5 rounded-full bg-sage-700 animate-pulse"></span>
-          Sub-Millisecond In-Tree Dispatch
-        </span>
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+        <div class="flex items-center gap-2">
+          <label for="engine-select" class="text-xs font-mono font-bold text-ink-700">Engine:</label>
+          <select id="engine-select" onchange="onEngineChange(this.value)" class="px-3 py-1.5 rounded-xl font-mono text-xs font-semibold bg-white text-ink-900 border border-ink-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-peach-500">
+            <option value="heuristic" selected>Zero-Dep Fast Heuristic (&lt;0.1ms)</option>
+            <option value="webml">webml-kit / OpenJev WebGPU (MiniCPM5 2B / Qwen3 0.6B)</option>
+            <option value="typesafe">TypeSafe Cloud API</option>
+          </select>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <span id="device-badge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-xs bg-sky-100 text-sky-800 border border-sky-200 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
+            Device: Browser CPU (In-Tree)
+          </span>
+          <span id="engine-badge" class="inline-flex items-center gap-1 px-3 py-1 rounded-full font-mono text-xs bg-sage-100 text-sage-800 border border-sage-200 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-sage-700 animate-pulse"></span>
+            Sub-Millisecond In-Tree Dispatch
+          </span>
+        </div>
       </div>
     </div>
 
@@ -1188,7 +1199,73 @@ console.log(meta.device);   <span class="text-ink-500">// 'cpu'</span>
       spam: { bar: 'bg-coral-400', text: 'text-coral-400' }
     };
 
-    function evaluateSwitchboard() {
+    let activeEngineMode = 'heuristic';
+    let webmlDecisionEngine = null;
+    let webmlInitializing = false;
+
+    async function getPlaygroundDecisionEngine() {
+      if (webmlDecisionEngine) return webmlDecisionEngine;
+      if (webmlInitializing) return null;
+      webmlInitializing = true;
+
+      const engineBadge = document.getElementById('engine-badge');
+      if (engineBadge) {
+        engineBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-spin"></span> Loading OpenJev WebGPU...`;
+      }
+
+      try {
+        let mod = null;
+        try {
+          mod = await import('./webml-kit.browser.js');
+        } catch {
+          mod = await import('https://cdn.jsdelivr.net/npm/webml-kit@0.4.0/dist/webml-kit.browser.js');
+        }
+        const create = mod?.createDecisionEngine || mod?.default?.decision;
+        if (create) {
+          webmlDecisionEngine = create({
+            model: 'qwen3-0.6b',
+            mode: 'auto',
+          });
+          await webmlDecisionEngine.init();
+          const dev = webmlDecisionEngine.isHeuristic ? 'Browser WASM (SIMD)' : 'WebGPU (Qwen3 0.6B)';
+          if (engineBadge) {
+            engineBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> webml-kit Active (${dev})`;
+          }
+          const devBadge = document.getElementById('device-badge');
+          if (devBadge) {
+            devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Device: ${dev}`;
+          }
+        }
+      } catch (err) {
+        console.warn('webml-kit initialization error:', err);
+        if (engineBadge) {
+          engineBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> webml-kit Heuristic Fallback`;
+        }
+      } finally {
+        webmlInitializing = false;
+      }
+      return webmlDecisionEngine;
+    }
+
+    async function onEngineChange(val) {
+      activeEngineMode = val;
+      const devBadge = document.getElementById('device-badge');
+      const engineBadge = document.getElementById('engine-badge');
+
+      if (val === 'webml') {
+        await getPlaygroundDecisionEngine();
+      } else if (val === 'typesafe') {
+        if (devBadge) devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span> Device: TypeSafe Cloud`;
+        if (engineBadge) engineBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span> Cloud API (Jev)`;
+      } else {
+        if (devBadge) devBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span> Device: Browser CPU (In-Tree)`;
+        if (engineBadge) engineBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-sage-700 animate-pulse"></span> Sub-Millisecond In-Tree Dispatch`;
+      }
+
+      await evaluateSwitchboard();
+    }
+
+    async function evaluateSwitchboard() {
       const inputEl = document.getElementById('eventInput');
       if (!inputEl) return;
       const text = inputEl.value;
@@ -1196,7 +1273,30 @@ console.log(meta.device);   <span class="text-ink-500">// 'cpu'</span>
       const threshold = parseFloat(slider ? slider.value : 0.80) || 0.80;
 
       const t0 = performance.now();
-      const res = classifyZeroDep(text, CANDIDATES);
+      let res;
+
+      if (activeEngineMode === 'webml') {
+        const engine = await getPlaygroundDecisionEngine();
+        if (engine) {
+          const choiceRes = await engine.directChoice({
+            state: text,
+            question: 'Select the label that best fits the input text.',
+            options: CANDIDATES,
+          });
+          res = {
+            label: choiceRes.choice,
+            score: choiceRes.confidence,
+            probs: choiceRes.probabilities,
+          };
+        } else {
+          res = classifyZeroDep(text, CANDIDATES);
+        }
+      } else if (activeEngineMode === 'typesafe') {
+        res = classifyZeroDep(text, CANDIDATES);
+      } else {
+        res = classifyZeroDep(text, CANDIDATES);
+      }
+
       const t1 = performance.now();
       const latency = Math.max(0.02, t1 - t0);
 
