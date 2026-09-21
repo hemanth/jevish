@@ -25,6 +25,9 @@ export interface HevOptions {
   engine?: 'webml' | 'builtin' | 'typesafe' | 'gliner' | any;
   model?: string;
   threshold?: number;
+  cascade?: boolean;
+  cascadeThreshold?: number;
+  clusters?: Record<string, string[]>;
 }
 
 export type HandlerFn<T = any> = (text: string, meta: ClassificationMeta) => T | Promise<T>;
@@ -54,6 +57,7 @@ export interface HevFunction {
   pick(labels: string[], options?: HevOptions): (text: string, opts?: HevOptions) => Promise<string>;
   match<T = any>(branches: BranchMap<T>, options?: HevOptions): (text: string, opts?: HevOptions) => Promise<T>;
   device(): ComputeDevice;
+  SEMANTIC_CLUSTERS: Record<string, string[]>;
 }
 
 export class Engine {
@@ -65,6 +69,7 @@ export class Engine {
 
 export declare const defaultEngine: Engine;
 export declare const webmlEngine: Engine;
+export declare const SEMANTIC_CLUSTERS: Record<string, string[]>;
 export declare function detectDevice(): ComputeDevice;
 
 declare const jevish: HevFunction;

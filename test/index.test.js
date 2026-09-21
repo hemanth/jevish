@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import jevish, { hev, jevish as namedJevish } from '../index.js';
+import jevish, { hev, jevish as namedJevish, SEMANTIC_CLUSTERS } from '../index.js';
 
 test('1. Zero-shot classification (array mode)', async () => {
   const result = await hev('The checkout button returns a 500 internal server error', [
@@ -165,4 +165,106 @@ test('13. webml-kit decision engine option', async () => {
   const isBug = await hev('System crashed with fatal exception', 'is this a software bug?', { engine: 'webml' });
   assert.equal(isBug, true);
 });
+
+test('14. Multi-word and compound labels resolve clusters properly', async () => {
+  // Phrases with non-first-word cluster keywords
+  const result = await hev('I was charged twice on my invoice for this service', [
+    'customer billing',
+    'software bug',
+  ]);
+  assert.equal(result, 'customer billing');
+
+  const compound = await hev('New microprocessor quantum computing architecture announced', [
+    'sci/tech',
+    'sports',
+    'world',
+  ]);
+  assert.equal(compound, 'sci/tech');
+});
+
+test('15. Custom user-injected semantic clusters via options.clusters', async () => {
+  // Domain outside built-ins: e-commerce logistics
+  const customClusters = {
+    shipping: ['tracking', 'parcel', 'courier', 'fedex', 'ups', 'package', 'delivered', 'dispatch'],
+    returns: ['refund', 'exchange', 'rma', 'sendback', 'receipt'],
+  };
+
+  // Zero-shot array mode with custom clusters
+  const label = await hev('Where is my parcel right now? It was dispatched yesterday.', [
+    'shipping',
+    'returns',
+    'support',
+  ], { clusters: customClusters });
+  assert.equal(label, 'shipping');
+
+  // Object pattern matching with custom clusters
+  let handled = '';
+  await hev('Please process my refund for item exchange', {
+    'shipping': () => { handled = 'shipping'; },
+    'returns': () => { handled = 'returns'; },
+    _: () => { handled = 'fallback'; },
+  }, { clusters: customClusters });
+  assert.equal(handled, 'returns');
+
+  // Boolean predicate with custom clusters
+  const isShipping = await hev('My package is delayed at the courier facility', 'is shipping inquiry', {
+    clusters: customClusters,
+  });
+  assert.equal(isShipping, true);
+});
+
+test('16. Canonical news and emotion clusters are active in zero-dep', async () => {
+  const news = await hev('The prime minister signed international peace treaty after talks', [
+    'world',
+    'sports',
+    'business',
+  ]);
+  assert.equal(news, 'world');
+
+  const emotion = await hev('I feel so exhausted, heartbroken and discouraged today', [
+    'sadness',
+    'joy',
+    'anger',
+  ]);
+  assert.equal(emotion, 'sadness');
+});
+
+test('17. SEMANTIC_CLUSTERS export is available and extensible', () => {
+  assert.ok(typeof SEMANTIC_CLUSTERS === 'object');
+  assert.ok(Array.isArray(SEMANTIC_CLUSTERS.bug));
+  assert.ok(Array.isArray(SEMANTIC_CLUSTERS.billing));
+  assert.ok(Array.isArray(SEMANTIC_CLUSTERS.world));
+  assert.ok(Array.isArray(SEMANTIC_CLUSTERS.sadness));
+  assert.equal(jevish.SEMANTIC_CLUSTERS, SEMANTIC_CLUSTERS);
+});
+
+test('18. GLiNER local neural cascade escalation on ambiguous inputs', async () => {
+  const glinerMock = {
+    async classify(input, labels) {
+      return {
+        label: 'cardiology',
+        score: 0.95,
+        probs: { cardiology: 0.95, orthopedics: 0.05 },
+        margin: 0.90,
+      };
+    },
+    async predicate(input, condition) {
+      return {
+        value: true,
+        score: 0.92,
+      };
+    }
+  };
+
+  // Ambiguous out-of-vocabulary input triggers cascade to GLiNER
+  const meta = await hev.detailed('Patient has acute myocardial infarction', ['cardiology', 'orthopedics'], {
+    cascade: true,
+    gliner: glinerMock,
+  });
+
+  assert.equal(meta.label, 'cardiology');
+  assert.equal(meta.engine, 'cascade');
+  assert.equal(meta.fastPath, false);
+});
+
 

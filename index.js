@@ -1,4 +1,4 @@
-import { defaultEngine, webmlEngine, Engine, detectDevice } from './lib/engine.js';
+import { defaultEngine, webmlEngine, Engine, detectDevice, SEMANTIC_CLUSTERS } from './lib/engine.js';
 import { matchObject } from './lib/matcher.js';
 
 /**
@@ -75,10 +75,10 @@ hev.score = async function score(input, condition, options = {}) {
     engine = new Engine({ type: engine, ...options });
   }
   if (Array.isArray(condition)) {
-    const res = await engine.classify(String(input || ''), condition);
+    const res = await engine.classify(String(input || ''), condition, options);
     return res.score;
   }
-  const res = await engine.predicate(String(input || ''), condition);
+  const res = await engine.predicate(String(input || ''), condition, options);
   return res.score;
 };
 
@@ -113,7 +113,8 @@ hev.device = function device() {
 hev.Engine = Engine;
 hev.detectDevice = detectDevice;
 hev.webmlEngine = webmlEngine;
+hev.SEMANTIC_CLUSTERS = SEMANTIC_CLUSTERS;
 const jevish = hev;
 export default jevish;
-export { jevish, hev, matchObject, Engine, detectDevice, webmlEngine };
+export { jevish, hev, matchObject, Engine, detectDevice, webmlEngine, SEMANTIC_CLUSTERS };
 
